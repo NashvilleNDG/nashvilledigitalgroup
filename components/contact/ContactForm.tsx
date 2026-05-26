@@ -18,7 +18,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 // ── Shared input / label styles — matches ProposalForm ──────────────────────
 const inputClass =
-  "w-full bg-white/8 border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] placeholder:text-white/40 focus:outline-none focus:border-sky-400 focus:bg-white/12 transition-all duration-200";
+  "w-full bg-white/8 border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] placeholder:text-white focus:outline-none focus:border-sky-400 focus:bg-white/12 transition-all duration-200";
 
 const selectClass =
   "w-full bg-[#0d1520] border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] focus:outline-none focus:border-sky-400 transition-all duration-200 appearance-none cursor-pointer";
@@ -62,7 +62,7 @@ export default function ContactForm() {
           <CheckCircle size={32} className="text-sky-400" />
         </div>
         <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
-        <p className="text-white/80 text-sm max-w-xs">
+        <p className="text-white text-sm max-w-xs">
           We&apos;ll be in touch within 1 business day. Our team is standing by
           to help grow your business.
         </p>
@@ -172,7 +172,7 @@ export default function ContactForm() {
           </select>
           {/* Custom dropdown arrow */}
           <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-            <svg className="w-4 h-4 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
@@ -198,7 +198,7 @@ export default function ContactForm() {
             <option value="$25,000+/month">$25,000+ / month</option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-            <svg className="w-4 h-4 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
@@ -254,7 +254,7 @@ export default function ContactForm() {
         )}
       </button>
 
-      <p className="text-center text-[11px] text-white/30">
+      <p className="text-center text-[11px] text-white">
         No spam. We respond within 1 business day.
       </p>
     </form>

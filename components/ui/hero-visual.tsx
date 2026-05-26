@@ -22,7 +22,7 @@ export function HeroVisual() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 glass rounded-3xl p-5 glow-sky z-20"
       >
         <div className="flex items-center justify-between mb-3">
-          <span className="text-[10px] uppercase tracking-widest text-white/40">Avg. ROI</span>
+          <span className="text-[10px] uppercase tracking-widest text-white">Avg. ROI</span>
           <div className="w-7 h-7 bg-sky-500/20 rounded-lg flex items-center justify-center">
             <TrendingUp className="w-3.5 h-3.5 text-sky-400" />
           </div>
@@ -55,7 +55,7 @@ export function HeroVisual() {
         </div>
         <div>
           <div className="text-xl font-bold text-white leading-tight">500+</div>
-          <div className="text-[11px] text-white/60">Clients Served</div>
+          <div className="text-[11px] text-white">Clients Served</div>
         </div>
       </motion.div>
 
@@ -71,7 +71,7 @@ export function HeroVisual() {
         </div>
         <div>
           <div className="text-xl font-bold text-white leading-tight">98%</div>
-          <div className="text-[11px] text-white/60">Satisfaction Rate</div>
+          <div className="text-[11px] text-white">Satisfaction Rate</div>
         </div>
       </motion.div>
 
@@ -83,7 +83,7 @@ export function HeroVisual() {
         className="absolute top-20 right-4 glass rounded-xl px-3 py-2 flex items-center gap-2 z-10 border border-sky-500/20 animate-float-delayed"
       >
         <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-        <span className="text-[11px] text-white/80 font-medium">AI Active 24/7</span>
+        <span className="text-[11px] text-white font-medium">AI Active 24/7</span>
       </motion.div>
 
       {/* ── Bottom-left: Leads badge ── */}
@@ -95,7 +95,7 @@ export function HeroVisual() {
         style={{ animationDelay: "2s" }}
       >
         <BarChart3 className="w-3.5 h-3.5 text-sky-400" />
-        <span className="text-[11px] text-white/80 font-medium">+127% Lead Gen</span>
+        <span className="text-[11px] text-white font-medium">+127% Lead Gen</span>
       </motion.div>
 
       {/* ── Top-center: small wins list ── */}
@@ -109,7 +109,7 @@ export function HeroVisual() {
         {["SEO Rankings ↑", "Revenue ↑ 3x", "Leads Qualified"].map((item) => (
           <div key={item} className="flex items-center gap-2">
             <CheckCircle2 className="w-3 h-3 text-sky-400 shrink-0" />
-            <span className="text-[10px] text-white/80">{item}</span>
+            <span className="text-[10px] text-white">{item}</span>
           </div>
         ))}
       </motion.div>

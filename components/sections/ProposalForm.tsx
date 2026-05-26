@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Send, CheckCircle } from "lucide-react"
 
 const inputBase =
-  "w-full bg-white/8 border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] placeholder:text-white/40 focus:outline-none focus:border-sky-400 focus:bg-white/12 transition-all duration-200"
+  "w-full bg-white/8 border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] placeholder:text-white focus:outline-none focus:border-sky-400 focus:bg-white/12 transition-all duration-200"
 
 const labelBase = "text-[11px] font-bold text-white uppercase tracking-[0.18em]"
 
@@ -74,7 +74,7 @@ export function ProposalForm() {
           </h2>
 
           {/* Description — bright enough to read */}
-          <p className="text-white/90 text-base leading-relaxed max-w-sm"
+          <p className="text-white text-base leading-relaxed max-w-sm"
              style={{ textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
             Tell us about your business and goals. We&apos;ll put together a
             custom growth strategy — no cost, no obligation.
@@ -83,7 +83,7 @@ export function ProposalForm() {
           {/* Trust badges */}
           <div className="flex flex-wrap gap-5 mt-8">
             {["Free Consultation", "No Hidden Fees", "48-hr Response"].map((b) => (
-              <span key={b} className="flex items-center gap-1.5 text-sm font-medium text-white/90">
+              <span key={b} className="flex items-center gap-1.5 text-sm font-medium text-white">
                 <CheckCircle size={14} className="text-sky-400 shrink-0" />
                 {b}
               </span>
@@ -106,7 +106,7 @@ export function ProposalForm() {
                 <CheckCircle size={32} className="text-sky-400" />
               </div>
               <h3 className="text-2xl font-bold text-white">We&apos;ll be in touch!</h3>
-              <p className="text-white/80 text-sm max-w-xs">
+              <p className="text-white text-sm max-w-xs">
                 Thanks for reaching out. A Nashville Digital Group strategist
                 will contact you within 24 hours.
               </p>
@@ -201,7 +201,7 @@ export function ProposalForm() {
                 )}
               </button>
 
-              <p className="text-center text-[11px] text-white/35">
+              <p className="text-center text-[11px] text-white">
                 No spam. No commitment. We respond within 24 hours.
               </p>
             </form>

@@ -25,11 +25,11 @@ export default function ContactPage() {
             </p>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
               Let&apos;s Grow Your Business{" "}
-              <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+              <span className="text-sky-400">
                 Together
               </span>
             </h1>
-            <p className="text-white/60 text-lg mb-10">
+            <p className="text-white text-lg mb-10">
               Ready to transform your digital presence? Get a free strategy consultation with our team of AI-powered marketing experts.
             </p>
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
                   📞
                 </div>
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-widest mb-1">
+                  <p className="text-white text-xs uppercase tracking-widest mb-1">
                     Phone
                   </p>
                   <p className="text-white font-medium">{company.phone}</p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                   ✉️
                 </div>
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-widest mb-1">
+                  <p className="text-white text-xs uppercase tracking-widest mb-1">
                     Email
                   </p>
                   <p className="text-white font-medium">{company.email}</p>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   📍
                 </div>
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-widest mb-1">
+                  <p className="text-white text-xs uppercase tracking-widest mb-1">
                     Location
                   </p>
                   <p className="text-white font-medium">{company.location}</p>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   🕐
                 </div>
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-widest mb-1">
+                  <p className="text-white text-xs uppercase tracking-widest mb-1">
                     Hours
                   </p>
                   <p className="text-white font-medium">{company.hours}</p>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   "2. Custom Marketing Plan",
                   "3. Measurable Results",
                 ].map((step, index) => (
-                  <div key={step} className="flex gap-3 text-white/80 text-sm">
+                  <div key={step} className="flex gap-3 text-white text-sm">
                     <span className="bg-sky-500/10 text-sky-400 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0">
                       {index + 1}
                     </span>

@@ -62,7 +62,7 @@ export default function HomePage() {
                 </TextReveal>
                 <TextReveal
                   as="span"
-                  className="block bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent"
+                  className="block text-sky-400"
                   delay={0.38}
                   wordDelay={0.1}
                 >
@@ -71,7 +71,7 @@ export default function HomePage() {
               </h1>
 
               <BlurFade delay={0.6} inView>
-                <p className="text-lg md:text-xl text-white/60 leading-relaxed mb-10 max-w-xl">
+                <p className="text-lg md:text-xl text-white leading-relaxed mb-10 max-w-xl">
                   {company.tagline}
                 </p>
               </BlurFade>
@@ -86,7 +86,7 @@ export default function HomePage() {
                   <Magnetic strength={0.3}>
                     <Link
                       href="/services"
-                      className="border border-white/10 hover:border-sky-500/50 text-white/75 hover:text-white px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm"
+                      className="border border-white/10 hover:border-sky-500/50 text-white hover:text-white px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm"
                     >
                       View Services
                     </Link>
@@ -95,7 +95,7 @@ export default function HomePage() {
               </BlurFade>
 
               <BlurFade delay={0.8} inView>
-                <div className="flex items-center gap-6 mt-10 flex-wrap text-sm text-white/50">
+                <div className="flex items-center gap-6 mt-10 flex-wrap text-sm text-white">
                   <span className="flex items-center gap-1.5"><span className="text-sky-400">✓</span> 30-Day Money Back</span>
                   <span className="flex items-center gap-1.5"><span className="text-sky-400">✓</span> Free Strategy Call</span>
                   <span className="flex items-center gap-1.5"><span className="text-sky-400">✓</span> No Hidden Fees</span>
@@ -132,7 +132,7 @@ export default function HomePage() {
             ].map((stat, i) => (
               <BlurFade key={stat.label} delay={0.1 + i * 0.08} inView>
                 <div className="text-center px-4">
-                  <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent tabular-nums leading-none mb-1">
+                  <div className="text-3xl md:text-4xl font-black text-sky-600 tabular-nums leading-none mb-1">
                     {stat.short ? (
                       <>{stat.short}{stat.suffix}</>
                     ) : (
@@ -141,7 +141,7 @@ export default function HomePage() {
                           value={stat.num}
                           delay={0.2 + i * 0.08}
                           decimalPlaces={stat.decimal ?? 0}
-                          className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent"
+                          className="text-sky-600"
                         />
                         {stat.suffix}
                       </>
@@ -205,11 +205,11 @@ export default function HomePage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
                 Complete{" "}
-                <span className="bg-gradient-to-r from-sky-300 to-sky-500 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Digital Solutions
                 </span>
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+              <p className="text-white text-lg max-w-2xl mx-auto">
                 From AI-powered campaigns to custom web development — everything your business needs to dominate online.
               </p>
             </div>
@@ -230,10 +230,10 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-white font-semibold text-lg mb-1">{service.title}</h3>
                     <p className="text-sky-400 text-sm font-medium mb-3">{service.price}</p>
-                    <p className="text-white/60 text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
+                    <p className="text-white text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
                     <ul className="space-y-1.5">
                       {service.features.slice(0, 3).map((feature) => (
-                        <li key={feature} className="text-white/50 text-xs flex items-center gap-2">
+                        <li key={feature} className="text-white text-xs flex items-center gap-2">
                           <span className="w-1 h-1 rounded-full bg-sky-500/60 shrink-0" />
                           {feature}
                         </li>
@@ -270,7 +270,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight leading-tight">
                 The AI-First Agency
                 <br />
-                <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-600">
                   Built for Growth
                 </span>
               </h2>
@@ -325,7 +325,7 @@ export default function HomePage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 What Our{" "}
-                <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-600">
                   Clients Say
                 </span>
               </h2>
@@ -413,7 +413,7 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BlurFade delay={0.1} inView>
-            <p className="text-sky-200/80 text-sm font-semibold uppercase tracking-widest mb-4">
+            <p className="text-white text-sm font-semibold uppercase tracking-widest mb-4">
               Start Today
             </p>
             <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
@@ -421,7 +421,7 @@ export default function HomePage() {
               <br />
               Your Business?
             </h2>
-            <p className="text-blue-100/80 text-lg max-w-xl mx-auto mb-10">
+            <p className="text-white text-lg max-w-xl mx-auto mb-10">
               Join 500+ businesses that have already accelerated their growth with Nashville Digital Group.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
@@ -436,12 +436,12 @@ export default function HomePage() {
               </ShimmerLink>
               <a
                 href="tel:6152000170"
-                className="border border-white/20 hover:border-white/40 text-white/90 hover:text-white px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm"
+                className="border border-white/20 hover:border-white/40 text-white hover:text-white px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm"
               >
                 (615) 200-0170
               </a>
             </div>
-            <p className="text-blue-200/60 text-sm mt-6">
+            <p className="text-white text-sm mt-6">
               No commitment required · Free 30-minute strategy session
             </p>
           </BlurFade>

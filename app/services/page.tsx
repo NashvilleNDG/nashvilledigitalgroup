@@ -29,11 +29,11 @@ export default function ServicesPage() {
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
                 AI-Powered Services for{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Every Business Need
                 </span>
               </h1>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto mb-10">
+              <p className="text-white text-lg max-w-2xl mx-auto mb-10">
                 From intelligent automation to custom web development — comprehensive digital solutions starting from $249/month.
               </p>
               <ShimmerLink href="/contact">
@@ -64,12 +64,12 @@ export default function ServicesPage() {
                   <h2 className="text-white text-xl font-bold mb-3">
                     {service.title}
                   </h2>
-                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">
+                  <p className="text-white text-sm leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
                   <ul className="space-y-2 border-t border-border pt-5">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2.5 text-white/80 text-sm">
+                      <li key={feature} className="flex items-center gap-2.5 text-white text-sm">
                         <span className="w-4 h-4 rounded-full bg-sky-500/15 flex items-center justify-center shrink-0">
                           <span className="text-sky-400 text-[9px]">✓</span>
                         </span>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">
               Not Sure Which Service Is Right For You?
             </h2>
-            <p className="text-blue-100/80 text-lg max-w-xl mx-auto mb-8">
+            <p className="text-white text-lg max-w-xl mx-auto mb-8">
               Our team will analyze your business and recommend the perfect combination of services.
             </p>
             <ShimmerLink

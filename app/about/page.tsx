@@ -29,11 +29,11 @@ export default function AboutPage() {
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
                 Nashville&apos;s AI-Powered{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Marketing Leaders
                 </span>
               </h1>
-              <p className="text-white/60 text-lg max-w-3xl mx-auto mb-12">
+              <p className="text-white text-lg max-w-3xl mx-auto mb-12">
                 At Nashville Digital Group, we believe that every business deserves to thrive in the digital age. Our
                 mission is to democratize access to cutting-edge AI-powered marketing solutions, making advanced
                 technology accessible to businesses of all sizes.
@@ -57,7 +57,7 @@ export default function AboutPage() {
                         />
                         {stat.suffix}
                       </div>
-                      <div className="text-white/60 text-xs mt-1">{stat.label}</div>
+                      <div className="text-white text-xs mt-1">{stat.label}</div>
                     </div>
                   </BlurFade>
                 ))}
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </div>
                 <p className="text-sky-400 text-sm uppercase tracking-widest mb-2">Our Mission</p>
                 <h2 className="text-2xl font-bold text-white mb-4">Driving Digital Excellence</h2>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   At Nashville Digital Group, we believe that every business deserves to thrive in the digital age. Our
                   mission is to democratize access to cutting-edge AI-powered marketing solutions, making advanced
                   technology accessible to businesses of all sizes. We combine human creativity with artificial
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 </div>
                 <p className="text-sky-400 text-sm uppercase tracking-widest mb-2">Our Vision</p>
                 <h2 className="text-2xl font-bold text-white mb-4">Leading the Southeast</h2>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-white text-sm leading-relaxed">
                   To be the leading AI-powered digital marketing agency in the Southeast, known for transforming
                   businesses through innovative technology and exceptional results. We envision a future where every
                   Nashville business has access to the tools and strategies that were once reserved for Fortune 500
@@ -116,11 +116,11 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 The People Behind{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Your Growth
                 </span>
               </h2>
-              <p className="text-white/60 text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
                 25+ digital marketing experts, strategists, and AI engineers — all focused on one thing: your results.
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function AboutPage() {
           <BlurFade delay={0.4} inView>
             <div className="flex flex-wrap gap-3 justify-center mt-8">
               {["🏆 Award-Winning Culture", "🌍 Remote-Friendly", "📚 L&D Budget $2K/yr", "🏥 Full Benefits", "🎉 Quarterly Retreats"].map((badge) => (
-                <span key={badge} className="glass border border-white/8 text-white/75 text-sm px-4 py-2 rounded-full">
+                <span key={badge} className="glass border border-white/8 text-white text-sm px-4 py-2 rounded-full">
                   {badge}
                 </span>
               ))}
@@ -227,7 +227,7 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Five Years of{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Innovation
                 </span>
               </h2>
@@ -245,7 +245,7 @@ export default function AboutPage() {
                   </div>
                   <div className="glass border border-white/6 rounded-2xl p-6 flex-1 hover:border-sky-500/20 transition-colors">
                     <h3 className="text-white font-semibold text-lg mb-2">{event.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{event.description}</p>
+                    <p className="text-white text-sm leading-relaxed">{event.description}</p>
                   </div>
                 </div>
               </BlurFade>
@@ -264,7 +264,7 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Our Core{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Values
                 </span>
               </h2>
@@ -279,7 +279,7 @@ export default function AboutPage() {
                     <Icon name={value.icon} className="w-5 h-5 text-sky-400" />
                   </div>
                   <h3 className="text-white font-semibold text-lg mb-2">{value.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{value.description}</p>
+                  <p className="text-white text-sm leading-relaxed">{value.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -297,7 +297,7 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Industry{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sky-400">
                   Awards &amp; Recognition
                 </span>
               </h2>
@@ -328,11 +328,11 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <div className="text-5xl mb-6">💬</div>
-            <blockquote className="text-xl md:text-2xl text-white/90 italic max-w-3xl mx-auto text-center leading-relaxed mb-8 font-light">
+            <blockquote className="text-xl md:text-2xl text-white italic max-w-3xl mx-auto text-center leading-relaxed mb-8 font-light">
               &ldquo;We&apos;re committed to your success. If you&apos;re not satisfied with our results within the
               first 30 days, we&apos;ll work for free until you are — or provide a full refund.&rdquo;
             </blockquote>
-            <p className="text-blue-200/80 font-semibold mb-8">— Sarah Johnson, CEO &amp; Founder</p>
+            <p className="text-white font-semibold mb-8">— Sarah Johnson, CEO &amp; Founder</p>
             <ShimmerLink
               href="/contact"
               background="rgba(255,255,255,0.18)"
