@@ -14,6 +14,8 @@ import { Icon } from "@/components/ui/icon"
 import { ParallaxHeroBg } from "@/components/ui/parallax-hero-bg"
 import { TextReveal } from "@/components/ui/text-reveal"
 import { Magnetic } from "@/components/ui/magnetic"
+import { FeaturedWork } from "@/components/sections/FeaturedWork"
+import { ProposalForm } from "@/components/sections/ProposalForm"
 
 export const metadata: Metadata = {
   title: "Nashville Digital Group | AI-Powered Digital Marketing Agency",
@@ -60,7 +62,7 @@ export default function HomePage() {
                 </TextReveal>
                 <TextReveal
                   as="span"
-                  className="block bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent"
+                  className="block bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent"
                   delay={0.38}
                   wordDelay={0.1}
                 >
@@ -69,7 +71,7 @@ export default function HomePage() {
               </h1>
 
               <BlurFade delay={0.6} inView>
-                <p className="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
+                <p className="text-lg md:text-xl text-white/60 leading-relaxed mb-10 max-w-xl">
                   {company.tagline}
                 </p>
               </BlurFade>
@@ -84,7 +86,7 @@ export default function HomePage() {
                   <Magnetic strength={0.3}>
                     <Link
                       href="/services"
-                      className="border border-white/10 hover:border-sky-500/50 text-slate-300 hover:text-white px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm"
+                      className="border border-white/10 hover:border-sky-500/50 text-white/75 hover:text-white px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm"
                     >
                       View Services
                     </Link>
@@ -93,10 +95,10 @@ export default function HomePage() {
               </BlurFade>
 
               <BlurFade delay={0.8} inView>
-                <div className="flex items-center gap-6 mt-10 flex-wrap text-sm text-slate-500">
-                  <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> 30-Day Money Back</span>
-                  <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> Free Strategy Call</span>
-                  <span className="flex items-center gap-1.5"><span className="text-emerald-400">✓</span> No Hidden Fees</span>
+                <div className="flex items-center gap-6 mt-10 flex-wrap text-sm text-white/50">
+                  <span className="flex items-center gap-1.5"><span className="text-sky-400">✓</span> 30-Day Money Back</span>
+                  <span className="flex items-center gap-1.5"><span className="text-sky-400">✓</span> Free Strategy Call</span>
+                  <span className="flex items-center gap-1.5"><span className="text-sky-400">✓</span> No Hidden Fees</span>
                 </div>
               </BlurFade>
             </div>
@@ -130,7 +132,7 @@ export default function HomePage() {
             ].map((stat, i) => (
               <BlurFade key={stat.label} delay={0.1 + i * 0.08} inView>
                 <div className="text-center px-4">
-                  <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent tabular-nums leading-none mb-1">
+                  <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent tabular-nums leading-none mb-1">
                     {stat.short ? (
                       <>{stat.short}{stat.suffix}</>
                     ) : (
@@ -139,7 +141,7 @@ export default function HomePage() {
                           value={stat.num}
                           delay={0.2 + i * 0.08}
                           decimalPlaces={stat.decimal ?? 0}
-                          className="bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent"
+                          className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent"
                         />
                         {stat.suffix}
                       </>
@@ -203,11 +205,11 @@ export default function HomePage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
                 Complete{" "}
-                <span className="bg-gradient-to-r from-sky-300 to-violet-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-300 to-sky-500 bg-clip-text text-transparent">
                   Digital Solutions
                 </span>
               </h2>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
                 From AI-powered campaigns to custom web development — everything your business needs to dominate online.
               </p>
             </div>
@@ -228,10 +230,10 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-white font-semibold text-lg mb-1">{service.title}</h3>
                     <p className="text-sky-400 text-sm font-medium mb-3">{service.price}</p>
-                    <p className="text-slate-400 text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
+                    <p className="text-white/60 text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
                     <ul className="space-y-1.5">
                       {service.features.slice(0, 3).map((feature) => (
-                        <li key={feature} className="text-slate-500 text-xs flex items-center gap-2">
+                        <li key={feature} className="text-white/50 text-xs flex items-center gap-2">
                           <span className="w-1 h-1 rounded-full bg-sky-500/60 shrink-0" />
                           {feature}
                         </li>
@@ -268,7 +270,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-5 tracking-tight leading-tight">
                 The AI-First Agency
                 <br />
-                <span className="bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   Built for Growth
                 </span>
               </h2>
@@ -293,9 +295,9 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { num: 500, suffix: "+", label: "Clients Served", bg: "bg-sky-50", border: "border-sky-200", numColor: "text-sky-700" },
-                  { num: 98, suffix: "%", label: "Satisfaction Rate", bg: "bg-emerald-50", border: "border-emerald-200", numColor: "text-emerald-700" },
-                  { num: 300, suffix: "%", label: "Avg ROI in 90 Days", bg: "bg-violet-50", border: "border-violet-200", numColor: "text-violet-700" },
-                  { num: 4.9, suffix: "★", label: "Glassdoor Rating", decimal: 1, bg: "bg-amber-50", border: "border-amber-200", numColor: "text-amber-700" },
+                  { num: 98, suffix: "%", label: "Satisfaction Rate", bg: "bg-sky-50", border: "border-sky-200", numColor: "text-sky-700" },
+                  { num: 300, suffix: "%", label: "Avg ROI in 90 Days", bg: "bg-sky-50", border: "border-sky-200", numColor: "text-sky-600" },
+                  { num: 4.9, suffix: "★", label: "Glassdoor Rating", decimal: 1, bg: "bg-sky-50", border: "border-sky-100", numColor: "text-sky-500" },
                 ].map((stat, i) => (
                   <div key={stat.label} className={`rounded-2xl p-6 text-center border-2 ${stat.border} ${stat.bg} shadow-sm`}>
                     <div className={`text-3xl font-black tabular-nums mb-1 ${stat.numColor}`}>
@@ -323,7 +325,7 @@ export default function HomePage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 What Our{" "}
-                <span className="bg-gradient-to-r from-sky-600 to-violet-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent">
                   Clients Say
                 </span>
               </h2>
@@ -346,7 +348,7 @@ export default function HomePage() {
                   )}
                   <p className="text-slate-600 text-sm leading-relaxed flex-1 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
                       {t.name[0]}
                     </div>
                     <div>
@@ -372,7 +374,7 @@ export default function HomePage() {
                   )}
                   <p className="text-slate-600 text-sm leading-relaxed flex-1 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-400 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
                       {t.name[0]}
                     </div>
                     <div>
@@ -395,8 +397,14 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Featured Work ── */}
+      <FeaturedWork />
+
+      {/* ── Proposal Form ── */}
+      <ProposalForm />
+
       {/* ── CTA (Bright Gradient) ── */}
-      <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-blue-700 to-violet-700">
+      <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
         <Meteors number={18} />
         {/* Inner glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)]" />

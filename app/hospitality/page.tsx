@@ -24,18 +24,18 @@ export default function HospitalityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <BlurFade delay={0.1} inView>
             <div className="text-center">
-              <span className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-semibold px-4 py-2 rounded-full mb-6">
+              <span className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm font-semibold px-4 py-2 rounded-full mb-6">
                 🏨 AI Solutions for Hospitality
               </span>
               <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
                 Boost Hotel Revenue
                 <br />
-                <span className="bg-gradient-to-r from-emerald-400 via-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-300 via-sky-400 to-sky-500 bg-clip-text text-transparent">
                   Up to 40%
                 </span>{" "}
                 With Generative AI
               </h1>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+              <p className="text-white/60 text-lg max-w-2xl mx-auto mb-10">
                 Revolutionize your hospitality business with AI-powered guest communication, dynamic pricing, and streamlined operations.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
@@ -44,7 +44,7 @@ export default function HospitalityPage() {
                 </ShimmerLink>
                 <Link
                   href="#case-studies"
-                  className="border border-white/10 hover:border-sky-500/40 text-slate-300 hover:text-white px-6 py-3 rounded-xl transition-all duration-200"
+                  className="border border-white/10 hover:border-sky-500/40 text-white/80 hover:text-white px-6 py-3 rounded-xl transition-all duration-200"
                 >
                   View Case Studies
                 </Link>
@@ -58,7 +58,7 @@ export default function HospitalityPage() {
                 ].map((stat) => (
                   <div key={stat.label} className="glass border border-white/8 rounded-2xl px-6 py-4 text-center min-w-[130px]">
                     <p className="text-2xl font-black text-white">{stat.value}</p>
-                    <p className="text-slate-400 text-xs mt-1">{stat.label}</p>
+                    <p className="text-white/60 text-xs mt-1">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -77,7 +77,7 @@ export default function HospitalityPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Six Ways AI Transforms Your{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Hotel
                 </span>
               </h2>
@@ -96,7 +96,7 @@ export default function HospitalityPage() {
                   <h3 className="text-white font-semibold text-lg mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                  <p className="text-white/60 text-sm leading-relaxed mb-4">
                     {feature.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -126,7 +126,7 @@ export default function HospitalityPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Real Hotels. Real{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Results.
                 </span>
               </h2>
@@ -144,16 +144,16 @@ export default function HospitalityPage() {
                       <h3 className="text-white text-xl font-bold mb-3">
                         {study.property}
                       </h3>
-                      <p className="text-slate-500 text-xs uppercase tracking-widest">
+                      <p className="text-white/40 text-xs uppercase tracking-widest">
                         Challenge:
                       </p>
-                      <p className="text-slate-400 text-sm mt-1 mb-4">
+                      <p className="text-white/60 text-sm mt-1 mb-4">
                         {study.challenge}
                       </p>
-                      <p className="text-slate-500 text-xs uppercase tracking-widest">
+                      <p className="text-white/40 text-xs uppercase tracking-widest">
                         Solution:
                       </p>
-                      <p className="text-slate-400 text-sm mt-1">
+                      <p className="text-white/60 text-sm mt-1">
                         {study.solution}
                       </p>
                     </div>
@@ -161,8 +161,8 @@ export default function HospitalityPage() {
                       <p className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Results</p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {study.results.map((result) => (
-                          <div key={result} className="flex items-start gap-2.5 text-slate-300 text-sm">
-                            <span className="text-emerald-400 mt-0.5 shrink-0">✓</span>
+                          <div key={result} className="flex items-start gap-2.5 text-white/80 text-sm">
+                            <span className="text-sky-400 mt-0.5 shrink-0">✓</span>
                             {result}
                           </div>
                         ))}
@@ -182,7 +182,7 @@ export default function HospitalityPage() {
           <AnimatedSection className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
               Seamless Integration With Your{" "}
-              <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                 Existing Systems
               </span>
             </h2>
@@ -200,7 +200,7 @@ export default function HospitalityPage() {
                     <span className="text-2xl">{pillar.icon}</span>
                   </div>
                   <h3 className="text-white font-semibold text-lg mb-2">{pillar.title}</h3>
-                  <p className="text-slate-400 text-sm">{pillar.desc}</p>
+                  <p className="text-white/60 text-sm">{pillar.desc}</p>
                 </div>
               ))}
             </div>
@@ -209,7 +209,7 @@ export default function HospitalityPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-28 overflow-hidden bg-gradient-to-br from-emerald-600 via-sky-700 to-violet-700">
+      <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
         <Meteors number={14} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.07)_0%,transparent_70%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +217,7 @@ export default function HospitalityPage() {
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">
               Ready to Transform Your Hotel?
             </h2>
-            <p className="text-emerald-100/80 text-lg max-w-xl mx-auto mb-8">
+            <p className="text-sky-100/80 text-lg max-w-xl mx-auto mb-8">
               Join leading Nashville hospitality businesses already using AI to drive revenue and delight guests.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">

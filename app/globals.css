@@ -129,15 +129,18 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
+    /* Prevent animated elements (x: ±40) from ever creating a horizontal scrollbar */
+    overflow-x: hidden;
   }
   html {
     @apply font-sans scroll-smooth;
+    overflow-x: hidden;
   }
 }
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-sky-300 to-sky-500 bg-clip-text text-transparent;
   }
   .gradient-text-blue {
     @apply bg-gradient-to-r from-sky-300 to-sky-500 bg-clip-text text-transparent;

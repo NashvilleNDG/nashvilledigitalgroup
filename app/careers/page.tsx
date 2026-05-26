@@ -28,11 +28,11 @@ export default function CareersPage() {
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
                 Build the Future of{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Digital Marketing
                 </span>
               </h1>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-12">
+              <p className="text-white/60 text-lg max-w-2xl mx-auto mb-12">
                 Join Nashville Digital Group&apos;s team of 25+ digital experts. Remote-friendly, mission-driven, and always growing.
               </p>
               <div className="flex gap-6 justify-center flex-wrap">
@@ -43,7 +43,7 @@ export default function CareersPage() {
                 ].map((stat) => (
                   <div key={stat.label} className="glass border border-white/8 rounded-2xl px-6 py-4 text-center min-w-[110px]">
                     <p className="text-2xl font-black text-white">{stat.value}</p>
-                    <p className="text-slate-400 text-xs mt-1">{stat.label}</p>
+                    <p className="text-white/60 text-xs mt-1">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -62,7 +62,7 @@ export default function CareersPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Why Work at{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   NDG
                 </span>
               </h2>
@@ -76,7 +76,7 @@ export default function CareersPage() {
                     <Icon name={benefit.icon} className="w-5 h-5 text-sky-400" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{benefit.description}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -94,7 +94,7 @@ export default function CareersPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 6 Roles We&apos;re{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Hiring For
                 </span>
               </h2>
@@ -107,7 +107,7 @@ export default function CareersPage() {
                   <div className="flex justify-between items-start flex-wrap gap-4">
                     <div>
                       <h3 className="text-white text-xl font-bold mb-2">{job.title}</h3>
-                      <span className="bg-violet-500/10 text-violet-400 border border-violet-500/15 text-xs px-3 py-1 rounded-full">
+                      <span className="bg-sky-500/10 text-sky-400 border border-sky-500/15 text-xs px-3 py-1 rounded-full">
                         {job.department}
                       </span>
                     </div>
@@ -117,17 +117,17 @@ export default function CareersPage() {
                     <span className="bg-sky-500/10 text-sky-400 border border-sky-500/15 text-xs px-3 py-1 rounded-full">
                       {job.type}
                     </span>
-                    <span className="text-slate-400 text-sm flex items-center gap-1.5">
+                    <span className="text-white/60 text-sm flex items-center gap-1.5">
                       <span className="text-xs">📍</span> {job.location}
                     </span>
                   </div>
                   <div className="border-t border-white/6 pt-4">
-                    <p className="text-slate-500 text-xs uppercase tracking-widest mb-3">
+                    <p className="text-white/40 text-xs uppercase tracking-widest mb-3">
                       Requirements:
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {job.requirements.map((req) => (
-                        <div key={req} className="flex items-center gap-2 text-slate-300 text-sm">
+                        <div key={req} className="flex items-center gap-2 text-white/80 text-sm">
                           <span className="w-1.5 h-1.5 rounded-full bg-sky-500/60 shrink-0" />
                           {req}
                         </div>
@@ -154,7 +154,7 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Our Culture</h2>
-            <p className="max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed mb-10">
+            <p className="max-w-2xl mx-auto text-white/60 text-lg leading-relaxed mb-10">
               We&apos;re a team of passionate experts who believe in continuous learning, radical transparency, and delivering exceptional results. Remote-friendly, diverse, and always excited about the next challenge.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -169,7 +169,7 @@ export default function CareersPage() {
                 >
                   <p className="text-3xl mb-3">{pillar.icon}</p>
                   <h3 className="text-white font-semibold text-lg mb-2">{pillar.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{pillar.desc}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{pillar.desc}</p>
                 </div>
               ))}
             </div>
@@ -178,7 +178,7 @@ export default function CareersPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-28 overflow-hidden bg-gradient-to-br from-violet-600 via-blue-700 to-sky-600">
+      <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
         <Meteors number={12} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.07)_0%,transparent_70%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

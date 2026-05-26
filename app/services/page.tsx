@@ -29,11 +29,11 @@ export default function ServicesPage() {
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
                 AI-Powered Services for{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Every Business Need
                 </span>
               </h1>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+              <p className="text-white/60 text-lg max-w-2xl mx-auto mb-10">
                 From intelligent automation to custom web development — comprehensive digital solutions starting from $249/month.
               </p>
               <ShimmerLink href="/contact">
@@ -64,12 +64,12 @@ export default function ServicesPage() {
                   <h2 className="text-white text-xl font-bold mb-3">
                     {service.title}
                   </h2>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">
                     {service.description}
                   </p>
                   <ul className="space-y-2 border-t border-border pt-5">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2.5 text-slate-300 text-sm">
+                      <li key={feature} className="flex items-center gap-2.5 text-white/80 text-sm">
                         <span className="w-4 h-4 rounded-full bg-sky-500/15 flex items-center justify-center shrink-0">
                           <span className="text-sky-400 text-[9px]">✓</span>
                         </span>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-blue-700 to-violet-700">
+      <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
         <Meteors number={14} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.07)_0%,transparent_70%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

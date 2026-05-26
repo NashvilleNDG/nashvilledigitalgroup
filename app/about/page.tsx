@@ -29,11 +29,11 @@ export default function AboutPage() {
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
                 Nashville&apos;s AI-Powered{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Marketing Leaders
                 </span>
               </h1>
-              <p className="text-slate-400 text-lg max-w-3xl mx-auto mb-12">
+              <p className="text-white/60 text-lg max-w-3xl mx-auto mb-12">
                 At Nashville Digital Group, we believe that every business deserves to thrive in the digital age. Our
                 mission is to democratize access to cutting-edge AI-powered marketing solutions, making advanced
                 technology accessible to businesses of all sizes.
@@ -57,7 +57,7 @@ export default function AboutPage() {
                         />
                         {stat.suffix}
                       </div>
-                      <div className="text-slate-400 text-xs mt-1">{stat.label}</div>
+                      <div className="text-white/60 text-xs mt-1">{stat.label}</div>
                     </div>
                   </BlurFade>
                 ))}
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </div>
                 <p className="text-sky-400 text-sm uppercase tracking-widest mb-2">Our Mission</p>
                 <h2 className="text-2xl font-bold text-white mb-4">Driving Digital Excellence</h2>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-white/60 text-sm leading-relaxed">
                   At Nashville Digital Group, we believe that every business deserves to thrive in the digital age. Our
                   mission is to democratize access to cutting-edge AI-powered marketing solutions, making advanced
                   technology accessible to businesses of all sizes. We combine human creativity with artificial
@@ -88,13 +88,13 @@ export default function AboutPage() {
             </BlurFade>
 
             <BlurFade delay={0.2} inView>
-              <div className="glass border border-violet-500/15 rounded-2xl p-8 h-full hover:border-violet-500/30 transition-colors">
-                <div className="w-12 h-12 bg-violet-500/15 rounded-xl flex items-center justify-center mb-5 ring-1 ring-violet-500/20">
+              <div className="glass border border-sky-500/15 rounded-2xl p-8 h-full hover:border-sky-500/30 transition-colors">
+                <div className="w-12 h-12 bg-sky-500/15 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20">
                   <span className="text-2xl">🔭</span>
                 </div>
-                <p className="text-violet-400 text-sm uppercase tracking-widest mb-2">Our Vision</p>
+                <p className="text-sky-400 text-sm uppercase tracking-widest mb-2">Our Vision</p>
                 <h2 className="text-2xl font-bold text-white mb-4">Leading the Southeast</h2>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-white/60 text-sm leading-relaxed">
                   To be the leading AI-powered digital marketing agency in the Southeast, known for transforming
                   businesses through innovative technology and exceptional results. We envision a future where every
                   Nashville business has access to the tools and strategies that were once reserved for Fortune 500
@@ -116,11 +116,11 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 The People Behind{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Your Growth
                 </span>
               </h2>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-white/60 text-lg max-w-2xl mx-auto mt-4">
                 25+ digital marketing experts, strategists, and AI engineers — all focused on one thing: your results.
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function AboutPage() {
           <BlurFade delay={0.4} inView>
             <div className="flex flex-wrap gap-3 justify-center mt-8">
               {["🏆 Award-Winning Culture", "🌍 Remote-Friendly", "📚 L&D Budget $2K/yr", "🏥 Full Benefits", "🎉 Quarterly Retreats"].map((badge) => (
-                <span key={badge} className="glass border border-white/8 text-slate-300 text-sm px-4 py-2 rounded-full">
+                <span key={badge} className="glass border border-white/8 text-white/75 text-sm px-4 py-2 rounded-full">
                   {badge}
                 </span>
               ))}
@@ -227,7 +227,7 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Five Years of{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Innovation
                 </span>
               </h2>
@@ -240,12 +240,12 @@ export default function AboutPage() {
             {timeline.map((event, i) => (
               <BlurFade key={event.year} delay={0.1 + i * 0.1} inView>
                 <div className="flex gap-6 md:gap-8 mb-10 relative">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-sky-500/20 to-violet-500/20 border border-sky-500/30 flex items-center justify-center shrink-0 z-10">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-sky-500/20 to-sky-500/5 border border-sky-500/30 flex items-center justify-center shrink-0 z-10">
                     <span className="text-sky-400 font-black text-xs">{event.year}</span>
                   </div>
                   <div className="glass border border-white/6 rounded-2xl p-6 flex-1 hover:border-sky-500/20 transition-colors">
                     <h3 className="text-white font-semibold text-lg mb-2">{event.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{event.description}</p>
+                    <p className="text-white/60 text-sm leading-relaxed">{event.description}</p>
                   </div>
                 </div>
               </BlurFade>
@@ -264,7 +264,7 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Our Core{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Values
                 </span>
               </h2>
@@ -279,7 +279,7 @@ export default function AboutPage() {
                     <Icon name={value.icon} className="w-5 h-5 text-sky-400" />
                   </div>
                   <h3 className="text-white font-semibold text-lg mb-2">{value.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{value.description}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{value.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -297,7 +297,7 @@ export default function AboutPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                 Industry{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Awards &amp; Recognition
                 </span>
               </h2>
@@ -322,7 +322,7 @@ export default function AboutPage() {
       </section>
 
       {/* CEO Promise / CTA */}
-      <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-blue-700 to-violet-700">
+      <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
         <Meteors number={14} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

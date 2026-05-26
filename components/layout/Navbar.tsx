@@ -35,7 +35,7 @@ export default function Navbar() {
                 "text-sm font-medium transition-colors",
                 pathname === link.href
                   ? "text-white"
-                  : "text-slate-400 hover:text-white"
+                  : "text-white/60 hover:text-white"
               )}
             >
               {link.label}
@@ -56,7 +56,7 @@ export default function Navbar() {
             type="button"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-400 hover:text-white transition-colors"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white/60 hover:text-white transition-colors"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -76,7 +76,7 @@ export default function Navbar() {
                   "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   pathname === link.href
                     ? "text-white bg-white/5"
-                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                    : "text-white/60 hover:text-white hover:bg-white/5"
                 )}
               >
                 {link.label}

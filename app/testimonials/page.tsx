@@ -37,7 +37,7 @@ function ReviewWidget({
           <span key={i} className="text-amber-400 text-xs">★</span>
         ))}
       </div>
-      <div className="text-slate-400 text-xs font-medium">{platform}</div>
+      <div className="text-white/60 text-xs font-medium">{platform}</div>
     </motion.div>
   )
 }
@@ -54,7 +54,7 @@ function TestimonialsHeroVisual() {
         className="absolute inset-0 flex items-center justify-center"
       >
         <div className="glass border border-sky-500/30 rounded-3xl px-10 py-8 text-center shadow-2xl shadow-sky-500/10 animate-float">
-          <div className="text-6xl font-black bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent leading-none mb-2">
+          <div className="text-6xl font-black bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 bg-clip-text text-transparent leading-none mb-2">
             4.9
           </div>
           <div className="flex gap-1 justify-center mb-2">
@@ -62,8 +62,8 @@ function TestimonialsHeroVisual() {
               <span key={i} className="text-amber-400 text-xl">★</span>
             ))}
           </div>
-          <div className="text-slate-300 text-sm font-semibold">Overall Rating</div>
-          <div className="text-slate-500 text-xs mt-1">Across all platforms</div>
+          <div className="text-white/80 text-sm font-semibold">Overall Rating</div>
+          <div className="text-white/40 text-xs mt-1">Across all platforms</div>
         </div>
       </motion.div>
 
@@ -72,10 +72,10 @@ function TestimonialsHeroVisual() {
         <ReviewWidget score="4.9★" platform="Google" color="text-sky-400" delay={0.4} floatClass="animate-float-slow" />
       </div>
       <div className="absolute top-0 right-4 md:right-8">
-        <ReviewWidget score="4.8★" platform="Glassdoor" color="text-emerald-400" delay={0.5} floatClass="animate-float-delayed" />
+        <ReviewWidget score="4.8★" platform="Glassdoor" color="text-sky-400" delay={0.5} floatClass="animate-float-delayed" />
       </div>
       <div className="absolute bottom-0 left-8 md:left-16">
-        <ReviewWidget score="5.0★" platform="Clutch" color="text-violet-400" delay={0.55} floatClass="animate-float" />
+        <ReviewWidget score="5.0★" platform="Clutch" color="text-sky-400" delay={0.55} floatClass="animate-float" />
       </div>
       <div className="absolute bottom-0 right-8 md:right-16">
         <ReviewWidget score="4.9★" platform="Facebook" color="text-amber-400" delay={0.6} floatClass="animate-float-slow" />
@@ -111,11 +111,11 @@ export default function TestimonialsPage() {
                 </p>
                 <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
                   Real Results.{" "}
-                  <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 bg-clip-text text-transparent">
                     Real Clients.
                   </span>
                 </h1>
-                <p className="text-slate-400 text-lg max-w-xl leading-relaxed mb-10">
+                <p className="text-white/60 text-lg max-w-xl leading-relaxed mb-10">
                   Join 500+ businesses that have transformed their digital presence and achieved measurable growth with Nashville Digital Group.
                 </p>
               </BlurFade>
@@ -138,7 +138,7 @@ export default function TestimonialsPage() {
                         />
                         <span>{stat.suffix}</span>
                       </div>
-                      <div className="text-slate-500 text-xs mt-1">{stat.label}</div>
+                      <div className="text-white/40 text-xs mt-1">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -163,7 +163,7 @@ export default function TestimonialsPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
                 Voices of{" "}
-                <span className="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-sky-400 bg-clip-text text-transparent">
                   Our Clients
                 </span>
               </h2>
@@ -182,14 +182,14 @@ export default function TestimonialsPage() {
                       {t.metric}
                     </span>
                   )}
-                  <p className="text-slate-300 text-sm leading-relaxed flex-1 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+                  <p className="text-white/80 text-sm leading-relaxed flex-1 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-violet-400 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-sky-400 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
                       {t.name[0]}
                     </div>
                     <div>
                       <p className="text-white font-semibold text-sm">{t.name}</p>
-                      <p className="text-slate-500 text-xs">{t.role} at {t.company}</p>
+                      <p className="text-white/40 text-xs">{t.role} at {t.company}</p>
                     </div>
                   </div>
                 </div>
@@ -206,14 +206,14 @@ export default function TestimonialsPage() {
                       {t.metric}
                     </span>
                   )}
-                  <p className="text-slate-300 text-sm leading-relaxed flex-1 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+                  <p className="text-white/80 text-sm leading-relaxed flex-1 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-violet-400 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-sky-400 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
                       {t.name[0]}
                     </div>
                     <div>
                       <p className="text-white font-semibold text-sm">{t.name}</p>
-                      <p className="text-slate-500 text-xs">{t.role} at {t.company}</p>
+                      <p className="text-white/40 text-xs">{t.role} at {t.company}</p>
                     </div>
                   </div>
                 </div>
@@ -239,10 +239,10 @@ export default function TestimonialsPage() {
               ].map((stat) => (
                 <div key={stat.label} className="glass border border-white/6 rounded-2xl p-6 text-center hover:border-sky-500/20 transition-colors">
                   <div className="text-3xl mb-3">{stat.icon}</div>
-                  <p className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                  <p className="text-2xl font-bold bg-gradient-to-r from-sky-300 to-sky-500 bg-clip-text text-transparent">
                     {stat.value}
                   </p>
-                  <p className="text-slate-400 text-sm mt-1">{stat.label}</p>
+                  <p className="text-white/60 text-sm mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -251,7 +251,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-blue-700 to-violet-700">
+      <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
         <Meteors number={16} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.08)_0%,transparent_70%)]" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
