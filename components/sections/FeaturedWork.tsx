@@ -59,17 +59,19 @@ const projects = [
 ]
 
 // ─── Slide variants ───────────────────────────────────────────────────────────
+const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1]
+
 const slideVariants = {
   enter: (dir: number) => ({ x: dir > 0 ? 40 : -40, opacity: 0 }),
   center: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.55, ease: EASE },
   },
   exit: (dir: number) => ({
     x: dir > 0 ? -40 : 40,
     opacity: 0,
-    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.35, ease: EASE },
   }),
 }
 
