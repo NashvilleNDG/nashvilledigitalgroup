@@ -26,7 +26,7 @@ const projects = [
     result: { metric: "2.4×", label: "Revenue growth after 6-month campaign" },
     tags: ["Web Design", "Social Media", "Email"],
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=85&auto=format",
-    accent: "#f97316",
+    accent: "#38BDF8",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const projects = [
     result: { metric: "540+", label: "Vehicles sold through digital channels in Q1" },
     tags: ["Web Dev", "SEO", "Video Ads"],
     image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&q=85&auto=format",
-    accent: "#a78bfa",
+    accent: "#38BDF8",
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const projects = [
     result: { metric: "3×", label: "New client bookings month over month" },
     tags: ["Branding", "Web Design", "Paid Social"],
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=85&auto=format",
-    accent: "#f472b6",
+    accent: "#38BDF8",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const projects = [
     result: { metric: "4.9 ★", label: "Google rating across all 4 locations" },
     tags: ["Local SEO", "Web Design", "Reviews"],
     image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1400&q=85&auto=format",
-    accent: "#34d399",
+    accent: "#38BDF8",
   },
 ]
 
@@ -100,8 +100,7 @@ export function FeaturedWork() {
   return (
     <section className="relative bg-[#05080f] py-24 md:py-32 overflow-hidden">
       {/* Background glow orbs */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[160px] pointer-events-none opacity-20"
-           style={{ background: project.accent }} />
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[160px] pointer-events-none opacity-20 bg-sky-400" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-sky-600/15 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,10 +209,7 @@ export function FeaturedWork() {
               <div className="lg:col-span-3">
                 <div className="relative">
                   {/* Glow behind mockup */}
-                  <div
-                    className="absolute inset-0 rounded-2xl blur-2xl opacity-20 scale-95 translate-y-4 pointer-events-none"
-                    style={{ background: project.accent }}
-                  />
+                  <div className="absolute inset-0 rounded-2xl blur-2xl opacity-20 scale-95 translate-y-4 pointer-events-none bg-sky-400" />
 
                   {/* Browser frame */}
                   <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0d1117]">
