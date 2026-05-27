@@ -11,7 +11,7 @@ import { Icon } from "@/components/ui/icon";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "10 AI-powered digital marketing services including SEO, web development, AI chatbots, and more. Starting from $249/month.",
+    "10 AI-powered digital marketing services including SEO, web development, AI chatbots, and more. Get a free strategy consultation today.",
 };
 
 export default function ServicesPage() {
@@ -34,7 +34,7 @@ export default function ServicesPage() {
                 </span>
               </h1>
               <p className="text-white text-lg max-w-2xl mx-auto mb-10">
-                From intelligent automation to custom web development — comprehensive digital solutions starting from $249/month.
+                From intelligent automation to custom web development — comprehensive digital solutions tailored to your business.
               </p>
               <ShimmerLink href="/contact">
                 Get Free Consultation →
@@ -58,9 +58,6 @@ export default function ServicesPage() {
                   <div className="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors">
                     <Icon name={service.icon} className="w-6 h-6 text-sky-400" />
                   </div>
-                  <span className="inline-block bg-sky-500/10 text-sky-400 text-xs font-semibold px-3 py-1 rounded-full mb-3 border border-sky-500/15">
-                    {service.price}
-                  </span>
                   <h2 className="text-white text-xl font-bold mb-3">
                     {service.title}
                   </h2>

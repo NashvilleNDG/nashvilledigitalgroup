@@ -200,11 +200,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-16">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-white text-sm font-semibold uppercase tracking-widest mb-3">
                 What We Offer
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                Complete{" "}
+                <span className="text-sky-400">Complete</span>{" "}
                 <span className="text-sky-400">
                   Digital Solutions
                 </span>
@@ -228,8 +228,7 @@ export default function HomePage() {
                     <div className="w-12 h-12 bg-sky-500/12 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20">
                       <Icon name={service.icon} className="w-5 h-5 text-sky-400" />
                     </div>
-                    <h3 className="text-white font-semibold text-lg mb-1">{service.title}</h3>
-                    <p className="text-sky-400 text-sm font-medium mb-3">{service.price}</p>
+                    <h3 className="text-sky-400 font-semibold text-lg mb-1">{service.title}</h3>
                     <p className="text-white text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
                     <ul className="space-y-1.5">
                       {service.features.slice(0, 3).map((feature) => (

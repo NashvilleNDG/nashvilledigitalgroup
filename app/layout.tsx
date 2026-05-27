@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { CustomCursor } from "@/components/ui/custom-cursor";
+import { ScrollRevealInit } from "@/components/ui/scroll-reveal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,6 +70,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
         <CustomCursor />
+        <ScrollRevealInit />
         <SmoothScroll>
           <Navbar />
           <main className="flex-1">{children}</main>

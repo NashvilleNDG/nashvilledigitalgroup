@@ -28,7 +28,6 @@ export const stats = [
 export type Service = {
   id: string
   title: string
-  price: string
   description: string
   features: string[]
   icon: string
@@ -38,7 +37,7 @@ export const services: Service[] = [
   {
     id: "ai-marketing",
     title: "AI-Powered Marketing",
-    price: "Starting at $500/month",
+
     description:
       "Leverage artificial intelligence to optimize campaigns, predict customer behavior, and automate marketing processes.",
     features: [
@@ -53,7 +52,7 @@ export const services: Service[] = [
   {
     id: "digital-strategy",
     title: "Digital Marketing Strategy",
-    price: "Starting at $500/month",
+
     description:
       "Comprehensive digital marketing strategies tailored to your business goals and target audience.",
     features: [
@@ -68,7 +67,7 @@ export const services: Service[] = [
   {
     id: "web-development",
     title: "Web Development",
-    price: "Starting at $2,500",
+
     description:
       "Custom websites and applications built with cutting-edge technologies for optimal performance.",
     features: [
@@ -83,7 +82,7 @@ export const services: Service[] = [
   {
     id: "seo",
     title: "SEO & Search Marketing",
-    price: "Starting at $249/month",
+
     description:
       "Dominate search results with advanced SEO techniques and strategic paid advertising.",
     features: [
@@ -98,7 +97,7 @@ export const services: Service[] = [
   {
     id: "social-media",
     title: "Social Media Management",
-    price: "Starting at $299/month",
+
     description:
       "Engage your audience across all platforms with compelling content and community management.",
     features: [
@@ -113,7 +112,7 @@ export const services: Service[] = [
   {
     id: "ai-chatbots",
     title: "AI Chatbots & Automation",
-    price: "Starting at $500/month",
+
     description:
       "Intelligent conversational AI that handles inquiries, generates leads, and provides 24/7 support.",
     features: [
@@ -128,7 +127,7 @@ export const services: Service[] = [
   {
     id: "email-marketing",
     title: "Email Marketing",
-    price: "Starting at $300/month",
+
     description:
       "Strategic email campaigns that nurture leads, boost engagement, and drive conversions.",
     features: [
@@ -143,7 +142,7 @@ export const services: Service[] = [
   {
     id: "llm-optimization",
     title: "LLM Optimization",
-    price: "Starting at $400/month",
+
     description:
       "Optimize your content for Large Language Models to ensure discoverability in AI-powered searches.",
     features: [
@@ -158,7 +157,7 @@ export const services: Service[] = [
   {
     id: "reputation-management",
     title: "Reputation Management",
-    price: "Starting at $350/month",
+
     description:
       "Monitor, protect, and enhance your online reputation with proactive management strategies.",
     features: [
@@ -173,7 +172,7 @@ export const services: Service[] = [
   {
     id: "engineering-services",
     title: "Engineering Services",
-    price: "Custom Pricing",
+
     description:
       "Specialized solutions for architecture, engineering, and construction firms including 3D rendering and BIM integration.",
     features: [
