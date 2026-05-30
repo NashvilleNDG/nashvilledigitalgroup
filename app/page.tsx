@@ -404,9 +404,6 @@ export default function HomePage() {
       {/* ── Video Testimonials ── */}
       <VideoTestimonials />
 
-      {/* ── Tech Stack ── */}
-      <TechStack />
-
       {/* ── Featured Work ── */}
       <FeaturedWork />
 
