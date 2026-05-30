@@ -80,29 +80,25 @@ const badges = [
 
 export function TrustBadges() {
   return (
-    <div className="bg-white/4 backdrop-blur-sm border border-white/8 rounded-2xl px-6 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-0">
-        {badges.map((badge, index) => (
-          <React.Fragment key={badge.id}>
-            <div className="flex items-center gap-2.5 px-4 py-2">
-              <div className="flex-shrink-0">{badge.icon}</div>
-              <div className="flex flex-col">
-                <span className="text-white text-xs font-semibold leading-tight whitespace-nowrap">
-                  {badge.label}
-                </span>
-                {badge.sublabel && (
-                  <span className="text-white/50 text-[11px] leading-tight">
-                    {badge.sublabel}
-                  </span>
-                )}
-              </div>
-            </div>
-            {index < badges.length - 1 && (
-              <div className="hidden sm:block h-8 w-px bg-white/10 flex-shrink-0" aria-hidden="true" />
+    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+      {badges.map((badge) => (
+        <div
+          key={badge.id}
+          className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-5 py-3 shadow-sm hover:border-sky-300 hover:shadow-md transition-all"
+        >
+          <div className="flex-shrink-0">{badge.icon}</div>
+          <div className="flex flex-col">
+            <span className="text-slate-800 text-sm font-semibold leading-tight whitespace-nowrap">
+              {badge.label}
+            </span>
+            {badge.sublabel && (
+              <span className="text-slate-400 text-xs leading-tight">
+                {badge.sublabel}
+              </span>
             )}
-          </React.Fragment>
-        ))}
-      </div>
+          </div>
+        </div>
+      ))}
     </div>
   )
 }

@@ -120,12 +120,6 @@ export default function HomePage() {
             </BlurFade>
           </div>
         </div>
-        {/* Trust badges — partner & award verification strip */}
-        <BlurFade delay={0.9} inView>
-          <div className="mt-12 pt-10 border-t border-white/10">
-            <TrustBadges />
-          </div>
-        </BlurFade>
       </section>
 
       {/* ── Stats + Trusted By — combined social proof ── */}
@@ -404,6 +398,18 @@ export default function HomePage() {
               </Link>
             </div>
           </BlurFade>
+        </div>
+      </section>
+
+      {/* ── Awards & Partner Badges ── */}
+      <section className="bg-white border-b border-slate-100 py-14 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BlurFade delay={0.1} inView>
+            <p className="text-center text-slate-400 text-xs uppercase tracking-[0.2em] font-semibold mb-10">
+              Trusted Partnerships &amp; Industry Recognition
+            </p>
+          </BlurFade>
+          <TrustBadges />
         </div>
       </section>
 
