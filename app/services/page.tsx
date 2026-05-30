@@ -122,7 +122,7 @@ export default function ServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="bg-background pt-20 md:pt-28 pb-48 md:pb-56">
         <FAQSection
           items={serviceFAQs}
           title="Frequently Asked Questions"
