@@ -173,48 +173,6 @@ main > section:not(:first-child) {
   filter: drop-shadow(0 -14px 28px rgba(0, 0, 0, 0.55));
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   CUSTOM CURSOR  —  visual states only (position is RAF-driven in JS)
-   ───────────────────────────────────────────────────────────────────
-   Outer wrappers receive  .ndg-cursor--visible / .ndg-cursor--hovered
-   via classList. Child elements respond with pure CSS transitions —
-   zero JS re-renders, zero Framer Motion overhead on every frame.
-   ═══════════════════════════════════════════════════════════════════ */
-
-.ndg-cursor-arrow-inner {
-  opacity: 0;
-  scale: 1;
-  filter: drop-shadow(0 0 4px rgba(56,189,248,0.65))
-          drop-shadow(0 0 2px rgba(56,189,248,0.25));
-  transition:
-    opacity 0.12s ease,
-    scale   0.18s ease-out,
-    filter  0.25s ease;
-}
-.ndg-cursor--visible .ndg-cursor-arrow-inner { opacity: 1; }
-.ndg-cursor--hovered .ndg-cursor-arrow-inner {
-  scale: 0.88;
-  filter: drop-shadow(0 0 7px  rgba(56,189,248,0.92))
-          drop-shadow(0 0 14px rgba(56,189,248,0.40));
-}
-
-.ndg-cursor-dot-inner {
-  border-radius: 50%;
-  background:    #38BDF8;
-  opacity:       0;
-  scale:         1;
-  box-shadow:    0 0 6px 2px rgba(56,189,248,0.65);
-  transition:
-    opacity    0.12s ease,
-    scale      0.18s ease-out,
-    box-shadow 0.22s ease;
-}
-.ndg-cursor--visible .ndg-cursor-dot-inner { opacity: 1; }
-.ndg-cursor--hovered .ndg-cursor-dot-inner {
-  scale:      1.571;  /* 11px ÷ 7px */
-  box-shadow: 0 0 10px 3px rgba(56,189,248,0.92),
-              0 0 22px 5px rgba(56,189,248,0.28);
-}
 
 @layer utilities {
   .gradient-text {

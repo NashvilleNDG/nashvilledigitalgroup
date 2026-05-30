@@ -147,7 +147,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
+      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased" suppressHydrationWarning>
         {/*
           ── Google Analytics 4 ──────────────────────────────────────────────
           Replace GA_MEASUREMENT_ID with your GA4 Measurement ID (G-XXXXXXXXXX)
