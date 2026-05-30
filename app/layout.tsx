@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
-import { CustomCursor } from "@/components/ui/custom-cursor";
 import { ScrollRevealInit } from "@/components/ui/scroll-reveal";
 import { LiveChat } from "@/components/ui/live-chat";
 
@@ -181,7 +180,6 @@ export default function RootLayout({
           fbq('track','PageView');
         `}</Script>
 
-        <CustomCursor />
         <ScrollRevealInit />
         <LiveChat />
         <SmoothScroll>
