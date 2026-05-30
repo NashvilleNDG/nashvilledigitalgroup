@@ -7,6 +7,34 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import { ShimmerLink } from "@/components/magicui/shimmer-link";
 import { Meteors } from "@/components/magicui/meteors";
 import { Icon } from "@/components/ui/icon";
+import { FAQSection } from "@/components/ui/faq-section";
+
+const serviceFAQs = [
+  {
+    question: "How long does it take to see results from digital marketing?",
+    answer: "Most clients see measurable improvements within 30–60 days. Paid advertising (PPC/Social Ads) delivers results within the first week. SEO typically shows meaningful ranking improvements within 60–90 days. Overall business growth — more leads, more revenue — is typically evident within the first 90-day cycle."
+  },
+  {
+    question: "Do you work with businesses outside Nashville?",
+    answer: "Absolutely. While we're headquartered in Nashville and serve hundreds of Middle Tennessee businesses, we work with clients across the US. Digital services like SEO, PPC, social media, AI chatbots, and web development are 100% location-independent. We have active clients in over 20 states."
+  },
+  {
+    question: "What makes NDG different from other digital marketing agencies?",
+    answer: "Three things: (1) AI-first — we use artificial intelligence for campaign optimization, content, and reporting, not as a buzzword but as actual tooling that improves results. (2) Revenue focus — we report on leads and revenue attributed, not impressions and clicks. (3) No long-term lock-ins — we earn your business every month. Our 98% satisfaction rate and 500+ client portfolio speak for themselves."
+  },
+  {
+    question: "How much does digital marketing cost?",
+    answer: "Investment depends on the services and scale needed for your goals. Our Pricing Calculator at /tools/pricing-calculator gives you a real-time estimate based on your selections. As a general guide: individual services start around $500–800/month; comprehensive multi-channel programs run $2,000–8,000/month; web development and app projects are quoted per scope."
+  },
+  {
+    question: "Do I need to sign a long-term contract?",
+    answer: "No long-term contracts required. We operate on month-to-month agreements after an initial 90-day onboarding period (which gives campaigns enough runway to show results). Our 30-day money-back guarantee for the first month means there's zero risk in getting started."
+  },
+  {
+    question: "Can I use just one service, or do I need a full package?",
+    answer: "You can absolutely start with a single service — many clients begin with SEO or PPC and expand over time. That said, our most successful clients combine 3–4 complementary services (e.g., SEO + content + social + email) because digital channels reinforce each other. We'll recommend the right mix based on your goals and budget during your free strategy call."
+  },
+];
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -79,6 +107,16 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-background py-4">
+        <FAQSection
+          items={serviceFAQs}
+          title="Frequently Asked Questions"
+          subtitle="Everything you need to know about working with NDG"
+          dark
+        />
       </section>
 
       {/* CTA */}

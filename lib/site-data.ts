@@ -558,6 +558,7 @@ export const navLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Hospitality AI", href: "/hospitality" },
+  { label: "Resources", href: "/resources" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ]
@@ -567,15 +568,37 @@ export const footerServiceLinks = [
   { label: "AI Solutions", href: "/services#ai-marketing" },
   { label: "Web Development", href: "/services#web-development" },
   { label: "SEO & Search", href: "/services#seo" },
+  { label: "App Development", href: "/services/app-development" },
   { label: "Engineering Services", href: "/services#engineering-services" },
 ]
 
 export const footerCompanyLinks = [
   { label: "About Us", href: "/about" },
+  { label: "How We Work", href: "/how-we-work" },
+  { label: "Resources", href: "/resources" },
   { label: "Careers", href: "/careers" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
-  { label: "Sitemap", href: "/sitemap.xml" },
+]
+
+export const footerIndustryLinks = [
+  { label: "Healthcare", href: "/industries/healthcare" },
+  { label: "Restaurants & F&B", href: "/industries/restaurants" },
+  { label: "Real Estate", href: "/industries/real-estate" },
+  { label: "Law Firms", href: "/industries/law-firms" },
+  { label: "All Industries", href: "/industries" },
+]
+
+export const footerLocationLinks = [
+  { label: "Nashville, TN", href: "/locations/nashville" },
+  { label: "Brentwood, TN", href: "/locations/brentwood" },
+  { label: "Franklin, TN", href: "/locations/franklin" },
+  { label: "All Locations", href: "/locations" },
+]
+
+export const footerToolLinks = [
+  { label: "ROI Calculator", href: "/tools/roi-calculator" },
+  { label: "Pricing Calculator", href: "/tools/pricing-calculator" },
 ]
 
 export const whyChooseItems = [

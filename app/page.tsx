@@ -16,6 +16,9 @@ import { TextReveal } from "@/components/ui/text-reveal"
 import { Magnetic } from "@/components/ui/magnetic"
 import { FeaturedWork } from "@/components/sections/FeaturedWork"
 import { ProposalForm } from "@/components/sections/ProposalForm"
+import { TrustBadges } from "@/components/ui/trust-badges"
+import { VideoTestimonials } from "@/components/ui/video-testimonials"
+import { TechStack } from "@/components/ui/tech-stack"
 
 export const metadata: Metadata = {
   title: "Nashville Digital Group | AI-Powered Digital Marketing Agency",
@@ -117,11 +120,19 @@ export default function HomePage() {
             </BlurFade>
           </div>
         </div>
+        {/* Trust badges — partner & award verification strip */}
+        <BlurFade delay={0.9} inView>
+          <div className="mt-12 pt-10 border-t border-white/10">
+            <TrustBadges />
+          </div>
+        </BlurFade>
       </section>
 
-      {/* ── Stats Strip — White ── */}
-      <section className="bg-white border-y border-slate-100 py-14 overflow-hidden">
+      {/* ── Stats + Trusted By — combined social proof ── */}
+      <section className="bg-white border-y border-slate-100 py-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Stats row */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 divide-x divide-slate-100">
             {[
               { num: 500, suffix: "+", label: "Clients Served" },
@@ -152,44 +163,44 @@ export default function HomePage() {
               </BlurFade>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ── Trusted By — Light Gray ── */}
-      <section className="bg-slate-50 py-14 border-b border-slate-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <p className="text-center text-slate-400 text-xs uppercase tracking-[0.2em] font-semibold mb-8">
-              Trusted by Nashville&apos;s Leading Businesses
-            </p>
-          </BlurFade>
-          <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_12%,white_88%,transparent)]">
-            <Marquee className="[--duration:28s]" pauseOnHover>
-              {[
-                { name: "Big Pigs Wine & Spirits", icon: "🍷" },
-                { name: "Maharani Collections", icon: "👗" },
-                { name: "The Lounge at 2nd", icon: "🍸" },
-                { name: "Nashville Realty Group", icon: "🏠" },
-                { name: "Music City Motors", icon: "🚗" },
-                { name: "Brentwood Med Spa", icon: "💆" },
-                { name: "Tennessee Eats", icon: "🍔" },
-                { name: "Clearview Dental", icon: "🦷" },
-              ].map((client) => (
-                <div
-                  key={client.name}
-                  className="mx-4 flex items-center gap-2.5 shrink-0 bg-white border border-slate-200 rounded-xl px-5 py-3 shadow-sm hover:border-sky-300 hover:shadow-md transition-all"
-                >
-                  <span className="text-lg">{client.icon}</span>
-                  <span className="text-slate-600 text-sm font-medium whitespace-nowrap">{client.name}</span>
-                </div>
-              ))}
-            </Marquee>
+          {/* Divider */}
+          <div className="border-t border-slate-100 mt-10 pt-10">
+            {/* Trusted By marquee */}
+            <BlurFade delay={0.1} inView>
+              <p className="text-center text-slate-400 text-xs uppercase tracking-[0.2em] font-semibold mb-8">
+                Trusted by Nashville&apos;s Leading Businesses
+              </p>
+            </BlurFade>
+            <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_12%,white_88%,transparent)]">
+              <Marquee className="[--duration:28s]" pauseOnHover>
+                {[
+                  { name: "Big Pigs Wine & Spirits", icon: "🍷" },
+                  { name: "Maharani Collections", icon: "👗" },
+                  { name: "The Lounge at 2nd", icon: "🍸" },
+                  { name: "Nashville Realty Group", icon: "🏠" },
+                  { name: "Music City Motors", icon: "🚗" },
+                  { name: "Brentwood Med Spa", icon: "💆" },
+                  { name: "Tennessee Eats", icon: "🍔" },
+                  { name: "Clearview Dental", icon: "🦷" },
+                ].map((client) => (
+                  <div
+                    key={client.name}
+                    className="mx-4 flex items-center gap-2.5 shrink-0 bg-slate-50 border border-slate-200 rounded-xl px-5 py-3 shadow-sm hover:border-sky-300 hover:shadow-md transition-all"
+                  >
+                    <span className="text-lg">{client.icon}</span>
+                    <span className="text-slate-600 text-sm font-medium whitespace-nowrap">{client.name}</span>
+                  </div>
+                ))}
+              </Marquee>
+            </div>
+            <BlurFade delay={0.3} inView>
+              <p className="text-center text-slate-400 text-xs mt-8">
+                + 490 more businesses growing with NDG
+              </p>
+            </BlurFade>
           </div>
-          <BlurFade delay={0.3} inView>
-            <p className="text-center text-slate-400 text-xs mt-8">
-              + 490 more businesses growing with NDG
-            </p>
-          </BlurFade>
+
         </div>
       </section>
 
@@ -395,6 +406,12 @@ export default function HomePage() {
           </BlurFade>
         </div>
       </section>
+
+      {/* ── Video Testimonials ── */}
+      <VideoTestimonials />
+
+      {/* ── Tech Stack ── */}
+      <TechStack />
 
       {/* ── Featured Work ── */}
       <FeaturedWork />
