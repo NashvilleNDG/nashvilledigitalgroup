@@ -16,15 +16,15 @@ type FormData = {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-// ── Shared input / label styles — matches ProposalForm ──────────────────────
+// ── Shared input / label styles — light card (white background) ─────────────
 const inputClass =
-  "w-full bg-white/8 border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] placeholder:text-white focus:outline-none focus:border-sky-400 focus:bg-white/12 transition-all duration-200";
+  "w-full bg-white border border-slate-300 rounded-xl px-4 py-3.5 text-slate-900 font-medium text-[15px] placeholder:text-slate-400 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all duration-200";
 
 const selectClass =
-  "w-full bg-[#0d1520] border border-white/20 rounded-xl px-4 py-3.5 text-white font-medium text-[15px] focus:outline-none focus:border-sky-400 transition-all duration-200 appearance-none cursor-pointer";
+  "w-full bg-white border border-slate-300 rounded-xl px-4 py-3.5 text-slate-900 font-medium text-[15px] focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all duration-200 appearance-none cursor-pointer";
 
 const labelClass =
-  "block text-[11px] font-bold text-white uppercase tracking-[0.18em] mb-2";
+  "block text-[11px] font-bold text-slate-500 uppercase tracking-[0.18em] mb-2";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -56,13 +56,13 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center justify-center gap-5 py-20 px-8
-                      rounded-2xl border border-sky-400/25 bg-black/40 backdrop-blur-xl text-center">
-        <div className="w-16 h-16 rounded-full bg-sky-400/15 border border-sky-400/40
+                      rounded-2xl border border-sky-200 bg-sky-50 text-center">
+        <div className="w-16 h-16 rounded-full bg-sky-100 border border-sky-200
                         flex items-center justify-center">
-          <CheckCircle size={32} className="text-sky-400" />
+          <CheckCircle size={32} className="text-sky-600" />
         </div>
-        <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
-        <p className="text-white text-sm max-w-xs">
+        <h3 className="text-2xl font-bold text-slate-900">Message Sent!</h3>
+        <p className="text-slate-600 text-sm max-w-xs">
           We&apos;ll be in touch within 1 business day. Our team is standing by
           to help grow your business.
         </p>
@@ -178,7 +178,7 @@ export default function ContactForm() {
           </select>
           {/* Custom dropdown arrow */}
           <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
@@ -205,7 +205,7 @@ export default function ContactForm() {
             <option value="$25,000+/month">$25,000+ / month</option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
-            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
@@ -231,7 +231,7 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="text-red-400 text-sm">
+        <p className="text-red-500 text-sm">
           Something went wrong. Please try again or email us directly.
         </p>
       )}
@@ -263,7 +263,7 @@ export default function ContactForm() {
         )}
       </button>
 
-      <p className="text-center text-[11px] text-white">
+      <p className="text-center text-[11px] text-slate-400">
         No spam. We respond within 1 business day.
       </p>
     </form>
