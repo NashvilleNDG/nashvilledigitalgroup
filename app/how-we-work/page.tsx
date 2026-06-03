@@ -291,7 +291,7 @@ export default function HowWeWorkPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 What to Expect{" "}
-                <span className="text-sky-400">and When</span>
+                <span className="text-sky-600">and When</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Real milestones at real intervals — not vague promises.

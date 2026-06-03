@@ -158,7 +158,7 @@ export default function LocationsPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Our Core{" "}
-                <span className="text-sky-400">Service Areas</span>
+                <span className="text-sky-600">Service Areas</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Deep local expertise and proven results in Middle Tennessee&apos;s most important business markets.
@@ -260,7 +260,7 @@ export default function LocationsPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 More Middle Tennessee{" "}
-                <span className="text-sky-400">Communities</span>
+                <span className="text-sky-600">Communities</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Beyond our primary markets, we serve businesses across the broader Middle Tennessee region — each with

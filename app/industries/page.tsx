@@ -121,7 +121,7 @@ export default function IndustriesPage() {
               <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Our Verticals</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 Deep Expertise in{" "}
-                <span className="text-sky-400">Four Key Industries</span>
+                <span className="text-sky-600">Four Key Industries</span>
               </h2>
               <p className="text-slate-600 text-base max-w-xl mx-auto mt-4">
                 Click any industry below to see specific pain points, solutions, and real client results.

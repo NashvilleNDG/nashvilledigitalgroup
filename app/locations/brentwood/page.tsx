@@ -214,7 +214,7 @@ export default function BrentwoodPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Marketing as Premium as{" "}
-                <span className="text-sky-400">Your Business</span>
+                <span className="text-sky-600">Your Business</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 When your clients expect the best, your agency should too. We bring the same standard of excellence to
@@ -288,7 +288,7 @@ export default function BrentwoodPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Brentwood Clients,{" "}
-                <span className="text-sky-400">Measurable Outcomes</span>
+                <span className="text-sky-600">Measurable Outcomes</span>
               </h2>
             </div>
           </BlurFade>

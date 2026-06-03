@@ -78,22 +78,22 @@ const growthOpportunity = [
   {
     icon: "trending-up",
     title: "New Residents Are Searching Right Now",
-    body: "Every week, hundreds of families relocate to Franklin with zero pre-established brand loyalties. They&apos;re searching Google for everything — dentists, restaurants, contractors, accountants. Businesses with strong local SEO capture these new customers before competitors even know they exist.",
+    body: "Every week, hundreds of families relocate to Franklin with zero pre-established brand loyalties. They're searching Google for everything — dentists, restaurants, contractors, accountants. Businesses with strong local SEO capture these new customers before competitors even know they exist.",
   },
   {
     icon: "map-pin",
-    title: "Williamson County&apos;s Economic Strength",
+    title: "Williamson County's Economic Strength",
     body: "With a median household income near $96,000, Franklin consumers have high purchasing power. The ROI on digital marketing is measurably stronger here than in many other Middle Tennessee markets because the average transaction value is higher across nearly every category.",
   },
   {
     icon: "zap",
     title: "Less Saturated Than Nashville Proper",
-    body: "Franklin&apos;s digital marketing landscape is less competitive than Nashville&apos;s core market — costs per click are lower, local rankings are more achievable, and first-mover advantage is still available in many niches. Businesses that invest now will be much harder to displace in two years.",
+    body: "Franklin's digital marketing landscape is less competitive than Nashville's core market — costs per click are lower, local rankings are more achievable, and first-mover advantage is still available in many niches. Businesses that invest now will be much harder to displace in two years.",
   },
   {
     icon: "users",
     title: "Community-First Marketing Works Here",
-    body: "Franklin has a strong sense of local identity — residents genuinely want to support local businesses. Content that references Franklin&apos;s history, community events, and local landmarks resonates in a way that generic marketing never will. We build campaigns rooted in Franklin&apos;s authentic character.",
+    body: "Franklin has a strong sense of local identity — residents genuinely want to support local businesses. Content that references Franklin's history, community events, and local landmarks resonates in a way that generic marketing never will. We build campaigns rooted in Franklin's authentic character.",
   },
 ]
 
@@ -143,7 +143,7 @@ export default function FranklinPage() {
                 Franklin, TN — Williamson County
               </span>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight leading-tight">
-                Digital Marketing for Franklin, TN&apos;s{" "}
+                Digital Marketing for Franklin, TN's{" "}
                 <span className="text-sky-400">Fastest-Growing Businesses</span>
               </h1>
               <p className="text-white text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -177,7 +177,7 @@ export default function FranklinPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Franklin Is{" "}
-                <span className="text-sky-400">Growing Fast</span>
+                <span className="text-sky-600">Growing Fast</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 The numbers tell the story. Franklin and Williamson County represent one of the most significant
@@ -190,12 +190,12 @@ export default function FranklinPage() {
             {growthStats.map((stat, i) => (
               <BlurFade key={stat.label} delay={0.15 + i * 0.08} inView>
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 text-center hover:border-sky-300 hover:shadow-md transition-colors">
-                  <div className="text-4xl font-black text-sky-400 tabular-nums mb-2">
+                  <div className="text-4xl font-black text-sky-600 tabular-nums mb-2">
                     <NumberTicker
                       value={stat.num}
                       delay={0.25 + i * 0.1}
                       decimalPlaces={0}
-                      className="text-sky-400"
+                      className="text-sky-600"
                     />
                     {stat.suffix}
                   </div>
@@ -231,7 +231,7 @@ export default function FranklinPage() {
                 Industries We Serve
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Built for Franklin&apos;s{" "}
+                Built for Franklin's{" "}
                 <span className="text-sky-400">Growing Economy</span>
               </h2>
             </div>
@@ -271,10 +271,10 @@ export default function FranklinPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 How NDG Helps Franklin{" "}
-                <span className="text-sky-400">Businesses Win</span>
+                <span className="text-sky-600">Businesses Win</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
-                A strategic playbook built around Franklin&apos;s unique market dynamics — not a Nashville strategy
+                A strategic playbook built around Franklin's unique market dynamics — not a Nashville strategy
                 with a city name swapped in.
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function FranklinPage() {
               {
                 step: "01",
                 title: "Capture New Resident Traffic",
-                body: "We build content and optimize your Google Business Profile to capture the steady stream of new Franklin and Williamson County residents who are actively searching for everything from pediatricians to pizza. These high-intent searchers have no existing brand preferences — they&apos;re yours to win.",
+                body: "We build content and optimize your Google Business Profile to capture the steady stream of new Franklin and Williamson County residents who are actively searching for everything from pediatricians to pizza. These high-intent searchers have no existing brand preferences — they're yours to win.",
               },
               {
                 step: "02",
@@ -295,12 +295,12 @@ export default function FranklinPage() {
               {
                 step: "03",
                 title: "Build Community Authority",
-                body: "Franklin has a strong local identity and residents genuinely support local businesses. We help you become embedded in that community through local PR, content that references Franklin&apos;s history and character, and social strategies that build genuine community connections.",
+                body: "Franklin has a strong local identity and residents genuinely support local businesses. We help you become embedded in that community through local PR, content that references Franklin's history and character, and social strategies that build genuine community connections.",
               },
               {
                 step: "04",
                 title: "Scale With Your Growth",
-                body: "As Franklin grows, your marketing strategy should evolve with it. We build scalable systems — not one-time campaigns — that compound over time. The businesses that invest in digital presence now will have structural advantages as Franklin&apos;s market matures.",
+                body: "As Franklin grows, your marketing strategy should evolve with it. We build scalable systems — not one-time campaigns — that compound over time. The businesses that invest in digital presence now will have structural advantages as Franklin's market matures.",
               },
             ].map((item, i) => (
               <BlurFade key={item.step} delay={0.15 + i * 0.08} inView>
@@ -360,8 +360,8 @@ export default function FranklinPage() {
               Franklin Is Growing. Is Your Marketing Keeping Up?
             </h2>
             <p className="text-white text-lg max-w-2xl mx-auto mb-10">
-              The businesses that capture Franklin&apos;s new residents and growing customer base today will be the
-              dominant brands in five years. Let&apos;s build that position together.
+              The businesses that capture Franklin's new residents and growing customer base today will be the
+              dominant brands in five years. Let's build that position together.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <ShimmerLink

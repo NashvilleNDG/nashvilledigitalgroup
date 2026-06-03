@@ -131,7 +131,7 @@ export default function HealthcarePage() {
               <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Sound Familiar?</p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 The Challenges Holding Your Practice{" "}
-                <span className="text-sky-400">Back</span>
+                <span className="text-sky-600">Back</span>
               </h2>
             </div>
           </BlurFade>
@@ -249,7 +249,7 @@ export default function HealthcarePage() {
               <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Proven Results</p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Numbers That Matter to{" "}
-                <span className="text-sky-400">Your Practice</span>
+                <span className="text-sky-600">Your Practice</span>
               </h2>
             </div>
           </BlurFade>
@@ -276,7 +276,7 @@ export default function HealthcarePage() {
             ].map((kpi, index) => (
               <BlurFade key={kpi.label} delay={0.1 + index * 0.1} inView>
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 text-center hover:border-sky-300 hover:shadow-md transition-colors">
-                  <p className="text-5xl font-black text-sky-400 mb-2">
+                  <p className="text-5xl font-black text-sky-600 mb-2">
                     <NumberTicker value={kpi.value} />
                     {kpi.suffix}
                   </p>

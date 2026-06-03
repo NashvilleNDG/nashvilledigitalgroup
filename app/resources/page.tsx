@@ -150,7 +150,7 @@ export default function ResourcesPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Free Tools to{" "}
-                <span className="text-sky-400">Run the Numbers</span>
+                <span className="text-sky-600">Run the Numbers</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 No email required. Use these calculators to model your revenue potential before you
@@ -217,7 +217,7 @@ export default function ResourcesPage() {
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Real Businesses.{" "}
-                <span className="text-sky-400">Real Numbers.</span>
+                <span className="text-sky-600">Real Numbers.</span>
               </h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 These aren&apos;t projections or industry averages — these are results we produced

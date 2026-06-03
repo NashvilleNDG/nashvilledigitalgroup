@@ -128,7 +128,7 @@ export default function RestaurantsPage() {
               <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Sound Familiar?</p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Why Nashville Restaurants{" "}
-                <span className="text-sky-400">Struggle Online</span>
+                <span className="text-sky-600">Struggle Online</span>
               </h2>
             </div>
           </BlurFade>
@@ -246,7 +246,7 @@ export default function RestaurantsPage() {
               <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Client Results</p>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Real Nashville Restaurants.{" "}
-                <span className="text-sky-400">Real Numbers.</span>
+                <span className="text-sky-600">Real Numbers.</span>
               </h2>
             </div>
           </BlurFade>
@@ -276,7 +276,7 @@ export default function RestaurantsPage() {
             ].map((kpi, index) => (
               <BlurFade key={kpi.label} delay={0.1 + index * 0.1} inView>
                 <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 text-center hover:border-sky-300 hover:shadow-md transition-colors">
-                  <p className="text-5xl font-black text-sky-400 mb-1">
+                  <p className="text-5xl font-black text-sky-600 mb-1">
                     <NumberTicker value={kpi.value} />
                     {kpi.suffix}
                   </p>

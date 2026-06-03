@@ -233,7 +233,7 @@ export default function NashvillePage() {
                 </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                   Why Nashville Businesses{" "}
-                  <span className="text-sky-400">Choose NDG</span>
+                  <span className="text-sky-600">Choose NDG</span>
                 </h2>
                 <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                   We live here. We know which neighborhoods are trending, which industries are growing, and exactly how
@@ -349,7 +349,7 @@ export default function NashvillePage() {
                 </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                   Real Nashville Businesses.{" "}
-                  <span className="text-sky-400">Real Results.</span>
+                  <span className="text-sky-600">Real Results.</span>
                 </h2>
               </div>
             </BlurFade>
