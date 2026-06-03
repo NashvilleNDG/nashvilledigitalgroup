@@ -19,6 +19,15 @@ export default function AboutPage() {
     <main>
       {/* Page Hero */}
       <section className="bg-[#030812] py-24 md:py-32 relative overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/nashville-downtown.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#030812]/80" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030812] to-transparent" />
         <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-sky-600/18 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-1/4 right-[-5%] w-[400px] h-[400px] bg-violet-600/12 rounded-full blur-[100px] pointer-events-none" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

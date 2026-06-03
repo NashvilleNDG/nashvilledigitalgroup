@@ -155,6 +155,15 @@ export default function NashvillePage() {
       <main>
         {/* Hero */}
         <section className="bg-[#030812] py-24 md:py-32 relative overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/nashville-downtown.webp"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#030812]/80" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030812] to-transparent" />
           <div className="absolute top-1/4 left-[-10%] w-[600px] h-[600px] bg-sky-600/15 rounded-full blur-[130px] pointer-events-none" />
           <div className="absolute bottom-1/4 right-[-5%] w-[450px] h-[450px] bg-violet-600/10 rounded-full blur-[110px] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-sky-500/5 rounded-full blur-[80px] pointer-events-none" />

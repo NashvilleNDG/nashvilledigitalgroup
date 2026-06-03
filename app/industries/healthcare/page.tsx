@@ -65,6 +65,15 @@ export default function HealthcarePage() {
     <main>
       {/* Hero */}
       <section className="bg-[#030812] min-h-[80vh] flex items-center relative overflow-hidden py-24">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/nashville-downtown.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#030812]/80" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030812] to-transparent" />
         <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-sky-600/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-1/4 right-[-5%] w-[400px] h-[400px] bg-teal-600/12 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">

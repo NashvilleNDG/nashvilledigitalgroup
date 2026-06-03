@@ -97,6 +97,15 @@ export default function TestimonialsPage() {
     <main className="bg-background">
       {/* ── Hero ── */}
       <section className="relative min-h-[80vh] flex flex-col items-center justify-center py-24 md:py-32 overflow-hidden bg-[#030812]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/nashville-downtown.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#030812]/80" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030812] to-transparent" />
         <DotPattern className="absolute inset-0 opacity-25 [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black_40%,transparent_100%)]" />
         <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-sky-600/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-1/4 right-[-5%] w-[400px] h-[400px] bg-violet-600/12 rounded-full blur-[100px] pointer-events-none" />
