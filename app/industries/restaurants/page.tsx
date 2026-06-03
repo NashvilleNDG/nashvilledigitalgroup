@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Restaurant & Bar Digital Marketing Nashville | SEO, Ads & Social | NDG",
@@ -13,52 +14,33 @@ export const metadata: Metadata = {
     "Fill your restaurant every night with NDG's digital marketing for Nashville restaurants, bars, lounges & food businesses. +340% leads in 90 days for Big Pigs Wine & Spirits. Free strategy session.",
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do you help restaurants rank for 'restaurants near me' searches?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We optimize your Google Business Profile with accurate hours, photos, menus, and regular posts. We also build local citations across Yelp, TripAdvisor, and food directories, and create location-specific landing pages that target your neighborhood. Most restaurants see improved local pack rankings within 45–60 days.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you help us reduce no-shows and increase direct reservations?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We integrate direct booking widgets on your website and run targeted campaigns that drive reservations through your own system rather than third-party platforms that charge per-cover fees. We also set up automated SMS/email reminders to reduce no-shows.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you compete with Yelp and DoorDash for visibility?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We help you own your own brand search — so when someone Googles your restaurant by name, they land on your site first. We also run Google and Meta ads that drive orders and reservations directly to you, cutting out commission-heavy aggregators.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you manage social media for restaurants?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We create and manage content across Instagram, Facebook, and TikTok — including food photography direction, daily specials posts, event promotion, and influencer outreach for Nashville food bloggers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does restaurant digital marketing cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our restaurant marketing packages start at $900/month and scale with your advertising budget. We offer a free strategy session where we'll audit your current presence and recommend a plan based on your specific goals.",
-      },
-    },
-  ],
-}
+const restaurantFaqs = [
+  {
+    question: "How do you help restaurants rank for 'restaurants near me' searches?",
+    answer:
+      "We optimize your Google Business Profile with accurate hours, photos, menus, and regular posts. We also build local citations across Yelp, TripAdvisor, and food directories, and create location-specific landing pages that target your neighborhood. Most restaurants see improved local pack rankings within 45–60 days.",
+  },
+  {
+    question: "Can you help us reduce no-shows and increase direct reservations?",
+    answer:
+      "Yes. We integrate direct booking widgets on your website and run targeted campaigns that drive reservations through your own system rather than third-party platforms that charge per-cover fees. We also set up automated SMS/email reminders to reduce no-shows.",
+  },
+  {
+    question: "How do you compete with Yelp and DoorDash for visibility?",
+    answer:
+      "We help you own your own brand search — so when someone Googles your restaurant by name, they land on your site first. We also run Google and Meta ads that drive orders and reservations directly to you, cutting out commission-heavy aggregators.",
+  },
+  {
+    question: "Do you manage social media for restaurants?",
+    answer:
+      "Yes. We create and manage content across Instagram, Facebook, and TikTok — including food photography direction, daily specials posts, event promotion, and influencer outreach for Nashville food bloggers.",
+  },
+  {
+    question: "How much does restaurant digital marketing cost?",
+    answer:
+      "Our restaurant marketing packages start at $900/month and scale with your advertising budget. We offer a free strategy session where we'll audit your current presence and recommend a plan based on your specific goals.",
+  },
+]
 
 export default function RestaurantsPage() {
   return (
@@ -388,35 +370,11 @@ export default function RestaurantsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-section-alt py-24 md:py-32">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Frequently Asked Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Restaurant Marketing{" "}
-                <span className="text-sky-400">FAQs</span>
-              </h2>
-            </div>
-          </BlurFade>
-          <div className="space-y-4">
-            {faqSchema.mainEntity.map((faq, index) => (
-              <BlurFade key={faq.name} delay={0.1 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <h3 className="text-white font-semibold text-base mb-3">{faq.name}</h3>
-                  <p className="text-white text-sm leading-relaxed">{faq.acceptedAnswer.text}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      </section>
+      <FAQSection
+        items={restaurantFaqs}
+        title="Restaurant Marketing FAQs"
+        dark={true}
+      />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

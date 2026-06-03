@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Brentwood TN Digital Marketing Agency | Nashville Digital Group",
@@ -110,24 +111,24 @@ const caseStudies = [
 
 const faqs = [
   {
-    q: "Does digital marketing work differently in Brentwood compared to the broader Nashville market?",
-    a: "Yes — meaningfully so. Brentwood consumers are more research-intensive, have higher expectations for quality, and respond to authority signals differently. They're more likely to check credentials, read long-form content, and compare multiple providers before converting. Marketing that works well for high-volume Nashville businesses can actually backfire in Brentwood if it feels too promotional. We calibrate tone, content depth, and ad messaging specifically for premium markets.",
+    question: "Does digital marketing work differently in Brentwood compared to the broader Nashville market?",
+    answer: "Yes — meaningfully so. Brentwood consumers are more research-intensive, have higher expectations for quality, and respond to authority signals differently. They're more likely to check credentials, read long-form content, and compare multiple providers before converting. Marketing that works well for high-volume Nashville businesses can actually backfire in Brentwood if it feels too promotional. We calibrate tone, content depth, and ad messaging specifically for premium markets.",
   },
   {
-    q: "What services do Brentwood businesses invest in most?",
-    a: "For B2C businesses like med spas and restaurants, SEO and reputation management deliver the strongest ROI because Brentwood customers rely heavily on Google searches and reviews. Professional service firms tend to get more value from content marketing and LinkedIn strategy. For real estate and high-ticket services, PPC campaigns with strong landing pages are highly effective because the transaction value justifies the cost per click.",
+    question: "What services do Brentwood businesses invest in most?",
+    answer: "For B2C businesses like med spas and restaurants, SEO and reputation management deliver the strongest ROI because Brentwood customers rely heavily on Google searches and reviews. Professional service firms tend to get more value from content marketing and LinkedIn strategy. For real estate and high-ticket services, PPC campaigns with strong landing pages are highly effective because the transaction value justifies the cost per click.",
   },
   {
-    q: "How do you target Brentwood's affluent demographic specifically?",
-    a: "We layer household income targeting, zip code targeting (37027), and behavioral signals — luxury brand affinity, travel behavior, financial product research. On Google, we bid on terms that affluent Brentwood consumers actually use. We also optimize for the qualitative signals that matter to this audience: professional imagery, authoritative content, and seamless user experiences that communicate premium positioning.",
+    question: "How do you target Brentwood's affluent demographic specifically?",
+    answer: "We layer household income targeting, zip code targeting (37027), and behavioral signals — luxury brand affinity, travel behavior, financial product research. On Google, we bid on terms that affluent Brentwood consumers actually use. We also optimize for the qualitative signals that matter to this audience: professional imagery, authoritative content, and seamless user experiences that communicate premium positioning.",
   },
   {
-    q: "Can you help a Brentwood business that relies primarily on word-of-mouth referrals?",
-    a: "Absolutely — and this is one of the most common scenarios we encounter. Word-of-mouth is powerful, but it has a ceiling. Digital marketing extends your referral network exponentially: when someone is referred to you, the first thing they do is Google you. A strong digital presence validates the referral and increases the conversion rate. It also generates new leads during slow periods when referrals aren't coming in.",
+    question: "Can you help a Brentwood business that relies primarily on word-of-mouth referrals?",
+    answer: "Absolutely — and this is one of the most common scenarios we encounter. Word-of-mouth is powerful, but it has a ceiling. Digital marketing extends your referral network exponentially: when someone is referred to you, the first thing they do is Google you. A strong digital presence validates the referral and increases the conversion rate. It also generates new leads during slow periods when referrals aren't coming in.",
   },
   {
-    q: "What does a typical engagement look like for a Brentwood med spa?",
-    a: "We start with a comprehensive audit of your current digital footprint, competitive landscape, and patient acquisition funnel. Month one is typically technical SEO and website optimization, Google Business Profile enhancement, and baseline PPC setup. Months 2–3 we layer in content marketing and review generation. By month 4–6, most clients are seeing meaningful increases in consultation volume. We provide detailed monthly reporting with full transparency on spend and ROI.",
+    question: "What does a typical engagement look like for a Brentwood med spa?",
+    answer: "We start with a comprehensive audit of your current digital footprint, competitive landscape, and patient acquisition funnel. Month one is typically technical SEO and website optimization, Google Business Profile enhancement, and baseline PPC setup. Months 2–3 we layer in content marketing and review generation. By month 4–6, most clients are seeing meaningful increases in consultation volume. We provide detailed monthly reporting with full transparency on spend and ROI.",
   },
 ]
 
@@ -333,32 +334,7 @@ export default function BrentwoodPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Common Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Brentwood Marketing{" "}
-                <span className="text-sky-400">FAQ</span>
-              </h2>
-            </div>
-          </BlurFade>
-
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <BlurFade key={faq.q} delay={0.1 + i * 0.08} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <h3 className="text-white font-semibold text-lg mb-3">{faq.q}</h3>
-                  <p className="text-white text-sm leading-relaxed">{faq.a}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQSection items={faqs} title="Brentwood Marketing FAQ" dark={true} />
 
       {/* CTA */}
       <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Nashville Digital Marketing Agency | Nashville Digital Group",
@@ -124,24 +125,24 @@ const caseStudies = [
 
 const faqs = [
   {
-    q: "How long does it take to rank on Google for Nashville keywords?",
-    a: "For most Nashville businesses, you'll see meaningful ranking improvements within 3–4 months for mid-competition terms. Highly competitive terms like 'Nashville SEO agency' or 'Nashville personal injury lawyer' can take 6–12 months to crack the first page. We always prioritize quick wins first — neighborhood-specific and long-tail terms that drive real business while we build authority for bigger terms.",
+    question: "How long does it take to rank on Google for Nashville keywords?",
+    answer: "For most Nashville businesses, you'll see meaningful ranking improvements within 3–4 months for mid-competition terms. Highly competitive terms like 'Nashville SEO agency' or 'Nashville personal injury lawyer' can take 6–12 months to crack the first page. We always prioritize quick wins first — neighborhood-specific and long-tail terms that drive real business while we build authority for bigger terms.",
   },
   {
-    q: "Do Nashville-specific keywords perform better than generic ones?",
-    a: "Dramatically better. 'Hot chicken restaurant Nashville' converts at 3–5x the rate of just 'hot chicken restaurant' because the searcher has clear purchase intent in your market. We build content and technical SEO strategies around Nashville's specific neighborhoods, districts, and local vernacular — Lower Broadway, The Gulch, East Nashville, Green Hills — because that's how locals and tourists actually search.",
+    question: "Do Nashville-specific keywords perform better than generic ones?",
+    answer: "Dramatically better. 'Hot chicken restaurant Nashville' converts at 3–5x the rate of just 'hot chicken restaurant' because the searcher has clear purchase intent in your market. We build content and technical SEO strategies around Nashville's specific neighborhoods, districts, and local vernacular — Lower Broadway, The Gulch, East Nashville, Green Hills — because that's how locals and tourists actually search.",
   },
   {
-    q: "Is PPC worth it in Nashville's competitive market?",
-    a: "It depends on your category. Nashville PPC is highly competitive in tourism, real estate, and legal — CPCs can run $8–$40. But for the right business with good margins, it's extremely effective. We always run a profitability analysis before recommending PPC, and we combine it with conversion rate optimization on your landing pages so every click has the best possible chance of converting.",
+    question: "Is PPC worth it in Nashville's competitive market?",
+    answer: "It depends on your category. Nashville PPC is highly competitive in tourism, real estate, and legal — CPCs can run $8–$40. But for the right business with good margins, it's extremely effective. We always run a profitability analysis before recommending PPC, and we combine it with conversion rate optimization on your landing pages so every click has the best possible chance of converting.",
   },
   {
-    q: "How do you handle reputation management for Nashville hospitality businesses?",
-    a: "Nashville hospitality is review-driven — tourists make decisions based on TripAdvisor, Google, and Yelp. We deploy a proactive review generation system that catches satisfied customers at the right moment and makes it easy to leave a review. For negative reviews, we respond promptly with a resolution-focused approach that demonstrates to prospective customers how you treat concerns.",
+    question: "How do you handle reputation management for Nashville hospitality businesses?",
+    answer: "Nashville hospitality is review-driven — tourists make decisions based on TripAdvisor, Google, and Yelp. We deploy a proactive review generation system that catches satisfied customers at the right moment and makes it easy to leave a review. For negative reviews, we respond promptly with a resolution-focused approach that demonstrates to prospective customers how you treat concerns.",
   },
   {
-    q: "Can you help my Nashville business compete against national chains?",
-    a: "Yes — and local SEO is your biggest weapon. National chains have big budgets but they can't match your neighborhood relevance, authentic community connections, and the trust that comes with being Nashville-owned. We've helped dozens of locally owned Nashville businesses outrank national brands for their target keywords by leaning into local authority, community content, and hyper-specific geographic signals.",
+    question: "Can you help my Nashville business compete against national chains?",
+    answer: "Yes — and local SEO is your biggest weapon. National chains have big budgets but they can't match your neighborhood relevance, authentic community connections, and the trust that comes with being Nashville-owned. We've helped dozens of locally owned Nashville businesses outrank national brands for their target keywords by leaning into local authority, community content, and hyper-specific geographic signals.",
   },
 ]
 
@@ -392,32 +393,11 @@ export default function NashvillePage() {
         </section>
 
         {/* FAQ */}
-        <section className="bg-background py-20 md:py-28">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <BlurFade delay={0.1} inView>
-              <div className="text-center mb-14">
-                <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                  Common Questions
-                </p>
-                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                  Nashville SEO &amp;{" "}
-                  <span className="text-sky-400">Marketing FAQ</span>
-                </h2>
-              </div>
-            </BlurFade>
-
-            <div className="space-y-4">
-              {faqs.map((faq, i) => (
-                <BlurFade key={faq.q} delay={0.1 + i * 0.08} inView>
-                  <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                    <h3 className="text-white font-semibold text-lg mb-3">{faq.q}</h3>
-                    <p className="text-white text-sm leading-relaxed">{faq.a}</p>
-                  </div>
-                </BlurFade>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FAQSection
+          items={faqs}
+          title="Nashville SEO & Marketing FAQ"
+          dark={true}
+        />
 
         {/* CTA */}
         <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

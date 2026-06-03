@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Law Firm Digital Marketing Nashville | Legal SEO & PPC | NDG",
@@ -13,52 +14,33 @@ export const metadata: Metadata = {
     "Digital marketing for Nashville law firms and attorneys. Bar-compliant SEO, PPC, and AI intake chatbots that convert after-hours leads. Average 89% increase in consultation requests. Free strategy session.",
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is your legal marketing compliant with Tennessee Bar advertising rules?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We're familiar with Tennessee Supreme Court Rules on attorney advertising and build every campaign around those guidelines — including required disclaimers, prohibition on certain outcome claims, and rules around specialization language. We review all ad copy for compliance before it goes live.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you help law firms compete with large firms that have huge marketing budgets?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Small and mid-size firms can out-compete large firms by dominating long-tail, high-intent local searches that big firms ignore. We find the specific queries your ideal clients type in at 2am and make sure your firm appears first. Targeted beats broad every time in legal.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is an AI chatbot for law firms and is it compliant?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our AI intake chatbot handles initial contact — answering FAQs, collecting case details, and scheduling consultations — without providing legal advice. Every chatbot response is reviewed for compliance and includes appropriate disclaimers. It captures the leads who call at 2am when your intake staff isn't there.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does legal SEO take to show results?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Local SEO improvements (Google Maps rankings) typically show within 45–90 days. Organic website rankings for competitive terms like 'Nashville personal injury attorney' can take 4–8 months to reach page one. PPC campaigns drive consultation requests immediately while SEO builds.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you specialize in specific practice areas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We work with all practice areas but have deep experience in personal injury, family law, criminal defense, estate planning, and business law. Each practice area has specific search intent patterns, seasonal demand, and competitive dynamics we understand well.",
-      },
-    },
-  ],
-}
+const lawFirmFaqs = [
+  {
+    question: "Is your legal marketing compliant with Tennessee Bar advertising rules?",
+    answer:
+      "Yes. We're familiar with Tennessee Supreme Court Rules on attorney advertising and build every campaign around those guidelines — including required disclaimers, prohibition on certain outcome claims, and rules around specialization language. We review all ad copy for compliance before it goes live.",
+  },
+  {
+    question: "How do you help law firms compete with large firms that have huge marketing budgets?",
+    answer:
+      "Small and mid-size firms can out-compete large firms by dominating long-tail, high-intent local searches that big firms ignore. We find the specific queries your ideal clients type in at 2am and make sure your firm appears first. Targeted beats broad every time in legal.",
+  },
+  {
+    question: "What is an AI chatbot for law firms and is it compliant?",
+    answer:
+      "Our AI intake chatbot handles initial contact — answering FAQs, collecting case details, and scheduling consultations — without providing legal advice. Every chatbot response is reviewed for compliance and includes appropriate disclaimers. It captures the leads who call at 2am when your intake staff isn't there.",
+  },
+  {
+    question: "How long does legal SEO take to show results?",
+    answer:
+      "Local SEO improvements (Google Maps rankings) typically show within 45–90 days. Organic website rankings for competitive terms like 'Nashville personal injury attorney' can take 4–8 months to reach page one. PPC campaigns drive consultation requests immediately while SEO builds.",
+  },
+  {
+    question: "Do you specialize in specific practice areas?",
+    answer:
+      "We work with all practice areas but have deep experience in personal injury, family law, criminal defense, estate planning, and business law. Each practice area has specific search intent patterns, seasonal demand, and competitive dynamics we understand well.",
+  },
+]
 
 export default function LawFirmsPage() {
   return (
@@ -361,35 +343,11 @@ export default function LawFirmsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-section-alt py-24 md:py-32">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Frequently Asked Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Legal Marketing{" "}
-                <span className="text-sky-400">FAQs</span>
-              </h2>
-            </div>
-          </BlurFade>
-          <div className="space-y-4">
-            {faqSchema.mainEntity.map((faq, index) => (
-              <BlurFade key={faq.name} delay={0.1 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <h3 className="text-white font-semibold text-base mb-3">{faq.name}</h3>
-                  <p className="text-white text-sm leading-relaxed">{faq.acceptedAnswer.text}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      </section>
+      <FAQSection
+        items={lawFirmFaqs}
+        title="Legal Marketing FAQs"
+        dark={true}
+      />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

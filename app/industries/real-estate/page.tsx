@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Real Estate Digital Marketing Nashville | SEO for Agents & Brokerages | NDG",
@@ -13,52 +14,33 @@ export const metadata: Metadata = {
     "Digital marketing for Nashville real estate agents, brokerages, property managers & apartments. 312% increase in qualified leads for Nashville Realty Group. Free strategy session.",
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do you generate more qualified real estate leads?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We combine hyper-local SEO targeting specific Nashville neighborhoods with Google and Meta lead gen campaigns that use qualifying filters — price range, move timeline, pre-approval status — so you spend less time on leads that go nowhere.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you compete with Zillow and Realtor.com?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We build your own brand and website authority so buyers and sellers who already know you find you directly, and we create neighborhood-specific content that ranks for searches Zillow can't serve — things like 'best neighborhoods in Nashville for families' or 'Germantown condos for sale under $500k'.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you work with individual agents or only brokerages?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Both. We have packages designed for individual agents building their brand as well as brokerages looking to generate leads at scale and attract agent talent. Property managers and apartment communities are also a core specialty.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you help with property listing pages and virtual tour marketing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We build high-performance property listing pages with proper schema markup so listings appear in Google Property Search, and we create paid social campaigns that showcase virtual tours and drone footage to active buyers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does real estate digital marketing cost with NDG?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Individual agent packages start at $1,000/month. Brokerage and property management plans are custom-scoped based on your portfolio size and market. We offer a free strategy session to build a plan that fits your goals and budget.",
-      },
-    },
-  ],
-}
+const realEstateFaqs = [
+  {
+    question: "How do you generate more qualified real estate leads?",
+    answer:
+      "We combine hyper-local SEO targeting specific Nashville neighborhoods with Google and Meta lead gen campaigns that use qualifying filters — price range, move timeline, pre-approval status — so you spend less time on leads that go nowhere.",
+  },
+  {
+    question: "How do you compete with Zillow and Realtor.com?",
+    answer:
+      "We build your own brand and website authority so buyers and sellers who already know you find you directly, and we create neighborhood-specific content that ranks for searches Zillow can't serve — things like 'best neighborhoods in Nashville for families' or 'Germantown condos for sale under $500k'.",
+  },
+  {
+    question: "Do you work with individual agents or only brokerages?",
+    answer:
+      "Both. We have packages designed for individual agents building their brand as well as brokerages looking to generate leads at scale and attract agent talent. Property managers and apartment communities are also a core specialty.",
+  },
+  {
+    question: "Can you help with property listing pages and virtual tour marketing?",
+    answer:
+      "Yes. We build high-performance property listing pages with proper schema markup so listings appear in Google Property Search, and we create paid social campaigns that showcase virtual tours and drone footage to active buyers.",
+  },
+  {
+    question: "What does real estate digital marketing cost with NDG?",
+    answer:
+      "Individual agent packages start at $1,000/month. Brokerage and property management plans are custom-scoped based on your portfolio size and market. We offer a free strategy session to build a plan that fits your goals and budget.",
+  },
+]
 
 export default function RealEstatePage() {
   return (
@@ -365,35 +347,11 @@ export default function RealEstatePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-section-alt py-24 md:py-32">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Frequently Asked Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Real Estate Marketing{" "}
-                <span className="text-sky-400">FAQs</span>
-              </h2>
-            </div>
-          </BlurFade>
-          <div className="space-y-4">
-            {faqSchema.mainEntity.map((faq, index) => (
-              <BlurFade key={faq.name} delay={0.1 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <h3 className="text-white font-semibold text-base mb-3">{faq.name}</h3>
-                  <p className="text-white text-sm leading-relaxed">{faq.acceptedAnswer.text}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      </section>
+      <FAQSection
+        items={realEstateFaqs}
+        title="Real Estate Marketing FAQs"
+        dark={true}
+      />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

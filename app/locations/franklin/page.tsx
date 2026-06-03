@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Franklin TN Digital Marketing Agency | Nashville Digital Group",
@@ -99,24 +100,24 @@ const growthOpportunity = [
 
 const faqs = [
   {
-    q: "How competitive is the Franklin, TN digital marketing market compared to Nashville?",
-    a: "Franklin is notably less saturated digitally than Nashville proper, which makes it an excellent time to invest. For most categories — from healthcare to restaurants — first-page Google rankings are more achievable in Franklin than in Nashville, and cost-per-click on Google Ads is often 30–50% lower. Businesses that establish strong rankings now will have a significant head start as competition increases with the city's continued growth.",
+    question: "How competitive is the Franklin, TN digital marketing market compared to Nashville?",
+    answer: "Franklin is notably less saturated digitally than Nashville proper, which makes it an excellent time to invest. For most categories — from healthcare to restaurants — first-page Google rankings are more achievable in Franklin than in Nashville, and cost-per-click on Google Ads is often 30–50% lower. Businesses that establish strong rankings now will have a significant head start as competition increases with the city's continued growth.",
   },
   {
-    q: "Should I target 'Franklin TN' or 'Williamson County' or both?",
-    a: "Both, plus more granular neighborhood terms. We typically build a tiered keyword strategy: city-level terms ('Franklin TN dentist'), area terms ('Williamson County family law'), and neighborhood/landmark terms ('Cool Springs financial advisor', 'downtown Franklin boutique'). The right mix depends on your business type and where your customers actually live and search from.",
+    question: "Should I target 'Franklin TN' or 'Williamson County' or both?",
+    answer: "Both, plus more granular neighborhood terms. We typically build a tiered keyword strategy: city-level terms ('Franklin TN dentist'), area terms ('Williamson County family law'), and neighborhood/landmark terms ('Cool Springs financial advisor', 'downtown Franklin boutique'). The right mix depends on your business type and where your customers actually live and search from.",
   },
   {
-    q: "We're a new business in Franklin — is it too late to build a strong online presence?",
-    a: "Not at all — and given Franklin's growth trajectory, new businesses have a genuine opportunity to build authority before the market matures. We've helped several Franklin businesses go from zero web presence to first-page rankings within 4–6 months. The key is starting with a strong foundation: a well-optimized website, a verified Google Business Profile, and a content strategy that targets your specific Franklin audience.",
+    question: "We're a new business in Franklin — is it too late to build a strong online presence?",
+    answer: "Not at all — and given Franklin's growth trajectory, new businesses have a genuine opportunity to build authority before the market matures. We've helped several Franklin businesses go from zero web presence to first-page rankings within 4–6 months. The key is starting with a strong foundation: a well-optimized website, a verified Google Business Profile, and a content strategy that targets your specific Franklin audience.",
   },
   {
-    q: "Does The Factory at Franklin represent a digital marketing opportunity?",
-    a: "Yes, significantly. The Factory at Franklin is a destination that draws shoppers, diners, and event-goers from across the Nashville metro. Businesses in or near The Factory can benefit from content and local SEO that captures 'Factory at Franklin shopping' and related searches. We also help businesses leverage the Factory's foot traffic through social media strategies that convert in-person visitors into online followers and repeat customers.",
+    question: "Does The Factory at Franklin represent a digital marketing opportunity?",
+    answer: "Yes, significantly. The Factory at Franklin is a destination that draws shoppers, diners, and event-goers from across the Nashville metro. Businesses in or near The Factory can benefit from content and local SEO that captures 'Factory at Franklin shopping' and related searches. We also help businesses leverage the Factory's foot traffic through social media strategies that convert in-person visitors into online followers and repeat customers.",
   },
   {
-    q: "How do you approach marketing for Franklin businesses that also serve the broader Nashville metro?",
-    a: "We build a dual-market strategy. For your Franklin audience, we optimize for hyper-local Franklin and Williamson County terms. For broader Nashville metro reach, we layer in content and PPC that targets the full metro area while making clear you serve Franklin clients with premium service. This dual approach lets you capture local loyalty while competing for the larger Nashville market.",
+    question: "How do you approach marketing for Franklin businesses that also serve the broader Nashville metro?",
+    answer: "We build a dual-market strategy. For your Franklin audience, we optimize for hyper-local Franklin and Williamson County terms. For broader Nashville metro reach, we layer in content and PPC that targets the full metro area while making clear you serve Franklin clients with premium service. This dual approach lets you capture local loyalty while competing for the larger Nashville market.",
   },
 ]
 
@@ -320,32 +321,7 @@ export default function FranklinPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Common Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Franklin, TN Marketing{" "}
-                <span className="text-sky-400">FAQ</span>
-              </h2>
-            </div>
-          </BlurFade>
-
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <BlurFade key={faq.q} delay={0.1 + i * 0.08} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <h3 className="text-white font-semibold text-lg mb-3">{faq.q}</h3>
-                  <p className="text-white text-sm leading-relaxed">{faq.a}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQSection items={faqs} title="Franklin, TN Marketing FAQ" dark={true} />
 
       {/* CTA */}
       <section className="relative py-28 md:py-36 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

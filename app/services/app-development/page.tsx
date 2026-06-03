@@ -6,6 +6,7 @@ import { ShimmerLink } from "@/components/magicui/shimmer-link"
 import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Custom App Development | iOS, Android & Web Apps",
@@ -211,19 +212,6 @@ const faqs = [
       "You own 100% of the source code, intellectual property, and all work product we produce. Upon final payment, we transfer all code, assets, design files, and credentials to you. No licensing fees, no lock-in. We also provide complete documentation and a transition guide so your team — or any future agency — can continue development independently if you choose.",
   },
 ]
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-}
 
 export default function AppDevelopmentPage() {
   return (
@@ -557,40 +545,7 @@ export default function AppDevelopmentPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#030812] py-24 md:py-32">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Common Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Frequently Asked{" "}
-                <span className="text-sky-400">Questions</span>
-              </h2>
-            </div>
-          </BlurFade>
-          <div className="flex flex-col gap-4">
-            {faqs.map((faq, index) => (
-              <BlurFade key={faq.question} delay={0.1 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-semibold text-base leading-snug text-white flex-1">
-                      {faq.question}
-                    </h3>
-                    <span className="text-sky-400 text-xl font-light leading-none shrink-0">+</span>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">{faq.answer}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQSection items={faqs} title="Frequently Asked Questions" dark={true} />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

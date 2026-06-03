@@ -6,6 +6,7 @@ import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
 import { AnimatedSection } from "@/components/ui/animated-section"
 import { NumberTicker } from "@/components/magicui/number-ticker"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "Healthcare Digital Marketing Nashville | Medical Practice SEO & Ads | NDG",
@@ -13,52 +14,33 @@ export const metadata: Metadata = {
     "HIPAA-compliant digital marketing for medical practices, dental offices, med spas & clinics in Nashville. Average 127% increase in appointment bookings. Free strategy session.",
 }
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is your healthcare digital marketing HIPAA compliant?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Every campaign we run for healthcare providers follows HIPAA guidelines. We never use patient data in retargeting, sign BAAs where required, and ensure all landing pages and forms meet compliance standards.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long before we see more patient bookings?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most practices see measurable increases in appointment requests within 30–60 days of launching PPC and local SEO campaigns. Organic SEO results compound over 3–6 months.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you help manage our Google and Healthgrades reviews?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Our reputation management service monitors all major platforms — Google, Healthgrades, Zocdoc, Yelp — and automates review request workflows so satisfied patients leave feedback automatically.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you work with dental offices, med spas, and specialty clinics?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve a wide range of healthcare providers including general practitioners, dental offices, orthodontists, med spas, dermatology clinics, mental health practices, and more.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is your pricing for healthcare marketing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our healthcare marketing packages start at $1,200/month and are customized based on your services, market, and goals. We offer a free strategy session to scope out exactly what's needed.",
-      },
-    },
-  ],
-}
+const healthcareFaqs = [
+  {
+    question: "Is your healthcare digital marketing HIPAA compliant?",
+    answer:
+      "Yes. Every campaign we run for healthcare providers follows HIPAA guidelines. We never use patient data in retargeting, sign BAAs where required, and ensure all landing pages and forms meet compliance standards.",
+  },
+  {
+    question: "How long before we see more patient bookings?",
+    answer:
+      "Most practices see measurable increases in appointment requests within 30–60 days of launching PPC and local SEO campaigns. Organic SEO results compound over 3–6 months.",
+  },
+  {
+    question: "Can you help manage our Google and Healthgrades reviews?",
+    answer:
+      "Absolutely. Our reputation management service monitors all major platforms — Google, Healthgrades, Zocdoc, Yelp — and automates review request workflows so satisfied patients leave feedback automatically.",
+  },
+  {
+    question: "Do you work with dental offices, med spas, and specialty clinics?",
+    answer:
+      "Yes. We serve a wide range of healthcare providers including general practitioners, dental offices, orthodontists, med spas, dermatology clinics, mental health practices, and more.",
+  },
+  {
+    question: "What is your pricing for healthcare marketing?",
+    answer:
+      "Our healthcare marketing packages start at $1,200/month and are customized based on your services, market, and goals. We offer a free strategy session to scope out exactly what's needed.",
+  },
+]
 
 export default function HealthcarePage() {
   return (
@@ -364,35 +346,11 @@ export default function HealthcarePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-section-alt py-24 md:py-32">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Frequently Asked Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Healthcare Marketing{" "}
-                <span className="text-sky-400">FAQs</span>
-              </h2>
-            </div>
-          </BlurFade>
-          <div className="space-y-4">
-            {faqSchema.mainEntity.map((faq, index) => (
-              <BlurFade key={faq.name} delay={0.1 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
-                  <h3 className="text-white font-semibold text-base mb-3">{faq.name}</h3>
-                  <p className="text-white text-sm leading-relaxed">{faq.acceptedAnswer.text}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      </section>
+      <FAQSection
+        items={healthcareFaqs}
+        title="Healthcare Marketing FAQs"
+        dark={true}
+      />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">

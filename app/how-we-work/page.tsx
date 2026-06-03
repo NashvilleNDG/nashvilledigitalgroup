@@ -5,6 +5,7 @@ import { BlurFade } from "@/components/magicui/blur-fade"
 import { ShimmerLink } from "@/components/magicui/shimmer-link"
 import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
+import { FAQSection } from "@/components/ui/faq-section"
 
 export const metadata: Metadata = {
   title: "How We Work | The NDG Revenue-First Framework",
@@ -152,19 +153,6 @@ const faqs = [
       "We stand behind our work with a 30-day satisfaction guarantee. If you complete onboarding and are not satisfied with our work within the first 30 days, we will either work at no charge until you are, or issue a full refund. After Month 1, you can cancel at any time with 30 days notice — no penalties.",
   },
 ]
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-}
 
 export default function HowWeWorkPage() {
   return (
@@ -384,40 +372,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-slate-50 py-24 md:py-32">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
-                Common Questions
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
-                Frequently Asked{" "}
-                <span className="text-sky-600">Questions</span>
-              </h2>
-            </div>
-          </BlurFade>
-          <div className="flex flex-col gap-4">
-            {faqs.map((faq, index) => (
-              <BlurFade key={faq.question} delay={0.1 + index * 0.07} inView>
-                <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 hover:border-sky-300 hover:shadow-md transition-colors">
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-semibold text-base leading-snug text-slate-900 flex-1">
-                      {faq.question}
-                    </h3>
-                    <span className="text-sky-600 text-xl font-light leading-none shrink-0">+</span>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{faq.answer}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQSection items={faqs} title="Frequently Asked Questions" dark={false} />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
