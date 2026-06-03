@@ -28,12 +28,11 @@ export default function HospitalityPage() {
                 🏨 AI Solutions for Hospitality
               </span>
               <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
-                Boost Hotel Revenue
+                Boost Hotel Revenue With Generative AI
                 <br />
                 <span className="text-sky-400">
                   Up to 40%
-                </span>{" "}
-                With Generative AI
+                </span>
               </h1>
               <p className="text-white text-lg max-w-2xl mx-auto mb-10">
                 Revolutionize your hospitality business with AI-powered guest communication, dynamic pricing, and streamlined operations.

@@ -28,7 +28,8 @@ export default function AboutPage() {
                 About Us
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-                Nashville&apos;s AI-Powered{" "}
+                Nashville&apos;s AI-Powered
+                <br />
                 <span className="text-sky-400">
                   Marketing Leaders
                 </span>

@@ -110,7 +110,8 @@ export default function TestimonialsPage() {
                   Client Success Stories
                 </p>
                 <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-                  Real Results.{" "}
+                  Real Results.
+                  <br />
                   <span className="text-sky-400">
                     Real Clients.
                   </span>

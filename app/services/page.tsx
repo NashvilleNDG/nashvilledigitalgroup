@@ -68,7 +68,8 @@ export default function ServicesPage() {
                 Our Services
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-                AI-Powered Services for{" "}
+                AI-Powered Services for
+                <br />
                 <span className="text-sky-400">
                   Every Business Need
                 </span>

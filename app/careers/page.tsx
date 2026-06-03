@@ -27,7 +27,8 @@ export default function CareersPage() {
                 Join Our Team
               </p>
               <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-                Build the Future of{" "}
+                Build the Future of
+                <br />
                 <span className="text-sky-400">
                   Digital Marketing
                 </span>

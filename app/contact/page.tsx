@@ -24,7 +24,8 @@ export default function ContactPage() {
               Get In Touch
             </p>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-              Let&apos;s Grow Your Business{" "}
+              Let&apos;s Grow Your Business
+              <br />
               <span className="text-sky-400">
                 Together
               </span>
