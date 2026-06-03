@@ -21,7 +21,7 @@ export default function Navbar() {
           <img
             src="/ndg-logo.png"
             alt="Nashville Digital Group"
-            className="h-13 w-auto object-contain"
+            className="h-[3.9rem] w-auto object-contain"
           />
         </Link>
 
@@ -32,7 +32,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-sm font-bold transition-colors",
                 pathname === link.href
                   ? "text-sky-400"
                   : "text-white hover:text-sky-400"
