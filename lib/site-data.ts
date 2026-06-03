@@ -266,31 +266,31 @@ export const awards = [
 
 export const timeline = [
   {
-    year: "2020",
+    year: "2022",
     title: "Company Founded",
     description:
       "Established with a vision to democratize AI-powered marketing for businesses of all sizes.",
   },
   {
-    year: "2021",
+    year: "2023",
     title: "First AI Integration",
     description:
       "Successfully launched first AI-powered marketing automation platform, revolutionizing how we serve clients.",
   },
   {
-    year: "2022",
+    year: "2024",
     title: "Industry Recognition",
     description:
       "Recognized as 'Best Digital Marketing Agency' by Nashville Business Journal. Achieved 100+ satisfied clients.",
   },
   {
-    year: "2023",
+    year: "2025",
     title: "Team Expansion",
     description:
       "Grew team to 25+ specialists. Expanded services to include advanced AI solutions for the hospitality industry.",
   },
   {
-    year: "2024",
+    year: "2026",
     title: "AI Innovation Leader",
     description:
       "Launched comprehensive AI chatbot solutions. Became a recognized leader in AI-powered digital marketing.",
