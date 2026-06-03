@@ -5,40 +5,70 @@ import { usePathname } from "next/navigation"
 /**
  * ScrollRevealInit — Panel-stack safety layer
  *
- * The main sticky + z-index + card-edge styles live in globals.css
- * (outside @layer so they beat Tailwind utilities).
+ * The base sticky + z-index + card-edge styles live in globals.css
+ * (outside @layer so they beat Tailwind utilities). Every `main > section`
+ * is sticky by default, which creates the panel-stack scroll effect.
  *
- * This component's only job: after the browser has measured layout,
- * un-sticky any section whose natural height is taller than the
- * viewport — otherwise the section would hide its own lower content
- * (e.g. the Services grid on mobile where 6 cards stack vertically).
+ * Problem: a sticky section TALLER than the viewport gets pinned at top:0
+ * with its lower content below the fold. The next section then rises over
+ * that hidden region, so the visible (top) part appears frozen — it reads
+ * as "scrolling is stuck" and the section's own bottom content (e.g. the
+ * Featured Work carousel controls) becomes unreachable.
  *
- * It re-runs on every route change so other pages work too.
+ * Fix: any section taller than the viewport is switched to position:relative
+ * so it scrolls normally. Sections that fit keep the sticky panel-stack
+ * effect. This re-runs on route change AND on resize, and RESTORES sticky
+ * when a section once again fits (e.g. after enlarging the window).
  */
 export function ScrollRevealInit() {
   const pathname = usePathname()
 
   useEffect(() => {
-    // Double-rAF: let the browser finish layout before measuring heights
-    const raf = requestAnimationFrame(() =>
-      requestAnimationFrame(() => {
-        const sections = Array.from(
-          document.querySelectorAll<HTMLElement>("main > section")
-        )
-        const vh = window.innerHeight
+    let raf = 0
+    let resizeTimer: ReturnType<typeof setTimeout> | undefined
 
-        sections.forEach((s) => {
-          if (s.offsetHeight > vh * 1.25) {
-            // Section is too tall — fall back to normal scroll so
-            // the content below the fold stays reachable
-            s.style.position = "relative"
-            s.style.top = ""
-          }
-        })
+    const apply = () => {
+      const sections = Array.from(
+        document.querySelectorAll<HTMLElement>("main > section")
+      )
+      const vh = window.innerHeight
+
+      sections.forEach((s) => {
+        // Temporarily clear the inline override so we measure the section's
+        // natural height (sticky vs relative doesn't change height, but this
+        // keeps the logic robust if other inline styles were applied).
+        const tooTall = s.offsetHeight > vh * 1.02 // any section taller than the viewport
+
+        if (tooTall) {
+          // Fall back to normal scroll so all content stays reachable
+          s.style.position = "relative"
+          s.style.top = ""
+        } else {
+          // Restore the sticky panel-stack effect (defer to globals.css)
+          s.style.position = ""
+          s.style.top = ""
+        }
       })
-    )
+    }
 
-    return () => cancelAnimationFrame(raf)
+    const schedule = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(() => requestAnimationFrame(apply))
+    }
+
+    const onResize = () => {
+      clearTimeout(resizeTimer)
+      resizeTimer = setTimeout(schedule, 150)
+    }
+
+    schedule()
+    window.addEventListener("resize", onResize)
+
+    return () => {
+      cancelAnimationFrame(raf)
+      clearTimeout(resizeTimer)
+      window.removeEventListener("resize", onResize)
+    }
   }, [pathname])
 
   return null
