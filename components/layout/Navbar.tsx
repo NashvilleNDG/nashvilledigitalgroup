@@ -13,7 +13,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 h-16 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+    <header className="fixed top-0 inset-x-0 z-50 h-16 border-b border-white/8 bg-[#080808]/95 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
         {/* Left: logo */}
         <Link href="/" className="flex items-center shrink-0">
@@ -34,8 +34,8 @@ export default function Navbar() {
               className={cn(
                 "text-sm font-medium transition-colors",
                 pathname === link.href
-                  ? "text-sky-500"
-                  : "text-sky-700 hover:text-sky-500"
+                  ? "text-sky-400"
+                  : "text-white hover:text-sky-400"
               )}
             >
               {link.label}
@@ -56,7 +56,7 @@ export default function Navbar() {
             type="button"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-sky-700 hover:text-sky-500 transition-colors"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:text-sky-400 transition-colors"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -65,7 +65,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-b border-slate-200 bg-white">
+        <div className="md:hidden border-b border-white/8 bg-[#080808]">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -75,14 +75,14 @@ export default function Navbar() {
                 className={cn(
                   "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   pathname === link.href
-                    ? "text-sky-500 bg-sky-50"
-                    : "text-sky-700 hover:text-sky-500 hover:bg-sky-50"
+                    ? "text-sky-400 bg-white/5"
+                    : "text-white hover:text-sky-400 hover:bg-white/5"
                 )}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="pt-3 border-t border-slate-200 mt-2">
+            <div className="pt-3 border-t border-white/8 mt-2">
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
