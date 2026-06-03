@@ -172,13 +172,21 @@ export function FeaturedWork() {
                   </span>
                 </div>
 
-                {/* Buttons */}
+                {/* Buttons — suppressHydrationWarning guards against browser
+                    extensions (form-fillers/password managers) that inject
+                    fdprocessedid attributes into buttons before hydration */}
                 <div className="flex flex-wrap gap-3 pt-1">
-                  <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-sky-500 hover:bg-sky-400 transition-all duration-200 hover:scale-[1.02]">
+                  <button
+                    suppressHydrationWarning
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-sky-500 hover:bg-sky-400 transition-all duration-200 hover:scale-[1.02]"
+                  >
                     <ExternalLink size={15} />
                     View Website
                   </button>
-                  <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white border border-white/20 hover:border-white/40 transition-all duration-200">
+                  <button
+                    suppressHydrationWarning
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white border border-white/20 hover:border-white/40 transition-all duration-200"
+                  >
                     <ArrowRight size={15} />
                     Case Study
                   </button>
@@ -230,6 +238,7 @@ export function FeaturedWork() {
               {projects.map((p, i) => (
                 <button
                   key={p.id}
+                  suppressHydrationWarning
                   onClick={() => go(i)}
                   aria-label={`Go to project ${i + 1}`}
                   className={`relative h-2 rounded-full transition-all duration-300 ${
@@ -247,6 +256,7 @@ export function FeaturedWork() {
               </span>
               <div className="flex gap-2">
                 <button
+                  suppressHydrationWarning
                   onClick={prev}
                   aria-label="Previous project"
                   className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-sky-400 hover:text-sky-400 transition-all duration-200"
@@ -254,6 +264,7 @@ export function FeaturedWork() {
                   <ChevronLeft size={20} />
                 </button>
                 <button
+                  suppressHydrationWarning
                   onClick={next}
                   aria-label="Next project"
                   className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-sky-400 hover:text-sky-400 transition-all duration-200"
