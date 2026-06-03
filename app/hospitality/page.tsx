@@ -76,16 +76,16 @@ export default function HospitalityPage() {
       </section>
 
       {/* 6 AI Features */}
-      <section className="bg-section-blue py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 What We Offer
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Six Ways AI Transforms Your{" "}
-                <span className="text-sky-400">
+                <span className="text-sky-600">
                   Hotel
                 </span>
               </h2>
@@ -95,23 +95,23 @@ export default function HospitalityPage() {
             {hospitalityFeatures.map((feature, index) => (
               <BlurFade key={feature.title} delay={0.15 + index * 0.07} inView>
                 <SpotlightCard
-                  className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors"
-                  spotlightColor="rgba(56, 189, 248, 0.1)"
+                  className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors"
+                  spotlightColor="rgba(56, 189, 248, 0.06)"
                 >
-                  <div className="w-12 h-12 bg-sky-500/12 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20">
-                    <Icon name={feature.icon} className="w-5 h-5 text-sky-400" />
+                  <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200">
+                    <Icon name={feature.icon} className="w-5 h-5 text-sky-600" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-3">
+                  <h3 className="text-slate-900 font-semibold text-lg mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-white text-sm leading-relaxed mb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     {feature.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {feature.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs bg-sky-500/8 text-sky-400 border border-sky-500/15 px-2.5 py-1 rounded-full"
+                        className="text-xs bg-sky-50 text-sky-600 border border-sky-100 px-2.5 py-1 rounded-full"
                       >
                         {tag}
                       </span>

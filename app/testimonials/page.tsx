@@ -234,10 +234,10 @@ export default function TestimonialsPage() {
       </section>
 
       {/* ── Trust Proof Strip ── */}
-      <section className="bg-section-alt border-y border-white/5 py-20">
+      <section className="bg-white border-y border-slate-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
-            <h2 className="text-center text-2xl md:text-3xl font-bold text-white mb-10">
+            <h2 className="text-center text-2xl md:text-3xl font-bold text-slate-900 mb-10">
               Why Clients Choose NDG
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -247,12 +247,12 @@ export default function TestimonialsPage() {
                 { value: "24/7", label: "AI-Powered Support", icon: "🤖" },
                 { value: "98%", label: "Client Retention Rate", icon: "🔒" },
               ].map((stat) => (
-                <div key={stat.label} className="glass border border-white/6 rounded-2xl p-6 text-center hover:border-sky-500/20 transition-colors">
+                <div key={stat.label} className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 text-center hover:border-sky-300 hover:shadow-md transition-colors">
                   <div className="text-3xl mb-3">{stat.icon}</div>
-                  <p className="text-2xl font-bold text-sky-400">
+                  <p className="text-2xl font-bold text-sky-600">
                     {stat.value}
                   </p>
-                  <p className="text-white text-sm mt-1">{stat.label}</p>
+                  <p className="text-slate-600 text-sm mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>

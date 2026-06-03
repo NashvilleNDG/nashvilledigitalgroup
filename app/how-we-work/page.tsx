@@ -282,18 +282,18 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* What to Expect */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Timeline
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 What to Expect{" "}
                 <span className="text-sky-400">and When</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Real milestones at real intervals — not vague promises.
               </p>
             </div>
@@ -303,7 +303,7 @@ export default function HowWeWorkPage() {
             {milestones.map((milestone, index) => (
               <BlurFade key={milestone.period} delay={0.15 + index * 0.1} inView>
                 <div
-                  className={`glass border ${milestone.color} rounded-2xl p-6 h-full hover:brightness-110 transition-all`}
+                  className={`bg-white border ${milestone.color} rounded-2xl p-6 h-full shadow-sm hover:shadow-md transition-all`}
                 >
                   <div
                     className={`inline-block ${milestone.bgColor} border ${milestone.color} rounded-xl px-3 py-1.5 mb-5`}
@@ -314,7 +314,7 @@ export default function HowWeWorkPage() {
                   </div>
                   <ul className="space-y-3">
                     {milestone.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-white text-sm">
+                      <li key={item} className="flex items-start gap-2.5 text-slate-600 text-sm">
                         <span
                           className={`w-4 h-4 rounded-full ${milestone.bgColor} flex items-center justify-center shrink-0 mt-0.5`}
                         >
@@ -384,7 +384,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#030812] py-24 md:py-32">
+      <section className="bg-slate-50 py-24 md:py-32">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -392,26 +392,26 @@ export default function HowWeWorkPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Common Questions
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Frequently Asked{" "}
-                <span className="text-sky-400">Questions</span>
+                <span className="text-sky-600">Questions</span>
               </h2>
             </div>
           </BlurFade>
           <div className="flex flex-col gap-4">
             {faqs.map((faq, index) => (
               <BlurFade key={faq.question} delay={0.1 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
+                <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 hover:border-sky-300 hover:shadow-md transition-colors">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-semibold text-base leading-snug text-white flex-1">
+                    <h3 className="font-semibold text-base leading-snug text-slate-900 flex-1">
                       {faq.question}
                     </h3>
-                    <span className="text-sky-400 text-xl font-light leading-none shrink-0">+</span>
+                    <span className="text-sky-600 text-xl font-light leading-none shrink-0">+</span>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">{faq.answer}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{faq.answer}</p>
                 </div>
               </BlurFade>
             ))}

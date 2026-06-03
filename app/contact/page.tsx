@@ -91,7 +91,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── Contact Form + Details ── */}
-      <section id="contact-form" className="bg-[#030812] py-20 md:py-28 relative overflow-hidden">
+      <section id="contact-form" className="bg-slate-50 py-20 md:py-28 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/8 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
 
@@ -99,71 +99,71 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left column */}
             <AnimatedSection>
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Get In Touch
               </p>
-              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight leading-tight">
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
                 We&apos;d Love to Hear From You
               </h2>
-              <p className="text-white text-lg mb-10">
+              <p className="text-slate-600 text-lg mb-10">
                 Fill out the form or reach us directly — we respond within 24 hours on business days.
               </p>
 
               {/* Contact details */}
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-sky-500/10 border border-sky-500/20 rounded-xl flex items-center justify-center text-sky-400 text-lg shrink-0">
+                  <div className="w-12 h-12 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center text-sky-600 text-lg shrink-0">
                     📞
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-1">Phone</p>
-                    <p className="text-white font-medium">{company.phone}</p>
-                    <p className="text-white font-medium">{company.phone2}</p>
+                    <p className="text-slate-500 text-xs uppercase tracking-widest mb-1">Phone</p>
+                    <p className="text-slate-800 font-medium">{company.phone}</p>
+                    <p className="text-slate-800 font-medium">{company.phone2}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-sky-500/10 border border-sky-500/20 rounded-xl flex items-center justify-center text-sky-400 text-lg shrink-0">
+                  <div className="w-12 h-12 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center text-sky-600 text-lg shrink-0">
                     ✉️
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-1">Email</p>
-                    <p className="text-white font-medium">{company.email}</p>
+                    <p className="text-slate-500 text-xs uppercase tracking-widest mb-1">Email</p>
+                    <p className="text-slate-800 font-medium">{company.email}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-sky-500/10 border border-sky-500/20 rounded-xl flex items-center justify-center text-sky-400 text-lg shrink-0">
+                  <div className="w-12 h-12 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center text-sky-600 text-lg shrink-0">
                     📍
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-1">Location</p>
-                    <p className="text-white font-medium">{company.location}</p>
+                    <p className="text-slate-500 text-xs uppercase tracking-widest mb-1">Location</p>
+                    <p className="text-slate-800 font-medium">{company.location}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-sky-500/10 border border-sky-500/20 rounded-xl flex items-center justify-center text-sky-400 text-lg shrink-0">
+                  <div className="w-12 h-12 bg-sky-50 border border-sky-100 rounded-xl flex items-center justify-center text-sky-600 text-lg shrink-0">
                     🕐
                   </div>
                   <div>
-                    <p className="text-white text-xs uppercase tracking-widest mb-1">Hours</p>
-                    <p className="text-white font-medium">{company.hours}</p>
+                    <p className="text-slate-500 text-xs uppercase tracking-widest mb-1">Hours</p>
+                    <p className="text-slate-800 font-medium">{company.hours}</p>
                   </div>
                 </div>
               </div>
 
               {/* What to expect */}
               <div className="mt-10">
-                <p className="text-white font-semibold mb-4">What to Expect</p>
+                <p className="text-slate-900 font-semibold mb-4">What to Expect</p>
                 <div className="space-y-3">
                   {[
                     "Free 30-min Strategy Call",
                     "Custom Marketing Plan",
                     "Measurable Results",
                   ].map((step, index) => (
-                    <div key={step} className="flex gap-3 text-white text-sm">
-                      <span className="bg-sky-500/10 text-sky-400 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0">
+                    <div key={step} className="flex gap-3 text-slate-700 text-sm">
+                      <span className="bg-sky-100 text-sky-600 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shrink-0">
                         {index + 1}
                       </span>
                       {step}
@@ -175,8 +175,8 @@ export default function ContactPage() {
 
             {/* Right column — form */}
             <AnimatedSection delay={0.2}>
-              <div className="glass border border-white/8 rounded-2xl p-8">
-                <h2 className="text-white text-2xl font-bold mb-8">
+              <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+                <h2 className="text-slate-900 text-2xl font-bold mb-8">
                   Send Us a Message
                 </h2>
                 <ContactForm />

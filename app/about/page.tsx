@@ -78,17 +78,17 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-section-alt border-y border-border/50 py-20 md:py-28">
+      <section className="bg-white border-y border-slate-100 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <BlurFade delay={0.1} inView>
-              <div className="glass border border-sky-500/15 rounded-2xl p-8 h-full hover:border-sky-500/30 transition-colors text-center">
-                <div className="w-12 h-12 bg-sky-500/15 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 mx-auto">
+              <div className="bg-slate-50 border border-sky-100 rounded-2xl shadow-sm p-8 h-full hover:border-sky-300 hover:shadow-md transition-colors text-center">
+                <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 mx-auto">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <p className="text-sky-400 text-sm uppercase tracking-widest mb-2">Our Mission</p>
-                <h2 className="text-2xl font-bold text-white mb-4">Driving Digital Excellence</h2>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="text-sky-600 text-sm uppercase tracking-widest mb-2">Our Mission</p>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">Driving Digital Excellence</h2>
+                <p className="text-slate-600 text-sm leading-relaxed">
                   At Nashville Digital Group, we believe that every business deserves to thrive in the digital age. Our
                   mission is to democratize access to cutting-edge AI-powered marketing solutions, making advanced
                   technology accessible to businesses of all sizes. We combine human creativity with artificial
@@ -98,13 +98,13 @@ export default function AboutPage() {
             </BlurFade>
 
             <BlurFade delay={0.2} inView>
-              <div className="glass border border-sky-500/15 rounded-2xl p-8 h-full hover:border-sky-500/30 transition-colors text-center">
-                <div className="w-12 h-12 bg-sky-500/15 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 mx-auto">
+              <div className="bg-slate-50 border border-sky-100 rounded-2xl shadow-sm p-8 h-full hover:border-sky-300 hover:shadow-md transition-colors text-center">
+                <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 mx-auto">
                   <span className="text-2xl">🔭</span>
                 </div>
-                <p className="text-sky-400 text-sm uppercase tracking-widest mb-2">Our Vision</p>
-                <h2 className="text-2xl font-bold text-white mb-4">Leading the Southeast</h2>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="text-sky-600 text-sm uppercase tracking-widest mb-2">Our Vision</p>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">Leading the Southeast</h2>
+                <p className="text-slate-600 text-sm leading-relaxed">
                   To be the leading AI-powered digital marketing agency in the Southeast, known for transforming
                   businesses through innovative technology and exceptional results. We envision a future where every
                   Nashville business has access to the tools and strategies that were once reserved for Fortune 500
@@ -265,16 +265,16 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="bg-section-blue py-20 md:py-28">
+      <section className="bg-slate-50 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 What We Stand For
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Our Core{" "}
-                <span className="text-sky-400">
+                <span className="text-sky-600">
                   Values
                 </span>
               </h2>
@@ -284,12 +284,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {coreValues.map((value, i) => (
               <BlurFade key={value.title} delay={0.15 + i * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors group text-center">
-                  <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors mx-auto">
-                    <Icon name={value.icon} className="w-5 h-5 text-sky-400" />
+                <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors group text-center">
+                  <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 group-hover:bg-sky-100 transition-colors mx-auto">
+                    <Icon name={value.icon} className="w-5 h-5 text-sky-600" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">{value.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-slate-900 font-semibold text-lg mb-2">{value.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{value.description}</p>
                 </div>
               </BlurFade>
             ))}

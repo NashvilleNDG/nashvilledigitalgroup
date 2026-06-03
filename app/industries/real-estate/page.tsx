@@ -121,12 +121,12 @@ export default function RealEstatePage() {
       </section>
 
       {/* Pain Points */}
-      <section className="bg-section-blue py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">Sound Familiar?</p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Sound Familiar?</p>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 What&apos;s Holding Your Real Estate Business{" "}
                 <span className="text-sky-400">Back</span>
               </h2>
@@ -156,12 +156,12 @@ export default function RealEstatePage() {
               },
             ].map((pain, index) => (
               <BlurFade key={pain.title} delay={0.15 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors">
-                  <div className="w-11 h-11 bg-sky-500/10 rounded-xl flex items-center justify-center mb-4 ring-1 ring-sky-500/20">
-                    <Icon name={pain.icon} className="w-5 h-5 text-sky-400" />
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors">
+                  <div className="w-11 h-11 bg-sky-50 rounded-xl flex items-center justify-center mb-4 ring-1 ring-sky-200">
+                    <Icon name={pain.icon} className="w-5 h-5 text-sky-600" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">{pain.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{pain.desc}</p>
+                  <h3 className="text-slate-900 font-semibold text-lg mb-2">{pain.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{pain.desc}</p>
                 </div>
               </BlurFade>
             ))}
@@ -239,12 +239,12 @@ export default function RealEstatePage() {
       </section>
 
       {/* Results */}
-      <section className="bg-section-alt py-24 md:py-32">
+      <section className="bg-slate-50 py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">Client Results</p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Client Results</p>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 KPIs That Move the{" "}
                 <span className="text-sky-400">Needle</span>
               </h2>
@@ -275,14 +275,14 @@ export default function RealEstatePage() {
               },
             ].map((kpi, index) => (
               <BlurFade key={kpi.label} delay={0.1 + index * 0.1} inView>
-                <div className="glass border border-white/6 rounded-2xl p-8 text-center hover:border-sky-500/20 transition-colors">
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 text-center hover:border-sky-300 hover:shadow-md transition-colors">
                   <p className="text-5xl font-black text-sky-400 mb-1">
                     <NumberTicker value={kpi.value} />
                     {kpi.suffix}
                   </p>
-                  <p className="text-sky-400 text-xs font-semibold uppercase tracking-widest mb-2">{kpi.client}</p>
-                  <h3 className="text-white font-semibold text-base mb-3">{kpi.label}</h3>
-                  <p className="text-white text-sm leading-relaxed">{kpi.desc}</p>
+                  <p className="text-sky-600 text-xs font-semibold uppercase tracking-widest mb-2">{kpi.client}</p>
+                  <h3 className="text-slate-900 font-semibold text-base mb-3">{kpi.label}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{kpi.desc}</p>
                 </div>
               </BlurFade>
             ))}

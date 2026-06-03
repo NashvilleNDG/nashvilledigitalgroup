@@ -294,18 +294,18 @@ export default function AppDevelopmentPage() {
       </section>
 
       {/* What We Build */}
-      <section className="bg-section-blue py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Our Capabilities
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 What We{" "}
                 <span className="text-sky-400">Build</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Whether you need a consumer app, an internal tool, or a complex platform — we have
                 the team and the track record.
               </p>
@@ -315,21 +315,21 @@ export default function AppDevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whatWeBuild.map((item, index) => (
               <BlurFade key={item.title} delay={0.15 + index * 0.08} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 flex flex-col h-full hover:border-sky-500/20 transition-colors group">
+                <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 flex flex-col h-full hover:border-sky-300 hover:shadow-md transition-colors group">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors shrink-0">
-                      <Icon name={item.icon} className="w-5 h-5 text-sky-400" />
+                    <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center ring-1 ring-sky-200 group-hover:bg-sky-50 transition-colors shrink-0">
+                      <Icon name={item.icon} className="w-5 h-5 text-sky-600" />
                     </div>
-                    <h3 className="text-white font-bold text-xl mt-1.5">{item.title}</h3>
+                    <h3 className="text-slate-900 font-bold text-xl mt-1.5">{item.title}</h3>
                   </div>
-                  <p className="text-white text-sm leading-relaxed mb-5 flex-1">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5 flex-1">
                     {item.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-sky-500/10 border border-sky-500/15 text-sky-400 text-xs px-2.5 py-1 rounded-full"
+                        className="bg-sky-50 border border-sky-200 text-sky-600 text-xs px-2.5 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -489,18 +489,18 @@ export default function AppDevelopmentPage() {
       </section>
 
       {/* Maintenance & Support */}
-      <section className="bg-section-blue py-24 md:py-32">
+      <section className="bg-slate-50 py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Post-Launch Support
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 We Don&apos;t Disappear{" "}
                 <span className="text-sky-400">After Launch</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Most agencies ship your app and move on. We treat launch as the beginning — not the
                 end. Every NDG app client has access to ongoing support plans that keep your product
                 healthy, secure, and improving.
@@ -512,7 +512,7 @@ export default function AppDevelopmentPage() {
             {maintenanceTiers.map((tier, index) => (
               <BlurFade key={tier.name} delay={0.15 + index * 0.1} inView>
                 <div
-                  className={`glass border ${tier.borderColor} rounded-2xl p-6 flex flex-col h-full hover:brightness-110 transition-all relative`}
+                  className={`bg-white border ${tier.borderColor} rounded-2xl shadow-sm p-6 flex flex-col h-full hover:shadow-md transition-all relative`}
                 >
                   {tier.badge && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -526,18 +526,18 @@ export default function AppDevelopmentPage() {
                       {tier.name}
                     </p>
                     <div className="flex items-end gap-1">
-                      <span className="text-white text-4xl font-black">{tier.price}</span>
-                      <span className="text-white/60 text-sm pb-1">{tier.period}</span>
+                      <span className="text-slate-900 text-4xl font-black">{tier.price}</span>
+                      <span className="text-slate-400 text-sm pb-1">{tier.period}</span>
                     </div>
-                    <p className="text-white/60 text-xs mt-1">{tier.responseTime}</p>
+                    <p className="text-slate-400 text-xs mt-1">{tier.responseTime}</p>
                   </div>
                   <ul className="space-y-2.5 mb-6 flex-1">
                     {tier.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2.5 text-white text-sm">
+                      <li key={feature} className="flex items-start gap-2.5 text-slate-600 text-sm">
                         <span
-                          className={`w-4 h-4 rounded-full bg-sky-500/15 flex items-center justify-center shrink-0 mt-0.5`}
+                          className={`w-4 h-4 rounded-full bg-sky-50 flex items-center justify-center shrink-0 mt-0.5`}
                         >
-                          <span className="text-sky-400 text-[9px]">✓</span>
+                          <span className="text-sky-600 text-[9px]">✓</span>
                         </span>
                         {feature}
                       </li>
@@ -545,7 +545,7 @@ export default function AppDevelopmentPage() {
                   </ul>
                   <Link
                     href="/contact"
-                    className={`inline-flex items-center justify-center gap-2 border ${tier.borderColor} hover:bg-sky-500/10 ${tier.accentColor} font-semibold px-4 py-2.5 rounded-xl transition-all text-sm`}
+                    className={`inline-flex items-center justify-center gap-2 border ${tier.borderColor} hover:bg-sky-50 ${tier.accentColor} font-semibold px-4 py-2.5 rounded-xl transition-all text-sm`}
                   >
                     {tier.cta} →
                   </Link>

@@ -63,16 +63,16 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-section-alt py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Perks &amp; Benefits
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Why Work at{" "}
-                <span className="text-sky-400">
+                <span className="text-sky-600">
                   NDG
                 </span>
               </h2>
@@ -81,12 +81,12 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {benefits.map((benefit, index) => (
               <BlurFade key={benefit.title} delay={0.15 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors h-full group">
-                  <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors">
-                    <Icon name={benefit.icon} className="w-5 h-5 text-sky-400" />
+                <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 hover:border-sky-300 hover:shadow-md transition-colors h-full group">
+                  <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 group-hover:bg-sky-100 transition-colors">
+                    <Icon name={benefit.icon} className="w-5 h-5 text-sky-600" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-slate-900 font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -160,26 +160,26 @@ export default function CareersPage() {
       </section>
 
       {/* Culture */}
-      <section className="bg-background py-20 md:py-28 border-y border-border/50">
+      <section className="bg-slate-50 py-20 md:py-28 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Our Culture</h2>
-            <p className="max-w-2xl mx-auto text-white text-lg leading-relaxed mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">Our Culture</h2>
+            <p className="max-w-2xl mx-auto text-slate-600 text-lg leading-relaxed mb-10">
               We&apos;re a team of passionate experts who believe in continuous learning, radical transparency, and delivering exceptional results. Remote-friendly, diverse, and always excited about the next challenge.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { icon: "🌟", title: "Innovation", desc: "We embrace new technologies and creative thinking to solve complex problems.", color: "border-amber-500/15 hover:border-amber-500/30" },
-                { icon: "🤝", title: "Collaboration", desc: "Great work happens together. We build on each other's strengths.", color: "border-sky-500/15 hover:border-sky-500/30" },
-                { icon: "📈", title: "Growth", desc: "Every team member has a clear path to learn, advance, and thrive.", color: "border-emerald-500/15 hover:border-emerald-500/30" },
+                { icon: "🌟", title: "Innovation", desc: "We embrace new technologies and creative thinking to solve complex problems.", color: "border-amber-200 hover:border-amber-300" },
+                { icon: "🤝", title: "Collaboration", desc: "Great work happens together. We build on each other's strengths.", color: "border-sky-200 hover:border-sky-300" },
+                { icon: "📈", title: "Growth", desc: "Every team member has a clear path to learn, advance, and thrive.", color: "border-emerald-200 hover:border-emerald-300" },
               ].map((pillar) => (
                 <div
                   key={pillar.title}
-                  className={`glass border ${pillar.color} rounded-2xl p-6 text-center transition-colors`}
+                  className={`bg-white border ${pillar.color} rounded-2xl shadow-sm p-6 text-center transition-colors hover:shadow-md`}
                 >
                   <p className="text-3xl mb-3">{pillar.icon}</p>
-                  <h3 className="text-white font-semibold text-lg mb-2">{pillar.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{pillar.desc}</p>
+                  <h3 className="text-slate-900 font-semibold text-lg mb-2">{pillar.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{pillar.desc}</p>
                 </div>
               ))}
             </div>

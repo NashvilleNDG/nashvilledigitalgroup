@@ -114,16 +114,16 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industry Cards */}
-      <section className="bg-section-blue py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">Our Verticals</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Our Verticals</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
                 Deep Expertise in{" "}
                 <span className="text-sky-400">Four Key Industries</span>
               </h2>
-              <p className="text-white text-base max-w-xl mx-auto mt-4">
+              <p className="text-slate-600 text-base max-w-xl mx-auto mt-4">
                 Click any industry below to see specific pain points, solutions, and real client results.
               </p>
             </div>
@@ -133,31 +133,31 @@ export default function IndustriesPage() {
               <BlurFade key={industry.href} delay={0.1 + index * 0.1} inView>
                 <Link
                   href={industry.href}
-                  className={`glass border border-white/6 ${industry.borderHover} rounded-2xl p-8 flex flex-col h-full transition-all duration-200 group hover:scale-[1.01] block`}
+                  className={`bg-white border border-slate-200 shadow-sm ${industry.borderHover} hover:shadow-md rounded-2xl p-8 flex flex-col h-full transition-all duration-200 group hover:scale-[1.01] block`}
                 >
                   <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${industry.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
                   <div className="relative z-10">
                     <div className="flex items-start gap-4 mb-5">
-                      <div className="w-12 h-12 bg-sky-500/12 rounded-xl flex items-center justify-center ring-1 ring-sky-500/20 shrink-0">
-                        <Icon name={industry.icon} className="w-5 h-5 text-sky-400" />
+                      <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center ring-1 ring-sky-200 shrink-0">
+                        <Icon name={industry.icon} className="w-5 h-5 text-sky-600" />
                       </div>
                       <div>
-                        <p className="text-sky-400 text-xs font-semibold uppercase tracking-widest mb-1">
+                        <p className="text-sky-600 text-xs font-semibold uppercase tracking-widest mb-1">
                           {industry.label}
                         </p>
-                        <h3 className="text-white font-bold text-xl leading-tight">{industry.title}</h3>
+                        <h3 className="text-slate-900 font-bold text-xl leading-tight">{industry.title}</h3>
                       </div>
                     </div>
-                    <p className="text-white text-sm leading-relaxed mb-6">{industry.desc}</p>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-6">{industry.desc}</p>
                     <div className="grid grid-cols-3 gap-3 mb-6">
                       {industry.stats.map((stat) => (
-                        <div key={stat.label} className="bg-white/4 border border-white/6 rounded-xl p-3 text-center">
-                          <p className="text-white font-bold text-lg">{stat.value}</p>
-                          <p className="text-white text-xs mt-0.5 leading-tight">{stat.label}</p>
+                        <div key={stat.label} className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
+                          <p className="text-slate-900 font-bold text-lg">{stat.value}</p>
+                          <p className="text-slate-500 text-xs mt-0.5 leading-tight">{stat.label}</p>
                         </div>
                       ))}
                     </div>
-                    <div className="flex items-center gap-2 text-sky-400 text-sm font-semibold group-hover:gap-3 transition-all duration-200">
+                    <div className="flex items-center gap-2 text-sky-600 text-sm font-semibold group-hover:gap-3 transition-all duration-200">
                       See {industry.label} Solutions
                       <span>→</span>
                     </div>
@@ -214,14 +214,14 @@ export default function IndustriesPage() {
       </section>
 
       {/* Not Listed Section */}
-      <section className="bg-section-alt py-20 md:py-24">
+      <section className="bg-slate-50 py-20 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BlurFade delay={0.1} inView>
-            <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">Don't See Your Industry?</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Don't See Your Industry?</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               We Work With Businesses Across Nashville
             </h2>
-            <p className="text-white text-base mb-8 leading-relaxed">
+            <p className="text-slate-600 text-base mb-8 leading-relaxed">
               Our four featured verticals represent our deepest expertise, but we serve businesses across all industries
               in Nashville and Middle Tennessee. If you need AI-powered digital marketing, we can help.
             </p>

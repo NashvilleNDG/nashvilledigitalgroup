@@ -141,18 +141,18 @@ export default function ResourcesPage() {
       </section>
 
       {/* Free Tools */}
-      <section className="bg-section-blue py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Interactive Tools
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Free Tools to{" "}
                 <span className="text-sky-400">Run the Numbers</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 No email required. Use these calculators to model your revenue potential before you
                 ever speak with us.
               </p>
@@ -161,15 +161,15 @@ export default function ResourcesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <BlurFade delay={0.15} inView>
-              <div className="glass border border-sky-500/20 rounded-2xl p-8 flex flex-col h-full hover:border-sky-500/40 transition-colors group">
-                <div className="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors">
-                  <Icon name="TrendingUp" className="w-6 h-6 text-sky-400" />
+              <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 flex flex-col h-full hover:border-sky-300 hover:shadow-md transition-colors group">
+                <div className="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-sky-200 group-hover:bg-sky-50 transition-colors">
+                  <Icon name="TrendingUp" className="w-6 h-6 text-sky-600" />
                 </div>
-                <p className="text-sky-400 text-xs font-semibold uppercase tracking-widest mb-2">
+                <p className="text-sky-600 text-xs font-semibold uppercase tracking-widest mb-2">
                   Free Tool
                 </p>
-                <h3 className="text-white text-2xl font-bold mb-3">ROI Calculator</h3>
-                <p className="text-white text-sm leading-relaxed mb-6 flex-1">
+                <h3 className="text-slate-900 text-2xl font-bold mb-3">ROI Calculator</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
                   Enter your current lead volume, average deal size, and close rate. Instantly see
                   what a 2x, 3x, or 5x improvement in any metric means for your annual revenue.
                 </p>
@@ -183,15 +183,15 @@ export default function ResourcesPage() {
             </BlurFade>
 
             <BlurFade delay={0.2} inView>
-              <div className="glass border border-violet-500/20 rounded-2xl p-8 flex flex-col h-full hover:border-violet-500/40 transition-colors group">
-                <div className="w-14 h-14 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-violet-500/20 group-hover:bg-violet-500/15 transition-colors">
-                  <Icon name="Calculator" className="w-6 h-6 text-violet-400" />
+              <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 flex flex-col h-full hover:border-sky-300 hover:shadow-md transition-colors group">
+                <div className="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-sky-200 group-hover:bg-sky-50 transition-colors">
+                  <Icon name="Calculator" className="w-6 h-6 text-sky-600" />
                 </div>
-                <p className="text-violet-400 text-xs font-semibold uppercase tracking-widest mb-2">
+                <p className="text-sky-600 text-xs font-semibold uppercase tracking-widest mb-2">
                   Free Tool
                 </p>
-                <h3 className="text-white text-2xl font-bold mb-3">Pricing Calculator</h3>
-                <p className="text-white text-sm leading-relaxed mb-6 flex-1">
+                <h3 className="text-slate-900 text-2xl font-bold mb-3">Pricing Calculator</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
                   Select the services you need and get an instant estimated investment range. No
                   sales call required — transparent pricing based on your actual scope.
                 </p>
@@ -208,18 +208,18 @@ export default function ResourcesPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-slate-50 py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Client Results
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Real Businesses.{" "}
                 <span className="text-sky-400">Real Numbers.</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 These aren&apos;t projections or industry averages — these are results we produced
                 for Nashville-area businesses.
               </p>
@@ -230,14 +230,14 @@ export default function ResourcesPage() {
             {caseStudies.map((study, index) => (
               <BlurFade key={study.client} delay={0.15 + index * 0.08} inView>
                 <div
-                  className={`glass border ${study.borderColor} rounded-2xl p-6 flex flex-col h-full hover:brightness-110 transition-all`}
+                  className={`bg-white border ${study.borderColor} rounded-2xl shadow-sm p-6 flex flex-col h-full hover:shadow-md transition-all`}
                 >
                   <div
                     className={`inline-block ${study.bgColor} border ${study.borderColor} rounded-lg px-2.5 py-1 mb-4 w-fit`}
                   >
-                    <span className="text-white text-xs font-semibold">{study.industry}</span>
+                    <span className="text-slate-500 text-xs font-semibold">{study.industry}</span>
                   </div>
-                  <h3 className="text-white text-xl font-bold mb-3">{study.client}</h3>
+                  <h3 className="text-slate-900 text-xl font-bold mb-3">{study.client}</h3>
                   <p className={`text-3xl font-black mb-4 ${study.resultColor}`}>
                     {study.result}
                   </p>
@@ -245,7 +245,7 @@ export default function ResourcesPage() {
                     {study.services.map((service) => (
                       <span
                         key={service}
-                        className="bg-white/5 border border-white/8 text-white text-xs px-2.5 py-1 rounded-full"
+                        className="bg-slate-100 border border-slate-200 text-slate-600 text-xs px-2.5 py-1 rounded-full"
                       >
                         {service}
                       </span>
@@ -254,7 +254,7 @@ export default function ResourcesPage() {
                   <div className="mt-auto">
                     <Link
                       href="/work"
-                      className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 text-sm font-semibold transition-colors"
+                      className="inline-flex items-center gap-1.5 text-sky-600 hover:text-sky-500 text-sm font-semibold transition-colors"
                     >
                       View Case Study →
                     </Link>

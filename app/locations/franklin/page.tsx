@@ -168,18 +168,18 @@ export default function FranklinPage() {
       </section>
 
       {/* Franklin Growth Stats */}
-      <section className="bg-section-blue py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 The Franklin Opportunity
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Franklin Is{" "}
                 <span className="text-sky-400">Growing Fast</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 The numbers tell the story. Franklin and Williamson County represent one of the most significant
                 growth opportunities for local businesses in the entire Southeast.
               </p>
@@ -189,7 +189,7 @@ export default function FranklinPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {growthStats.map((stat, i) => (
               <BlurFade key={stat.label} delay={0.15 + i * 0.08} inView>
-                <div className="glass border border-sky-500/15 rounded-2xl p-6 text-center hover:border-sky-500/30 transition-colors">
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 text-center hover:border-sky-300 hover:shadow-md transition-colors">
                   <div className="text-4xl font-black text-sky-400 tabular-nums mb-2">
                     <NumberTicker
                       value={stat.num}
@@ -199,7 +199,7 @@ export default function FranklinPage() {
                     />
                     {stat.suffix}
                   </div>
-                  <p className="text-white text-sm leading-relaxed">{stat.label}</p>
+                  <p className="text-slate-600 text-sm leading-relaxed">{stat.label}</p>
                 </div>
               </BlurFade>
             ))}
@@ -209,12 +209,12 @@ export default function FranklinPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {growthOpportunity.map((item, i) => (
               <BlurFade key={item.title} delay={0.2 + i * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors group">
-                  <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors">
-                    <Icon name={item.icon} className="w-5 h-5 text-sky-400" />
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors group">
+                  <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 group-hover:bg-sky-100 transition-colors">
+                    <Icon name={item.icon} className="w-5 h-5 text-sky-600" />
                   </div>
-                  <h3 className="text-white font-semibold text-base mb-2">{item.title}</h3>
-                  <p className="text-white text-sm leading-relaxed">{item.body}</p>
+                  <h3 className="text-slate-900 font-semibold text-base mb-2">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
                 </div>
               </BlurFade>
             ))}
@@ -262,18 +262,18 @@ export default function FranklinPage() {
       </section>
 
       {/* How NDG Helps Franklin Businesses */}
-      <section className="bg-section-blue py-20 md:py-28">
+      <section className="bg-slate-50 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Our Approach
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 How NDG Helps Franklin{" "}
                 <span className="text-sky-400">Businesses Win</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 A strategic playbook built around Franklin&apos;s unique market dynamics — not a Nashville strategy
                 with a city name swapped in.
               </p>
@@ -304,12 +304,12 @@ export default function FranklinPage() {
               },
             ].map((item, i) => (
               <BlurFade key={item.step} delay={0.15 + i * 0.08} inView>
-                <div className="glass border border-white/6 rounded-2xl p-8 h-full hover:border-sky-500/20 transition-colors">
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 h-full hover:border-sky-300 hover:shadow-md transition-colors">
                   <div className="flex items-start gap-5">
-                    <span className="text-4xl font-black text-sky-500/30 leading-none shrink-0">{item.step}</span>
+                    <span className="text-4xl font-black text-sky-400/40 leading-none shrink-0">{item.step}</span>
                     <div>
-                      <h3 className="text-white font-bold text-xl mb-3">{item.title}</h3>
-                      <p className="text-white text-sm leading-relaxed">{item.body}</p>
+                      <h3 className="text-slate-900 font-bold text-xl mb-3">{item.title}</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
                     </div>
                   </div>
                 </div>

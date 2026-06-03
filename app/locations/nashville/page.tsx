@@ -224,18 +224,18 @@ export default function NashvillePage() {
         </section>
 
         {/* Why Nashville Businesses Choose NDG */}
-        <section className="bg-section-blue py-20 md:py-28">
+        <section className="bg-white py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.1} inView>
               <div className="text-center mb-14">
-                <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+                <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                   Why Work With Us
                 </p>
-                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                   Why Nashville Businesses{" "}
                   <span className="text-sky-400">Choose NDG</span>
                 </h2>
-                <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+                <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                   We live here. We know which neighborhoods are trending, which industries are growing, and exactly how
                   Nashville consumers search. That local intelligence is baked into everything we do.
                 </p>
@@ -276,12 +276,12 @@ export default function NashvillePage() {
                 },
               ].map((card, i) => (
                 <BlurFade key={card.title} delay={0.15 + i * 0.07} inView>
-                  <div className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors group">
-                    <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 group-hover:bg-sky-500/15 transition-colors">
-                      <Icon name={card.icon} className="w-5 h-5 text-sky-400" />
+                  <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors group">
+                    <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 group-hover:bg-sky-100 transition-colors">
+                      <Icon name={card.icon} className="w-5 h-5 text-sky-600" />
                     </div>
-                    <h3 className="text-white font-semibold text-lg mb-2">{card.title}</h3>
-                    <p className="text-white text-sm leading-relaxed">{card.body}</p>
+                    <h3 className="text-slate-900 font-semibold text-lg mb-2">{card.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{card.body}</p>
                   </div>
                 </BlurFade>
               ))}
@@ -340,14 +340,14 @@ export default function NashvillePage() {
         </section>
 
         {/* Case Studies */}
-        <section className="bg-section-blue py-20 md:py-28">
+        <section className="bg-slate-50 py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.1} inView>
               <div className="text-center mb-14">
-                <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+                <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                   Client Success Stories
                 </p>
-                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                   Real Nashville Businesses.{" "}
                   <span className="text-sky-400">Real Results.</span>
                 </h2>
@@ -357,28 +357,28 @@ export default function NashvillePage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {caseStudies.map((study, i) => (
                 <BlurFade key={study.client} delay={0.1 + i * 0.1} inView>
-                  <div className="glass border border-white/6 rounded-2xl p-8 flex flex-col h-full hover:border-sky-500/20 transition-colors">
+                  <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 flex flex-col h-full hover:border-sky-300 hover:shadow-md transition-colors">
                     <div className="mb-6">
-                      <p className="text-sky-400 text-xs uppercase tracking-widest mb-1">Case Study</p>
-                      <h3 className="text-white text-xl font-bold mb-1">{study.client}</h3>
-                      <p className="text-white/50 text-xs">{study.neighborhood}</p>
+                      <p className="text-sky-600 text-xs uppercase tracking-widest mb-1">Case Study</p>
+                      <h3 className="text-slate-900 text-xl font-bold mb-1">{study.client}</h3>
+                      <p className="text-slate-400 text-xs">{study.neighborhood}</p>
                     </div>
                     <div className="space-y-4 flex-1">
                       <div>
-                        <p className="text-sky-400 text-xs uppercase tracking-widest mb-1">Challenge</p>
-                        <p className="text-white text-sm leading-relaxed">{study.challenge}</p>
+                        <p className="text-sky-600 text-xs uppercase tracking-widest mb-1">Challenge</p>
+                        <p className="text-slate-600 text-sm leading-relaxed">{study.challenge}</p>
                       </div>
                       <div>
-                        <p className="text-sky-400 text-xs uppercase tracking-widest mb-1">Solution</p>
-                        <p className="text-white text-sm leading-relaxed">{study.solution}</p>
+                        <p className="text-sky-600 text-xs uppercase tracking-widest mb-1">Solution</p>
+                        <p className="text-slate-600 text-sm leading-relaxed">{study.solution}</p>
                       </div>
                     </div>
-                    <div className="mt-6 pt-6 border-t border-white/6">
-                      <p className="text-white text-xs uppercase tracking-widest mb-3">Results</p>
+                    <div className="mt-6 pt-6 border-t border-slate-200">
+                      <p className="text-slate-900 text-xs uppercase tracking-widest mb-3">Results</p>
                       <ul className="space-y-2">
                         {study.results.map((result) => (
-                          <li key={result} className="flex items-start gap-2 text-white text-sm">
-                            <span className="text-sky-400 mt-0.5 shrink-0">✓</span>
+                          <li key={result} className="flex items-start gap-2 text-slate-600 text-sm">
+                            <span className="text-sky-600 mt-0.5 shrink-0">✓</span>
                             {result}
                           </li>
                         ))}

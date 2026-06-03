@@ -149,18 +149,18 @@ export default function LocationsPage() {
       </section>
 
       {/* Primary Markets Grid */}
-      <section className="bg-section-blue py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Primary Markets
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 Our Core{" "}
                 <span className="text-sky-400">Service Areas</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Deep local expertise and proven results in Middle Tennessee&apos;s most important business markets.
               </p>
             </div>
@@ -171,7 +171,7 @@ export default function LocationsPage() {
               <BlurFade key={market.city} delay={0.15 + i * 0.1} inView>
                 <Link
                   href={`/locations/${market.slug}`}
-                  className="block glass border border-white/6 rounded-2xl p-8 h-full hover:border-sky-500/30 transition-all duration-300 group relative overflow-hidden"
+                  className="block bg-white border border-slate-200 shadow-sm rounded-2xl p-8 h-full hover:border-sky-300 hover:shadow-md transition-all duration-300 group relative overflow-hidden"
                 >
                   {/* Hover glow */}
                   <div className="absolute inset-0 bg-sky-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -179,26 +179,26 @@ export default function LocationsPage() {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-6">
                       <div>
-                        <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-4 ring-1 ring-sky-500/20 group-hover:bg-sky-500/20 transition-colors">
-                          <Icon name={market.icon} className="w-5 h-5 text-sky-400" />
+                        <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-4 ring-1 ring-sky-200 group-hover:bg-sky-100 transition-colors">
+                          <Icon name={market.icon} className="w-5 h-5 text-sky-600" />
                         </div>
-                        <h3 className="text-white text-2xl font-bold">{market.city}</h3>
-                        <p className="text-sky-400 text-sm">{market.state}</p>
+                        <h3 className="text-slate-900 text-2xl font-bold">{market.city}</h3>
+                        <p className="text-sky-600 text-sm">{market.state}</p>
                       </div>
-                      <span className="text-sky-400 group-hover:translate-x-1 transition-transform duration-200 mt-1 text-lg">→</span>
+                      <span className="text-sky-600 group-hover:translate-x-1 transition-transform duration-200 mt-1 text-lg">→</span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-white text-sm leading-relaxed mb-6 flex-1">{market.description}</p>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">{market.description}</p>
 
                     {/* Industries */}
                     <div className="mb-6">
-                      <p className="text-white/50 text-xs uppercase tracking-widest mb-3">Industries Served</p>
+                      <p className="text-slate-400 text-xs uppercase tracking-widest mb-3">Industries Served</p>
                       <div className="flex flex-wrap gap-2">
                         {market.industries.map((industry) => (
                           <span
                             key={industry}
-                            className="text-xs bg-sky-500/8 text-sky-400 border border-sky-500/15 px-2.5 py-1 rounded-full"
+                            className="text-xs bg-sky-50 text-sky-600 border border-sky-200 px-2.5 py-1 rounded-full"
                           >
                             {industry}
                           </span>
@@ -207,9 +207,9 @@ export default function LocationsPage() {
                     </div>
 
                     {/* Highlight */}
-                    <div className="flex items-center gap-2 pt-5 border-t border-white/6">
+                    <div className="flex items-center gap-2 pt-5 border-t border-slate-200">
                       <span className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
-                      <span className="text-sky-400 text-xs">{market.highlight}</span>
+                      <span className="text-sky-600 text-xs">{market.highlight}</span>
                     </div>
                   </div>
                 </Link>
@@ -251,18 +251,18 @@ export default function LocationsPage() {
       </section>
 
       {/* Also Serving */}
-      <section className="bg-section-blue py-20 md:py-28">
+      <section className="bg-slate-50 py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1} inView>
             <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Also Serving
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
                 More Middle Tennessee{" "}
                 <span className="text-sky-400">Communities</span>
               </h2>
-              <p className="text-white text-lg max-w-2xl mx-auto mt-4">
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto mt-4">
                 Beyond our primary markets, we serve businesses across the broader Middle Tennessee region — each with
                 their own market dynamics and growth opportunities.
               </p>
@@ -272,25 +272,25 @@ export default function LocationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {additionalMarkets.map((market, i) => (
               <BlurFade key={market.city} delay={0.15 + i * 0.08} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 hover:border-sky-500/20 transition-colors">
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 hover:border-sky-300 hover:shadow-md transition-colors">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-white font-bold text-xl">{market.city}</h3>
-                      <p className="text-sky-400 text-sm">{market.state}</p>
+                      <h3 className="text-slate-900 font-bold text-xl">{market.city}</h3>
+                      <p className="text-sky-600 text-sm">{market.state}</p>
                     </div>
                     <Link
                       href="/contact"
-                      className="text-sky-400 text-sm hover:text-sky-300 transition-colors shrink-0 mt-1"
+                      className="text-sky-600 text-sm hover:text-sky-500 transition-colors shrink-0 mt-1"
                     >
                       Get started →
                     </Link>
                   </div>
-                  <p className="text-white text-sm leading-relaxed mb-4">{market.description}</p>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">{market.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {market.industries.map((industry) => (
                       <span
                         key={industry}
-                        className="text-xs bg-white/5 text-white/70 border border-white/8 px-2.5 py-1 rounded-full"
+                        className="text-xs bg-slate-100 text-slate-500 border border-slate-200 px-2.5 py-1 rounded-full"
                       >
                         {industry}
                       </span>
