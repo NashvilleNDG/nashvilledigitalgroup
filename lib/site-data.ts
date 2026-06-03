@@ -558,7 +558,6 @@ export const navLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Hospitality AI", href: "/hospitality" },
-  { label: "Resources", href: "/resources" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ]
