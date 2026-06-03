@@ -46,9 +46,9 @@ export default function ContactPage() {
 
           <BlurFade delay={0.2} inView>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
-              Let&apos;s Grow Your Business
+              Let&apos;s Grow Your
               <br />
-              <span className="text-sky-400">Together</span>
+              <span className="text-sky-400">Business Together</span>
             </h1>
           </BlurFade>
 
