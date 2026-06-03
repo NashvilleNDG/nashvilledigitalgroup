@@ -79,6 +79,7 @@ export default function ContactForm() {
           Full Name <span className="text-sky-400">*</span>
         </label>
         <input
+          suppressHydrationWarning
           id="fullName"
           name="fullName"
           type="text"
@@ -97,6 +98,7 @@ export default function ContactForm() {
             Email <span className="text-sky-400">*</span>
           </label>
           <input
+            suppressHydrationWarning
             id="email"
             name="email"
             type="email"
@@ -110,6 +112,7 @@ export default function ContactForm() {
         <div>
           <label htmlFor="phone" className={labelClass}>Phone</label>
           <input
+            suppressHydrationWarning
             id="phone"
             name="phone"
             type="tel"
@@ -126,6 +129,7 @@ export default function ContactForm() {
         <div>
           <label htmlFor="company" className={labelClass}>Company</label>
           <input
+            suppressHydrationWarning
             id="company"
             name="company"
             type="text"
@@ -138,6 +142,7 @@ export default function ContactForm() {
         <div>
           <label htmlFor="website" className={labelClass}>Website URL</label>
           <input
+            suppressHydrationWarning
             id="website"
             name="website"
             type="url"
@@ -154,6 +159,7 @@ export default function ContactForm() {
         <label htmlFor="service" className={labelClass}>Service Interest</label>
         <div className="relative">
           <select
+            suppressHydrationWarning
             id="service"
             name="service"
             value={formData.service}
@@ -184,6 +190,7 @@ export default function ContactForm() {
         <label htmlFor="budget" className={labelClass}>Monthly Budget</label>
         <div className="relative">
           <select
+            suppressHydrationWarning
             id="budget"
             name="budget"
             value={formData.budget}
@@ -211,6 +218,7 @@ export default function ContactForm() {
           Message <span className="text-sky-400">*</span>
         </label>
         <textarea
+          suppressHydrationWarning
           id="message"
           name="message"
           rows={4}
@@ -230,6 +238,7 @@ export default function ContactForm() {
 
       {/* Submit */}
       <button
+        suppressHydrationWarning
         type="submit"
         disabled={status === "submitting"}
         className="w-full flex items-center justify-center gap-2 bg-sky-500

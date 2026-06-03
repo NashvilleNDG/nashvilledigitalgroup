@@ -121,20 +121,20 @@ export function ProposalForm() {
                 <label className={labelBase}>
                   Full Name <span className="text-sky-400">*</span>
                 </label>
-                <input required type="text" placeholder="John Smith" className={inputBase} />
+                <input suppressHydrationWarning required type="text" placeholder="John Smith" className={inputBase} />
               </div>
 
               {/* Job Title + Company */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
                   <label className={labelBase}>Job Title</label>
-                  <input type="text" placeholder="CEO / Owner" className={inputBase} />
+                  <input suppressHydrationWarning type="text" placeholder="CEO / Owner" className={inputBase} />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className={labelBase}>
                     Company <span className="text-sky-400">*</span>
                   </label>
-                  <input required type="text" placeholder="Your Company" className={inputBase} />
+                  <input suppressHydrationWarning required type="text" placeholder="Your Company" className={inputBase} />
                 </div>
               </div>
 
@@ -144,11 +144,11 @@ export function ProposalForm() {
                   <label className={labelBase}>
                     Email <span className="text-sky-400">*</span>
                   </label>
-                  <input required type="email" placeholder="john@company.com" className={inputBase} />
+                  <input suppressHydrationWarning required type="email" placeholder="john@company.com" className={inputBase} />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className={labelBase}>Phone</label>
-                  <input type="tel" placeholder="(615) 000-0000" className={inputBase} />
+                  <input suppressHydrationWarning type="tel" placeholder="(615) 000-0000" className={inputBase} />
                 </div>
               </div>
 
@@ -156,6 +156,7 @@ export function ProposalForm() {
               <div className="flex flex-col gap-2">
                 <label className={labelBase}>Website URL</label>
                 <input
+                  suppressHydrationWarning
                   type="url"
                   placeholder="https://yourwebsite.com"
                   className={inputBase}
@@ -168,6 +169,7 @@ export function ProposalForm() {
                   What are your business goals? <span className="text-sky-400">*</span>
                 </label>
                 <textarea
+                  suppressHydrationWarning
                   required
                   rows={3}
                   placeholder="Tell us what you want to achieve — more leads, better rankings, higher conversions…"
@@ -177,6 +179,7 @@ export function ProposalForm() {
 
               {/* Submit */}
               <button
+                suppressHydrationWarning
                 type="submit"
                 disabled={loading}
                 className="mt-1 flex items-center justify-center gap-2 w-full py-4 rounded-xl
