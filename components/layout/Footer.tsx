@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="mt-4 space-y-1 text-white text-sm">
               <p>{company.phone}</p>
               <p>{company.email}</p>
-              <p className="text-white/60">{company.hours}</p>
+              <p className="text-white">{company.hours}</p>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerServiceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/70 hover:text-sky-400 text-sm transition-colors">
+                  <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -99,7 +99,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerCompanyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/70 hover:text-sky-400 text-sm transition-colors">
+                  <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -113,7 +113,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerIndustryLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/70 hover:text-sky-400 text-sm transition-colors">
+                  <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -127,7 +127,7 @@ export default function Footer() {
             <ul className="space-y-2 mb-6">
               {footerLocationLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/70 hover:text-sky-400 text-sm transition-colors">
+                  <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -137,7 +137,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerToolLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/70 hover:text-sky-400 text-sm transition-colors">
+                  <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
