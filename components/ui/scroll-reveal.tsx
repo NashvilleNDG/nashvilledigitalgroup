@@ -5,46 +5,41 @@ import { usePathname } from "next/navigation"
 /**
  * ScrollRevealInit — Panel-stack safety layer
  *
- * The base sticky + z-index + card-edge styles live in globals.css
- * (outside @layer so they beat Tailwind utilities). Every `main > section`
- * is sticky by default, which creates the panel-stack scroll effect.
+ * Every `main > section` is sticky by default (globals.css) → panel-stack
+ * scroll effect. A sticky section TALLER than the viewport pins at top:0 with
+ * its lower content below the fold; the next section rises over that hidden
+ * region, so the visible top appears frozen ("scroll stuck") and the section's
+ * own bottom content becomes unreachable.
  *
- * Problem: a sticky section TALLER than the viewport gets pinned at top:0
- * with its lower content below the fold. The next section then rises over
- * that hidden region, so the visible (top) part appears frozen — it reads
- * as "scrolling is stuck" and the section's own bottom content (e.g. the
- * Featured Work carousel controls) becomes unreachable.
+ * Fix: any section taller than the viewport → position:relative (normal
+ * scroll); sections that fit keep the sticky panel-stack effect.
  *
- * Fix: any section taller than the viewport is switched to position:relative
- * so it scrolls normally. Sections that fit keep the sticky panel-stack
- * effect. This re-runs on route change AND on resize, and RESTORES sticky
- * when a section once again fits (e.g. after enlarging the window).
+ * Reliability: layout height isn't final at mount (images/fonts/grids settle
+ * late), so we re-run `apply` from MANY triggers — rAF, staggered timeouts,
+ * window load, window resize, and a ResizeObserver on every section. Whichever
+ * fires once the real heights exist gets it right; later runs are idempotent.
  */
 export function ScrollRevealInit() {
   const pathname = usePathname()
 
   useEffect(() => {
-    let raf = 0
-    let resizeTimer: ReturnType<typeof setTimeout> | undefined
+    let frame = 0
+    const timers: ReturnType<typeof setTimeout>[] = []
 
     const apply = () => {
       const sections = Array.from(
         document.querySelectorAll<HTMLElement>("main > section")
       )
       const vh = window.innerHeight
-
+      if (!vh) return
       sections.forEach((s) => {
-        // Temporarily clear the inline override so we measure the section's
-        // natural height (sticky vs relative doesn't change height, but this
-        // keeps the logic robust if other inline styles were applied).
-        const tooTall = s.offsetHeight > vh * 1.02 // any section taller than the viewport
-
+        const tooTall = s.offsetHeight > vh * 1.02
         if (tooTall) {
-          // Fall back to normal scroll so all content stays reachable
-          s.style.position = "relative"
-          s.style.top = ""
-        } else {
-          // Restore the sticky panel-stack effect (defer to globals.css)
+          if (s.style.position !== "relative") {
+            s.style.position = "relative"
+            s.style.top = ""
+          }
+        } else if (s.style.position) {
           s.style.position = ""
           s.style.top = ""
         }
@@ -52,22 +47,34 @@ export function ScrollRevealInit() {
     }
 
     const schedule = () => {
-      cancelAnimationFrame(raf)
-      raf = requestAnimationFrame(() => requestAnimationFrame(apply))
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => requestAnimationFrame(apply))
     }
 
-    const onResize = () => {
-      clearTimeout(resizeTimer)
-      resizeTimer = setTimeout(schedule, 150)
-    }
-
+    // 1. Immediate (double-rAF)
     schedule()
-    window.addEventListener("resize", onResize)
+    // 2. Staggered fallbacks — catch late layout (images, fonts, grids)
+    ;[100, 300, 600, 1200].forEach((ms) => timers.push(setTimeout(apply, ms)))
+    // 3. After full window load (all images decoded)
+    window.addEventListener("load", apply)
+    // 4. On viewport resize
+    window.addEventListener("resize", schedule)
+
+    // 5. ResizeObserver — re-run whenever any section's height changes
+    const ro =
+      typeof ResizeObserver !== "undefined" ? new ResizeObserver(schedule) : null
+    if (ro) {
+      document
+        .querySelectorAll<HTMLElement>("main > section")
+        .forEach((s) => ro.observe(s))
+    }
 
     return () => {
-      cancelAnimationFrame(raf)
-      clearTimeout(resizeTimer)
-      window.removeEventListener("resize", onResize)
+      cancelAnimationFrame(frame)
+      timers.forEach(clearTimeout)
+      window.removeEventListener("load", apply)
+      window.removeEventListener("resize", schedule)
+      ro?.disconnect()
     }
   }, [pathname])
 

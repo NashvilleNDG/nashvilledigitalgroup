@@ -39,7 +39,7 @@ export function FAQSection({
   }
 
   return (
-    <section className={`py-16 ${dark ? "bg-[#030812]" : "bg-white"}`}>
+    <section className={`py-20 md:py-28 ${dark ? "bg-[#030812]" : "bg-white"}`}>
       {/* JSON-LD FAQ Schema — full answer text stays in the DOM for SEO/AI,
           independent of the visual accordion state */}
       <script

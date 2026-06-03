@@ -122,15 +122,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-white py-20 md:py-28">
-        <FAQSection
-          items={serviceFAQs}
-          title="Frequently Asked Questions"
-          subtitle="Everything you need to know about working with NDG"
-          dark={false}
-        />
-      </section>
+      {/* FAQ — FAQSection renders its own <section>, kept as a direct child
+          of <main> so the panel-stack scroll transition applies */}
+      <FAQSection
+        items={serviceFAQs}
+        title="Frequently Asked Questions"
+        subtitle="Everything you need to know about working with NDG"
+        dark={false}
+      />
 
       {/* CTA */}
       <section className="relative py-28 overflow-hidden bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800">
