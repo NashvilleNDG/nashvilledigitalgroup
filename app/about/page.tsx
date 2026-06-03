@@ -57,17 +57,17 @@ export default function AboutPage() {
                   { num: 4.9, suffix: "★", label: "Glassdoor Rating", decimal: 1 },
                 ].map((stat, i) => (
                   <BlurFade key={stat.label} delay={0.2 + i * 0.08} inView>
-                    <div className="glass border border-white/8 rounded-2xl px-6 py-4 text-center min-w-[110px]">
-                      <div className="text-3xl font-black text-white tabular-nums">
+                    <div className="glass border border-sky-500/25 bg-sky-500/5 rounded-2xl px-6 py-4 text-center min-w-[110px]">
+                      <div className="text-3xl font-black text-sky-400 tabular-nums">
                         <NumberTicker
                           value={stat.num}
                           delay={0.3 + i * 0.1}
                           decimalPlaces={stat.decimal ?? 0}
-                          className="text-white"
+                          className="text-sky-400"
                         />
                         {stat.suffix}
                       </div>
-                      <div className="text-white text-xs mt-1">{stat.label}</div>
+                      <div className="text-sky-300 text-xs mt-1">{stat.label}</div>
                     </div>
                   </BlurFade>
                 ))}
