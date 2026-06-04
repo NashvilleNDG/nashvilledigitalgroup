@@ -32,8 +32,15 @@ export function ScrollRevealInit() {
       )
       const vh = window.innerHeight
       if (!vh) return
+      // A sticky section taller than the viewport gets its lower content
+      // permanently covered by the next rising panel (unreachable). So only
+      // sections that essentially fit the viewport keep the sticky panel-stack
+      // effect; taller ones fall back to normal scroll. On mobile most content
+      // sections are taller than the screen, so the effect naturally applies
+      // only to short sections there — by design, to never hide content.
+      const MAX_RATIO = 1.02
       sections.forEach((s) => {
-        const tooTall = s.offsetHeight > vh * 1.02
+        const tooTall = s.offsetHeight > vh * MAX_RATIO
         if (tooTall) {
           if (s.style.position !== "relative") {
             s.style.position = "relative"
