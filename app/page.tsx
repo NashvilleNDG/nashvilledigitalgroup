@@ -143,7 +143,7 @@ export default function HomePage() {
                         <NumberTicker
                           value={stat.num}
                           delay={0.2 + i * 0.08}
-                          decimalPlaces={stat.decimal ?? 0}
+                          decimalPlaces={0}
                           className="text-sky-600"
                         />
                         {stat.suffix}
