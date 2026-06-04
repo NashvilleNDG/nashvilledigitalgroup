@@ -17,7 +17,6 @@ import { Magnetic } from "@/components/ui/magnetic"
 import { FeaturedWork } from "@/components/sections/FeaturedWork"
 import { ProposalForm } from "@/components/sections/ProposalForm"
 import { TrustBadges } from "@/components/ui/trust-badges"
-import { VideoTestimonials } from "@/components/ui/video-testimonials"
 import { TechStack } from "@/components/ui/tech-stack"
 
 export const metadata: Metadata = {
@@ -400,9 +399,6 @@ export default function HomePage() {
           </BlurFade>
         </div>
       </section>
-
-      {/* ── Video Testimonials ── */}
-      <VideoTestimonials />
 
       {/* ── Featured Work ── */}
       <FeaturedWork />
