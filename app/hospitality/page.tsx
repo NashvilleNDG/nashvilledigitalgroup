@@ -95,10 +95,10 @@ export default function HospitalityPage() {
             {hospitalityFeatures.map((feature, index) => (
               <BlurFade key={feature.title} delay={0.15 + index * 0.07} inView>
                 <SpotlightCard
-                  className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors"
+                  className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors text-center"
                   spotlightColor="rgba(56, 189, 248, 0.06)"
                 >
-                  <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200">
+                  <div className="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-200 mx-auto">
                     <Icon name={feature.icon} className="w-5 h-5 text-sky-600" />
                   </div>
                   <h3 className="text-slate-900 font-semibold text-lg mb-3">
@@ -107,7 +107,7 @@ export default function HospitalityPage() {
                   <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     {feature.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {feature.tags.map((tag) => (
                       <span
                         key={tag}

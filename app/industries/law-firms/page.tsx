@@ -138,8 +138,8 @@ export default function LawFirmsPage() {
               },
             ].map((pain, index) => (
               <BlurFade key={pain.title} delay={0.15 + index * 0.07} inView>
-                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors">
-                  <div className="w-11 h-11 bg-sky-50 rounded-xl flex items-center justify-center mb-4 ring-1 ring-sky-200">
+                <div className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 h-full hover:border-sky-300 hover:shadow-md transition-colors text-center">
+                  <div className="w-11 h-11 bg-sky-50 rounded-xl flex items-center justify-center mb-4 ring-1 ring-sky-200 mx-auto">
                     <Icon name={pain.icon} className="w-5 h-5 text-sky-600" />
                   </div>
                   <h3 className="text-slate-900 font-semibold text-lg mb-2">{pain.title}</h3>
@@ -197,13 +197,13 @@ export default function LawFirmsPage() {
               },
             ].map((solution, index) => (
               <BlurFade key={solution.title} delay={0.15 + index * 0.07} inView>
-                <div className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors flex flex-col">
-                  <div className="w-12 h-12 bg-sky-500/12 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20">
+                <div className="glass border border-white/6 rounded-2xl p-6 h-full hover:border-sky-500/20 transition-colors flex flex-col text-center">
+                  <div className="w-12 h-12 bg-sky-500/12 rounded-xl flex items-center justify-center mb-5 ring-1 ring-sky-500/20 mx-auto">
                     <Icon name={solution.icon} className="w-5 h-5 text-sky-400" />
                   </div>
                   <h3 className="text-white font-semibold text-lg mb-3">{solution.title}</h3>
                   <p className="text-white text-sm leading-relaxed mb-4 flex-1">{solution.desc}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {solution.tags.map((tag) => (
                       <span
                         key={tag}
