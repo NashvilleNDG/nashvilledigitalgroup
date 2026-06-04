@@ -107,10 +107,10 @@ export default function HomePage() {
 
             {/* Right: Animated visual */}
             <BlurFade delay={0.4} inView direction="left" className="w-full">
-              <div className="relative h-[520px]">
+              <div className="relative h-[340px] sm:h-[440px] lg:h-[520px]">
                 <HeroVisual />
-                <div className="absolute bottom-5 left-5 z-30">
-                  <div className="glass border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5">
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 lg:left-5 lg:translate-x-0 z-30">
+                  <div className="glass border border-white/10 rounded-xl px-4 py-2.5 flex items-center gap-2.5 whitespace-nowrap">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="text-white text-xs font-semibold">25+ Experts. 500+ Brands Scaled.</span>
                   </div>

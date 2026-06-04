@@ -7,7 +7,11 @@ const barHeights = [35, 55, 42, 78, 60, 88, 72, 100]
 
 export function HeroVisual() {
   return (
-    <div className="relative h-[520px] w-full hidden lg:block" aria-hidden="true">
+    // Outer: controls the space the visual occupies. On small screens the
+    // fixed-size stage below is scaled down and centered so the absolutely
+    // positioned cards never overlap or overflow.
+    <div className="relative w-full overflow-hidden flex justify-center lg:block h-[340px] sm:h-[440px] lg:h-[520px]" aria-hidden="true">
+    <div className="relative h-[520px] w-[440px] shrink-0 origin-top scale-[0.62] sm:scale-[0.80] lg:scale-100 lg:w-full">
       {/* Background glow orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-sky-500/12 rounded-full blur-[80px] animate-pulse-slow" />
@@ -113,6 +117,7 @@ export function HeroVisual() {
           </div>
         ))}
       </motion.div>
+    </div>
     </div>
   )
 }
