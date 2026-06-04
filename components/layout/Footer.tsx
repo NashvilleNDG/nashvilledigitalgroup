@@ -58,9 +58,9 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Top grid — 6 columns */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-10 sm:gap-8">
           {/* Column 1: Brand (spans 2 on lg) */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* Column 2: Services */}
           <div>
             <h3 className="text-sky-400 font-semibold mb-4 text-sm">Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 sm:space-y-2">
               {footerServiceLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
@@ -96,7 +96,7 @@ export default function Footer() {
           {/* Column 3: Company */}
           <div>
             <h3 className="text-sky-400 font-semibold mb-4 text-sm">Company</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 sm:space-y-2">
               {footerCompanyLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
@@ -110,7 +110,7 @@ export default function Footer() {
           {/* Column 4: Industries */}
           <div>
             <h3 className="text-sky-400 font-semibold mb-4 text-sm">Industries</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 sm:space-y-2">
               {footerIndustryLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Column 5: Locations + Tools */}
           <div>
             <h3 className="text-sky-400 font-semibold mb-4 text-sm">Locations</h3>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-3 sm:space-y-2 mb-6">
               {footerLocationLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
@@ -134,7 +134,7 @@ export default function Footer() {
               ))}
             </ul>
             <h3 className="text-sky-400 font-semibold mb-4 text-sm">Free Tools</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 sm:space-y-2">
               {footerToolLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white hover:text-sky-400 text-sm transition-colors">
