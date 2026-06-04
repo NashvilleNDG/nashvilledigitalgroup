@@ -126,13 +126,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 divide-x divide-slate-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
             {[
               { num: 500, suffix: "+", label: "Clients Served" },
               { num: 98, suffix: "%", label: "Satisfaction Rate" },
               { num: 300, suffix: "%", label: "Avg ROI (90 Days)" },
               { num: 1500000, suffix: "+", label: "Leads Generated", short: "1.5M" },
-              { num: 4.9, suffix: "★", label: "Glassdoor Rating", decimal: 1 },
             ].map((stat, i) => (
               <BlurFade key={stat.label} delay={0.1 + i * 0.08} inView>
                 <div className="text-center px-4">
