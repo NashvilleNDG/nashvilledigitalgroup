@@ -114,7 +114,7 @@ export function ProposalForm() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-white/12 bg-black/55 backdrop-blur-xl p-8 flex flex-col gap-4"
+              className="rounded-2xl border border-white/12 bg-black/55 backdrop-blur-xl p-5 sm:p-8 flex flex-col gap-5"
             >
               {/* Full Name */}
               <div className="flex flex-col gap-2">
@@ -125,7 +125,7 @@ export function ProposalForm() {
               </div>
 
               {/* Job Title + Company */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
                   <label className={labelBase}>Job Title</label>
                   <input suppressHydrationWarning type="text" placeholder="CEO / Owner" className={inputBase} />
@@ -139,7 +139,7 @@ export function ProposalForm() {
               </div>
 
               {/* Email + Phone */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
                   <label className={labelBase}>
                     Email <span className="text-sky-400">*</span>
