@@ -70,8 +70,8 @@ export default function RestaurantsPage() {
                 <span className="text-sky-400">On Your Terms.</span>
               </h1>
               <p className="text-white text-lg max-w-2xl mx-auto mb-10">
-                Nashville Digital Group helps restaurants, bars, lounges, and food businesses pack the house — without
-                handing a cut to Yelp or DoorDash for every cover.
+                From Mexican and Indian kitchens to American bars and lounges, Nashville Digital Group helps restaurants
+                of every cuisine pack the house — without handing a cut to Yelp or DoorDash for every cover.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
                 <ShimmerLink href="/contact">Get Free Strategy Session →</ShimmerLink>

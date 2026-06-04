@@ -9,7 +9,7 @@ import { AnimatedSection } from "@/components/ui/animated-section"
 export const metadata: Metadata = {
   title: "Industries We Serve | Nashville Digital Group",
   description:
-    "NDG specializes in digital marketing for healthcare, restaurants, real estate, and law firms in Nashville, TN. Industry-specific strategies that actually work. Free strategy session.",
+    "NDG specializes in digital marketing for healthcare, restaurants, real estate, law firms, e-commerce, liquor & smoke shops, and hospitality in Nashville, TN. Industry-specific strategies that actually work. Free strategy session.",
 }
 
 const industries = [
@@ -69,6 +69,48 @@ const industries = [
     color: "from-sky-500/10 to-indigo-500/5",
     borderHover: "hover:border-sky-500/30",
   },
+  {
+    href: "/industries/ecommerce",
+    icon: "store",
+    label: "E-Commerce",
+    title: "Online Stores & D2C Brands",
+    desc: "Scale your online store with paid social, Google Shopping, email/SMS automation, and conversion optimization. No storefront required — pure online growth.",
+    stats: [
+      { value: "+220%", label: "Average ROAS" },
+      { value: "3.1x", label: "Email/SMS Revenue" },
+      { value: "+47%", label: "Conversion Rate" },
+    ],
+    color: "from-emerald-500/10 to-sky-500/5",
+    borderHover: "hover:border-emerald-500/30",
+  },
+  {
+    href: "/industries/liquor-smoke-shops",
+    icon: "shield",
+    label: "Liquor & Smoke Shops",
+    title: "Liquor Stores, Smoke & Vape Shops",
+    desc: "Marketing for businesses other agencies are scared to touch. Compliant local SEO, Google Business Profile, and loyalty marketing that drives foot traffic where paid ads are banned.",
+    stats: [
+      { value: "Top 3", label: "Local Map Rankings" },
+      { value: "+58%", label: "Repeat Customers" },
+      { value: "100%", label: "Ad-Policy Compliant" },
+    ],
+    color: "from-amber-500/10 to-sky-500/5",
+    borderHover: "hover:border-amber-500/30",
+  },
+  {
+    href: "/hospitality",
+    icon: "building",
+    label: "Hospitality",
+    title: "Hotels, Venues & Events",
+    desc: "AI-powered marketing for hotels, event venues, and hospitality businesses. Direct-booking strategies that reduce OTA dependency and fill rooms year-round.",
+    stats: [
+      { value: "Up to 40%", label: "Revenue Boost" },
+      { value: "+2.5x", label: "Direct Bookings" },
+      { value: "24/7", label: "AI Concierge" },
+    ],
+    color: "from-rose-500/10 to-sky-500/5",
+    borderHover: "hover:border-rose-500/30",
+  },
 ]
 
 export default function IndustriesPage() {
@@ -120,8 +162,8 @@ export default function IndustriesPage() {
             <div className="text-center mb-14">
               <p className="text-sky-600 text-sm font-semibold uppercase tracking-widest mb-3">Our Verticals</p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-                Deep Expertise in{" "}
-                <span className="text-sky-600">Four Key Industries</span>
+                Deep Expertise Across{" "}
+                <span className="text-sky-600">Your Industry</span>
               </h2>
               <p className="text-slate-600 text-base max-w-xl mx-auto mt-4">
                 Click any industry below to see specific pain points, solutions, and real client results.

@@ -583,8 +583,9 @@ export const footerCompanyLinks = [
 export const footerIndustryLinks = [
   { label: "Healthcare", href: "/industries/healthcare" },
   { label: "Restaurants & F&B", href: "/industries/restaurants" },
+  { label: "E-Commerce", href: "/industries/ecommerce" },
+  { label: "Liquor & Smoke Shops", href: "/industries/liquor-smoke-shops" },
   { label: "Real Estate", href: "/industries/real-estate" },
-  { label: "Law Firms", href: "/industries/law-firms" },
   { label: "All Industries", href: "/industries" },
 ]
 
