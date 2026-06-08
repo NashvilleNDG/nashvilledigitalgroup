@@ -179,12 +179,16 @@ export default function HomePage() {
                   { name: "Palms Resort & Beach", src: "/clients/palms-resort-beach.png" },
                   { name: "Greenbrier Station", src: "/clients/greenbrier-station.png" },
                   { name: "Super 9 Station", src: "/clients/super-9-station.png" },
-                  { name: "Serene Minds Psychotherapy", src: "/clients/serene-minds-psychotherapy.png" },
+                  { name: "Serene Minds Psychotherapy", src: "/clients/serene-minds-psychotherapy.png", dark: true },
                   { name: "Good Health Primary Care", src: "/clients/good-health-primary-care.png" },
-                ].map((client) => (
+                ].map((client: { name: string; src: string; dark?: boolean }) => (
                   <div
                     key={client.name}
-                    className="mx-3 flex items-center justify-center shrink-0 h-[84px] w-[170px] bg-white border border-slate-200 rounded-xl px-5 shadow-sm hover:border-sky-300 hover:shadow-md transition-all"
+                    className={`mx-3 flex items-center justify-center shrink-0 h-[84px] rounded-xl shadow-sm transition-all ${
+                      client.dark
+                        ? "w-auto px-4 bg-[#060d1f] border border-white/10 hover:border-sky-400/40"
+                        : "w-[170px] px-5 bg-white border border-slate-200 hover:border-sky-300 hover:shadow-md"
+                    }`}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -192,7 +196,7 @@ export default function HomePage() {
                       alt={client.name}
                       title={client.name}
                       loading="lazy"
-                      className="max-h-14 max-w-[130px] w-auto object-contain"
+                      className={`${client.dark ? "max-h-[78px]" : "max-h-14 max-w-[130px]"} w-auto object-contain`}
                     />
                   </div>
                 ))}
