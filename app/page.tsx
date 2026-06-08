@@ -165,32 +165,39 @@ export default function HomePage() {
               </p>
             </BlurFade>
             <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_12%,white_88%,transparent)]">
-              <Marquee className="[--duration:28s]" pauseOnHover>
+              <Marquee className="[--duration:38s]" pauseOnHover>
                 {[
-                  { name: "Big Pigs Wine & Spirits", icon: "🍷" },
-                  { name: "Maharani Collections", icon: "👗" },
-                  { name: "The Lounge at 2nd", icon: "🍸" },
-                  { name: "Nashville Realty Group", icon: "🏠" },
-                  { name: "Music City Motors", icon: "🚗" },
-                  { name: "Brentwood Med Spa", icon: "💆" },
-                  { name: "Tennessee Eats", icon: "🍔" },
-                  { name: "Clearview Dental", icon: "🦷" },
+                  { name: "Red Spirits & Wine", src: "/clients/red-spirits-wine.png" },
+                  { name: "CNG Wine & Spirits", src: "/clients/cng-wine-spirits.png" },
+                  { name: "Super 9 Wine & Spirits", src: "/clients/super-9-wine-spirits.png" },
+                  { name: "The Grilled Cheeserie", src: "/clients/grilled-cheeserie.png" },
+                  { name: "Nawabi Hyderabad House Nashville", src: "/clients/nawabi-hyderabad-house.png" },
+                  { name: "Turmeric & Co Nashville", src: "/clients/turmeric-co.png" },
+                  { name: "Indian Harbor Caterings", src: "/clients/indian-harbor-caterings.png" },
+                  { name: "The Green Ash", src: "/clients/green-ash.png" },
+                  { name: "Best Western Plus", src: "/clients/best-western-plus.png" },
+                  { name: "Palms Resort & Beach", src: "/clients/palms-resort-beach.png" },
+                  { name: "Greenbrier Station", src: "/clients/greenbrier-station.png" },
+                  { name: "Super 9 Station", src: "/clients/super-9-station.png" },
+                  { name: "Serene Minds Psychotherapy", src: "/clients/serene-minds-psychotherapy.png" },
+                  { name: "Good Health Primary Care", src: "/clients/good-health-primary-care.png" },
                 ].map((client) => (
                   <div
                     key={client.name}
-                    className="mx-4 flex items-center gap-2.5 shrink-0 bg-slate-50 border border-slate-200 rounded-xl px-5 py-3 shadow-sm hover:border-sky-300 hover:shadow-md transition-all"
+                    className="mx-3 flex items-center justify-center shrink-0 h-[84px] w-[170px] bg-white border border-slate-200 rounded-xl px-5 shadow-sm hover:border-sky-300 hover:shadow-md transition-all"
                   >
-                    <span className="text-lg">{client.icon}</span>
-                    <span className="text-slate-600 text-sm font-medium whitespace-nowrap">{client.name}</span>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={client.src}
+                      alt={client.name}
+                      title={client.name}
+                      loading="lazy"
+                      className="max-h-14 max-w-[130px] w-auto object-contain"
+                    />
                   </div>
                 ))}
               </Marquee>
             </div>
-            <BlurFade delay={0.3} inView>
-              <p className="text-center text-slate-400 text-xs mt-8">
-                + 490 more businesses growing with NDG
-              </p>
-            </BlurFade>
           </div>
 
         </div>
