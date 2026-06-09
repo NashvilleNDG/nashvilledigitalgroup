@@ -440,6 +440,7 @@ export const jobs: Job[] = [
       "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
       "Strong portfolio across branding, social media, and web",
       "Experience with Figma & Canva for fast turnarounds",
+      "Skilled at creating visuals & content with AI tools (ChatGPT, Gemini, Google Flow, Midjourney)",
       "Sharp eye for typography, layout, and brand consistency",
     ],
   },
