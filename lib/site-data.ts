@@ -463,7 +463,8 @@ export const jobs: Job[] = [
     department: "Marketing",
     requirements: [
       "2–3 years email marketing experience",
-      "Hands-on with platforms like Mailchimp, Klaviyo, or HubSpot",
+      "Hands-on with platforms like Mailchimp & Constant Contact",
+      "Able to build & customize emails using HTML and AI tools",
       "Experience building automated drip & nurture campaigns",
       "Strong copywriting with A/B testing for subject lines & content",
       "Comfortable with list segmentation, deliverability, and performance reporting",
