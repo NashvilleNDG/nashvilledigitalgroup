@@ -6,7 +6,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker"
 import { ShimmerLink } from "@/components/magicui/shimmer-link"
 import { Meteors } from "@/components/magicui/meteors"
 import { Icon } from "@/components/ui/icon"
-import { company, timeline, coreValues, awards } from "@/lib/site-data"
+import { company, timeline, coreValues } from "@/lib/site-data"
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -290,40 +290,6 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-slate-900 font-semibold text-lg mb-2">{value.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{value.description}</p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Awards */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.1} inView>
-            <div className="text-center mb-14">
-              <p className="text-sky-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Recognition
-              </p>
-              <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                Industry{" "}
-                <span className="text-sky-400">
-                  Awards &amp; Recognition
-                </span>
-              </h2>
-            </div>
-          </BlurFade>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {awards.map((award, i) => (
-              <BlurFade key={award.title} delay={0.15 + i * 0.07} inView>
-                <div className="glass border border-amber-500/15 rounded-2xl p-6 text-center h-full hover:border-amber-500/30 transition-colors">
-                  <div className="text-3xl mb-4">🏆</div>
-                  <h3 className="text-white font-semibold mb-2">{award.title}</h3>
-                  <p className="text-sky-400 text-sm">{award.org}</p>
-                  <span className="inline-block bg-amber-500/10 text-amber-400 border border-amber-500/15 text-xs px-3 py-1 rounded-full mt-3">
-                    {award.year}
-                  </span>
                 </div>
               </BlurFade>
             ))}
