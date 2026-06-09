@@ -426,94 +426,33 @@ export const hospitalityCaseStudies = [
 export type Job = {
   title: string
   type: string
-  location: string
-  salary: string
   department: string
   requirements: string[]
 }
 
 export const jobs: Job[] = [
   {
-    title: "Senior Digital Marketing Specialist",
+    title: "Graphic Designer",
     type: "Full-time",
-    location: "Nashville, TN / Remote",
-    salary: "$60,000 – $80,000",
+    department: "Creative",
+    requirements: [
+      "2–3 years graphic design experience",
+      "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+      "Strong portfolio across branding, social media, and web",
+      "Experience with Figma & Canva for fast turnarounds",
+      "Sharp eye for typography, layout, and brand consistency",
+    ],
+  },
+  {
+    title: "SEO, AEO & GEO Executive",
+    type: "Full-time",
     department: "Marketing",
     requirements: [
-      "5+ years digital marketing experience",
-      "Google Ads & Facebook Ads certification",
-      "Marketing automation platform experience",
-      "Analytics and reporting expertise",
-      "Client management skills",
-    ],
-  },
-  {
-    title: "AI/ML Engineer",
-    type: "Full-time",
-    location: "Nashville, TN / Remote",
-    salary: "$80,000 – $120,000",
-    department: "Technology",
-    requirements: [
-      "3+ years machine learning experience",
-      "Python, TensorFlow, or PyTorch expertise",
-      "Experience with NLP and computer vision",
-      "API development and integration skills",
-      "Marketing technology knowledge preferred",
-    ],
-  },
-  {
-    title: "Content Marketing Manager",
-    type: "Full-time",
-    location: "Nashville, TN / Remote",
-    salary: "$50,000 – $70,000",
-    department: "Marketing",
-    requirements: [
-      "3+ years content marketing experience",
-      "Excellent writing and editing skills",
-      "Social media platform expertise",
-      "SEO and keyword research knowledge",
-      "Project management skills",
-    ],
-  },
-  {
-    title: "Web Developer",
-    type: "Full-time",
-    location: "Nashville, TN / Remote",
-    salary: "$65,000 – $85,000",
-    department: "Technology",
-    requirements: [
-      "3+ years web development experience",
-      "React, Next.js, and modern JavaScript",
-      "WordPress and CMS development skills",
-      "Responsive design and mobile optimization",
-      "Version control (Git) and deployment experience",
-    ],
-  },
-  {
-    title: "Account Manager",
-    type: "Full-time",
-    location: "Nashville, TN",
-    salary: "$45,000 – $65,000",
-    department: "Client Services",
-    requirements: [
-      "2+ years account management experience",
-      "Strong communication and presentation skills",
-      "Digital marketing knowledge",
-      "Project management capabilities",
-      "CRM and reporting tool experience",
-    ],
-  },
-  {
-    title: "Marketing Intern",
-    type: "Internship",
-    location: "Nashville, TN",
-    salary: "$15 – $18/hour",
-    department: "Marketing",
-    requirements: [
-      "Currently pursuing marketing or related degree",
-      "Strong interest in digital marketing",
-      "Basic knowledge of social media platforms",
-      "Excellent communication skills",
+      "2–3 years SEO experience (technical & on-page)",
+      "Working knowledge of AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization)",
+      "Hands-on with schema markup & structured data",
+      "Experience optimizing content for AI search (ChatGPT, Perplexity, Google AI Overviews)",
+      "Proficiency with GA4, Search Console, and tools like Ahrefs or SEMrush",
     ],
   },
 ]

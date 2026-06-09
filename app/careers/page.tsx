@@ -103,7 +103,7 @@ export default function CareersPage() {
                 Open Positions
               </p>
               <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                6 Roles We&apos;re{" "}
+                {jobs.length} {jobs.length === 1 ? "Role" : "Roles"} We&apos;re{" "}
                 <span className="text-sky-400">
                   Hiring For
                 </span>
@@ -121,14 +121,10 @@ export default function CareersPage() {
                         {job.department}
                       </span>
                     </div>
-                    <p className="text-sky-400 font-bold text-lg">{job.salary}</p>
                   </div>
                   <div className="flex gap-3 flex-wrap mt-3 mb-4">
                     <span className="bg-sky-500/10 text-sky-400 border border-sky-500/15 text-xs px-3 py-1 rounded-full">
                       {job.type}
-                    </span>
-                    <span className="text-white text-sm flex items-center gap-1.5">
-                      <span className="text-xs">📍</span> {job.location}
                     </span>
                   </div>
                   <div className="border-t border-white/6 pt-4">
