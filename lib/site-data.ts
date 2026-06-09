@@ -520,11 +520,6 @@ export const jobs: Job[] = [
 
 export const benefits = [
   {
-    title: "Comprehensive Health Benefits",
-    description: "Medical, dental, and vision coverage for you and your family.",
-    icon: "Heart",
-  },
-  {
     title: "Flexible Work Schedule",
     description: "Remote work options and flexible hours to fit your life.",
     icon: "Clock",
