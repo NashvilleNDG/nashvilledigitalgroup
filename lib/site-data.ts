@@ -474,8 +474,8 @@ export const benefits = [
   {
     title: "Great Work Environment",
     description:
-      "Modern office, free snacks, and a collaborative, supportive culture.",
-    icon: "Building",
+      "A collaborative, supportive, fully-remote culture where your ideas are always valued.",
+    icon: "Users",
   },
   {
     title: "Competitive Compensation",
@@ -486,6 +486,12 @@ export const benefits = [
     title: "Latest Technology",
     description: "Top-of-the-line equipment and the best software tools available.",
     icon: "Laptop",
+  },
+  {
+    title: "Learning & Growth",
+    description:
+      "Hands-on mentorship, clear advancement paths, and real exposure to cutting-edge AI and marketing work.",
+    icon: "Rocket",
   },
 ]
 
