@@ -450,6 +450,7 @@ export const jobs: Job[] = [
     department: "Marketing",
     requirements: [
       "2–3 years SEO experience (technical & on-page)",
+      "Strong off-page SEO skills — link building, outreach, citations, and digital PR",
       "Working knowledge of AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization)",
       "Hands-on with schema markup & structured data",
       "Experience optimizing content for AI search (ChatGPT, Perplexity, Google AI Overviews)",
