@@ -457,6 +457,18 @@ export const jobs: Job[] = [
       "Proficiency with GA4, Search Console, and tools like Ahrefs or SEMrush",
     ],
   },
+  {
+    title: "Email Marketing Executive",
+    type: "Full-time",
+    department: "Marketing",
+    requirements: [
+      "2–3 years email marketing experience",
+      "Hands-on with platforms like Mailchimp, Klaviyo, or HubSpot",
+      "Experience building automated drip & nurture campaigns",
+      "Strong copywriting with A/B testing for subject lines & content",
+      "Comfortable with list segmentation, deliverability, and performance reporting",
+    ],
+  },
 ]
 
 export const benefits = [
