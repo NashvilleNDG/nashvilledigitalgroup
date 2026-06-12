@@ -8,53 +8,80 @@ import { ChevronLeft, ChevronRight, ExternalLink, ArrowRight } from "lucide-reac
 const projects = [
   {
     id: 1,
-    client: "Nashville Realty Group",
-    category: "Web Design  ·  Local SEO  ·  Google Ads",
+    client: "The Grilled Cheeserie",
+    url: "https://the-grilled-cheeserie-copy-f1fa1a1c.base44.app",
+    category: "Web Design  ·  Online Ordering  ·  Local SEO",
     description:
-      "Complete digital transformation for Nashville's fastest-growing real estate firm. Rebuilt their web presence from scratch, launched hyper-local SEO, and ran precision PPC campaigns that dominated competitive keywords.",
-    result: { metric: "312%", label: "Increase in qualified leads within 90 days" },
-    tags: ["Web Design", "Local SEO", "PPC"],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400&q=85&auto=format",
+      "A bold, mobile-first build for Nashville's premier grilled cheese destination. We unified their café, food truck, and catering under one brand with interactive menus, location details, and seamless online ordering.",
+    result: { metric: "3-in-1", label: "Café, food truck & catering on one platform" },
+    tags: ["Web Design", "Online Ordering", "Local SEO"],
+    image: "/work/grilled-cheeserie.jpg",
   },
   {
     id: 2,
-    client: "Music City Kitchen",
-    category: "Web Design  ·  Social Media  ·  Email Marketing",
+    client: "Greenbrier Station",
+    url: "https://greenbrierstation.com/",
+    category: "Web Design  ·  Local SEO",
     description:
-      "Built a stunning online presence for this award-winning Nashville restaurant. Custom booking system, professional menu design, and a social strategy that grew their following to 50k+ and kept tables full year-round.",
-    result: { metric: "2.4×", label: "Revenue growth after 6-month campaign" },
-    tags: ["Web Design", "Social Media", "Email"],
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=85&auto=format",
+      "A clean, locally-optimized site for this neighborhood Shell station, grocery & deli in Greenbrier, TN. Built from scratch to make fuel, fresh groceries, and hot deli meals easy to find — and to win local search.",
+    result: { metric: "Local", label: "Tuned for Google Maps & 'near me' search" },
+    tags: ["Web Design", "Local SEO"],
+    image: "/work/greenbrier-station.jpg",
   },
   {
     id: 3,
-    client: "Tennessee Auto Group",
-    category: "Web Development  ·  Automotive SEO  ·  Video Ads",
+    client: "Blueoaak",
+    url: "https://blueoaak.com/",
+    category: "Web Design  ·  SEO  ·  Lead Generation",
     description:
-      "Modernized their dealer website with real-time inventory integration, AI chat, and a statewide SEO campaign targeting every major Tennessee metro. Video ad creative that broke category benchmarks.",
-    result: { metric: "540+", label: "Vehicles sold through digital channels in Q1" },
-    tags: ["Web Dev", "SEO", "Video Ads"],
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&q=85&auto=format",
+      "A polished, conversion-focused website for a nationwide bookkeeping and accounting firm. Clear service pages for tax, payroll, and business setup, backed by SEO built to bring in small-business leads.",
+    result: { metric: "Nationwide", label: "Lead-gen site for a US-wide finance firm" },
+    tags: ["Web Design", "SEO", "Lead Gen"],
+    image: "/work/blueoaak.jpg",
   },
   {
     id: 4,
-    client: "Brentwood Med Spa",
-    category: "Branding  ·  Web Design  ·  Instagram Ads",
+    client: "The Green Ash",
+    url: "https://thegreenash.com/",
+    category: "Web Design  ·  Local SEO  ·  Branding",
     description:
-      "Luxury rebrand for Brentwood's premier medical spa. New visual identity, high-converting landing pages, and Instagram ad funnels that tripled new client bookings and elevated their market positioning.",
-    result: { metric: "3×", label: "New client bookings month over month" },
-    tags: ["Branding", "Web Design", "Paid Social"],
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1400&q=85&auto=format",
+      "A premium, galaxy-themed storefront for this Nashville smoke shop on Gallatin Pike. We built the brand experience around their cigars, accessories, CBD and Delta-8 lineup, with local SEO to drive walk-in traffic.",
+    result: { metric: "Local", label: "Built to win Nashville map-pack visibility" },
+    tags: ["Web Design", "Local SEO", "Branding"],
+    image: "/work/green-ash.jpg",
   },
   {
     id: 5,
-    client: "Clearview Dental",
-    category: "Local SEO  ·  Web Design  ·  Reputation Management",
+    client: "Palms Resort & Beach",
+    url: "https://palmsresortbeach.com/",
+    category: "Web Design  ·  Direct Booking  ·  SEO",
     description:
-      "Helped this multi-location dental practice dominate local search results across 4 Nashville-area locations. Reputation management pushed their average Google rating from 3.8 to 4.9 stars.",
-    result: { metric: "4.9 ★", label: "Google rating across all 4 locations" },
-    tags: ["Local SEO", "Web Design", "Reviews"],
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1400&q=85&auto=format",
+      "An immersive site for the only resort on St. Croix with a mile-long private palm-lined beach. We showcased the rooms, dining, and water activities and built a direct-booking flow that keeps revenue commission-free.",
+    result: { metric: "Direct", label: "Commission-free bookings — no OTA fees" },
+    tags: ["Web Design", "Booking", "SEO"],
+    image: "/work/palms-resort.jpg",
+  },
+  {
+    id: 6,
+    client: "Indian Harbor Caterings",
+    url: "https://indianharborcaterings.com/",
+    category: "SEO  ·  AEO  ·  GEO",
+    description:
+      "Florida's most trusted catering company needed to own AI and local search. We delivered an SEO, AEO, and GEO strategy that surfaces their weddings and corporate catering across Florida — and inside AI answers.",
+    result: { metric: "FL-wide", label: "AI-search visibility across Florida catering" },
+    tags: ["SEO", "AEO", "GEO"],
+    image: "/work/indian-harbor.jpg",
+  },
+  {
+    id: 7,
+    client: "Serene Minds Psychotherapy",
+    url: "https://serenemindspsychotherapy.com/",
+    category: "SEO  ·  AEO  ·  GEO  ·  Web",
+    description:
+      "A telehealth psychotherapy practice serving all 67 Florida counties. We optimized the site for SEO, AEO, and GEO so clients searching for therapy — in English, Gujarati, or Hindi — find them first.",
+    result: { metric: "67/67", label: "Optimized to reach every Florida county" },
+    tags: ["SEO", "AEO", "GEO"],
+    image: "/work/serene-minds.jpg",
   },
 ]
 
@@ -176,13 +203,16 @@ export function FeaturedWork() {
                     extensions (form-fillers/password managers) that inject
                     fdprocessedid attributes into buttons before hydration */}
                 <div className="flex flex-wrap gap-3 pt-1">
-                  <button
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     suppressHydrationWarning
                     className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-sky-500 hover:bg-sky-400 transition-all duration-200 hover:scale-[1.02]"
                   >
                     <ExternalLink size={15} />
                     View Website
-                  </button>
+                  </a>
                   <button
                     suppressHydrationWarning
                     className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white border border-white/20 hover:border-white/40 transition-all duration-200"
@@ -211,7 +241,7 @@ export function FeaturedWork() {
                       <div className="flex-1 mx-2 bg-white/5 rounded-md h-6 flex items-center px-3 gap-2">
                         <div className="w-3 h-3 rounded-full border border-white/20 shrink-0" />
                         <span className="text-[10px] text-white/25 truncate">
-                          nashvilledigitalgroup.com/work/{project.client.toLowerCase().replace(/\s+/g, "-")}
+                          {project.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
                         </span>
                       </div>
                     </div>
