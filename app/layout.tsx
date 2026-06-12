@@ -82,7 +82,7 @@ export default function RootLayout({
     },
     "areaServed": ["Nashville, TN", "Brentwood, TN", "Franklin, TN", "Middle Tennessee"],
     "sameAs": [
-      "https://www.facebook.com/nashvilledigitalgroup",
+      "https://www.facebook.com/profile.php?id=100094645963506",
       "https://www.instagram.com/nashvilledigitalgroup",
       "https://www.youtube.com/@nashvilledigitalgroup",
       "https://www.tiktok.com/@nashvilledigitalgroup",

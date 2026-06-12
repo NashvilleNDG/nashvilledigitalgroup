@@ -15,7 +15,7 @@ const socials = [
   },
   {
     label: "Facebook",
-    href: "https://www.facebook.com/nashvilledigitalgroup",
+    href: "https://www.facebook.com/profile.php?id=100094645963506",
     color: "#1877F2",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
